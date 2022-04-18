@@ -301,7 +301,7 @@ static errorType OnGetCompanyInfo(void **DS, const char* const command) {
     ValidateRead(sscanf(command, "%d", &CompanyID), 1, "GetCompanyInfo failed.\n");
     StatusType res = GetCompanyInfo(DS, CompanyID, &Value, &NumEmployees);
     if (res == SUCCESS) {
-        printf("GetCompanyInfo: SUCCESS. Company %d has %d employees and value %d\n", CompanyID, Value, NumEmployees);
+        printf("GetCompanyInfo: SUCCESS. Company %d has %d employees and value %d\n", CompanyID, NumEmployees, Value);
     } else {
         printf("GetCompanyInfo: %s\n", ReturnValToStr(res));
     }

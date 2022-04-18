@@ -28,22 +28,27 @@ class BinSearchTree
                 Node(const Node&) = default;
                 Node& operator=(const Node&) = default;
                 ~Node() = default;
-                T& getData(){
+                const T& getData() const{
                     return data;
                 }
-                int gethHeight(){
-                    return height;
+                Node* getLeft() const{
+                    return left;
                 }
-                void sethHeight(int num){
-                    height = num;
+                Node* getRight() const{
+                    return right;
+                }
+                int getHeight() const{
+                    if(this == nullptr)
+                        return -1;
+                    return this->height;
                 }
         };
+    public:
         Node* root;
 
-    public:
         class ElementNotInTree: exception{};
         class ElementAlreadyInTree: exception{};
-        class MaxElementInTree: exception{};
+
         BinSearchTree(): root(nullptr)
         {
             
@@ -63,13 +68,13 @@ class BinSearchTree
             destroyRecursive(root);
         }
 
-        Node* getRoot() const
+        virtual Node* getRoot() const
         {
             return root;
         }
 
         //O(log(n))
-        Node* findElement(const K& key, Node* start) const
+        virtual Node* findElement(const K& key, Node* start) const
         {
             if(start == nullptr){
                 throw ElementNotInTree();
@@ -134,9 +139,7 @@ class BinSearchTree
                 return this->root;
             }
 
-            /**
-             * @brief If the key to be deleted is in the left subtree
-             */
+            // If the key to be deleted is in the left subtree
             if(key < root->key){
                 root->left = deleteNode(root->left, key);
                 if(root->left != nullptr){
@@ -144,9 +147,7 @@ class BinSearchTree
                 }
             }
 
-            /**
-             * @brief If the key to be deleted is in the right subtree
-             */
+            // If the key to be deleted is in the right subtree
             else if(root->key < key){
                 root->right = deleteNode(root->right, key);
                 if(root->right != nullptr){
@@ -154,9 +155,7 @@ class BinSearchTree
                 }
             }
             
-            /**
-             * @brief The root's key is equal to the key we want to delete
-             */
+            //The root's key is equal to the key we want to delete
             else{
 
                 Node* temp;
@@ -188,9 +187,9 @@ class BinSearchTree
         }
 
         //O(n)
-        void inorder(Node* root) const
+        virtual void inorder(Node* root) const
         {
-            if (root == NULL) {return;}
+            if (root == nullptr) {return;}
             inorder(root->left);
             std::cout << root->key << " ";
             inorder(root->right);
@@ -219,13 +218,10 @@ class BinSearchTree
         }
 
         //O(log n)
-        Node* findNextInorder(Node* start) const
+        virtual Node* findNextInorder(Node* start) const
         {
             if(start->right != nullptr){
                 return findMinNode(start->right);
-            }
-            if(start == findMaxNode(root)){
-                throw MaxElementInTree();
             }
             Node* temp = start;
             Node* next = start->parent;

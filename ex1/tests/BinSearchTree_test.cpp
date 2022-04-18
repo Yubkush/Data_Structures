@@ -73,7 +73,7 @@ bool testDeleteNode(const vector<shared_ptr<Employee>>& employees, BinSearchTree
     try{
         for (shared_ptr<Employee> employee : employees)
         {
-            tree.deleteNode(tree.getRoot() ,employee->GetEmployeeId());
+            auto node = tree.deleteNode(tree.getRoot() ,employee->GetEmployeeId());
             tree.inorder(tree.getRoot());
             std::cout << std::endl;
         }
