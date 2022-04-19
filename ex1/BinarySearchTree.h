@@ -4,6 +4,7 @@
 #include <exception>
 #include <iostream>
 #include <memory>
+#include <functional>
 
 using std::exception;
 using std::shared_ptr;
@@ -28,7 +29,7 @@ class BinSearchTree
                 Node(const Node&) = default;
                 Node& operator=(const Node&) = default;
                 ~Node() = default;
-                const T& getData() const{
+                T& getData() const{
                     return data;
                 }
                 Node* getLeft() const{
@@ -132,6 +133,7 @@ class BinSearchTree
             if(root == nullptr){
                 return root;
             }
+            //tree has one node
             if(this->root == root && root->left == nullptr && root->right == nullptr){
                 Node* temp = this->root;
                 this->root = nullptr;
@@ -180,6 +182,14 @@ class BinSearchTree
                     else{
                         root = nullptr;
                     }
+
+                    if(root != nullptr){
+                        root->parent = temp->parent;
+                        // if after deletetion root becomes the tree's root
+                        if(root->parent == nullptr){
+                            this->root = root;
+                        }
+                    }
                     delete(temp);
                 }
             }
@@ -187,12 +197,47 @@ class BinSearchTree
         }
 
         //O(n)
-        virtual void inorder(Node* root) const
+        virtual void inorder(Node* root, std::function<void(Node*)> visit) const
         {
             if (root == nullptr) {return;}
-            inorder(root->left);
-            std::cout << root->key << " ";
-            inorder(root->right);
+            inorder(root->left, visit);
+            visit(root);
+            inorder(root->right, visit);
+        }
+
+        //O(n)
+        virtual void reverseInorder(Node* root, std::function<void(Node*)> visit) const
+        {
+            if (root == nullptr) {return;}
+            inorder(root->right, visit);
+            visit(root);
+            inorder(root->left, visit);
+        }
+
+        virtual int elementsInRange(Node* root, const K& low, const K& high, std::function<bool(T)> condition) const
+        {
+            if(root == nullptr){
+                return 0;
+            }
+            //root is in range of keys
+            if(root->key >= low && root->key <= high){
+                if(condition(root->data)){
+                    return 1 + elementsInRange(root->left, low, high, condition) 
+                        + elementsInRange(root->right, low, high, condition);
+                }
+                else{
+                    return elementsInRange(root->left, low, high, condition) + 
+                        elementsInRange(root->right, low, high, condition);
+                }   
+            }
+
+            else if(root->key < low){
+                return elementsInRange(root->right, low, high, condition);
+            }
+
+            else{
+                return elementsInRange(root->left, low, high, condition);
+            }
         }
 
         //O(log n)

@@ -9,6 +9,8 @@ template <class T, class K>
 class AVLTree : BinSearchTree<T,K>
 {
     public:
+        using BinSearchTree<T,K>::findMaxNode;
+        using BinSearchTree<T,K>::findMinNode;
         typedef typename BinSearchTree<T,K>::Node* AVLNode;
         AVLTree() : BinSearchTree<T,K>() {}
         ~AVLTree() = default;
@@ -18,9 +20,9 @@ class AVLTree : BinSearchTree<T,K>
             return this->root;
         }
 
-        void inorder(AVLNode root) const override
+        void inorder(AVLNode root, std::function<void(AVLNode)> visit) const override
         {
-            BinSearchTree<T, K>::inorder(root);
+            BinSearchTree<T, K>::inorder(root, visit);
         }
 
         AVLNode findElement(const K& key, AVLNode start) const override
@@ -128,8 +130,8 @@ class AVLTree : BinSearchTree<T,K>
             if(getBalanceFactor(node) >= 2){
                 //LR_rotation
                 if(getBalanceFactor(node->left) < 0){
-                    LLR(node->left);
-                    RRR(node);
+                    RRR(node->left);
+                    LLR(node);
                 }
                 //LL rotation
                 else{
@@ -139,8 +141,8 @@ class AVLTree : BinSearchTree<T,K>
             else if(getBalanceFactor(node) <= -2){
                 //RL rotation
                 if(getBalanceFactor(node->right) > 0){
-                    RRR(node->right);
-                    LLR(node);
+                    LLR(node->right);
+                    RRR(node);
                 }
                 //RR rotation
                 else{

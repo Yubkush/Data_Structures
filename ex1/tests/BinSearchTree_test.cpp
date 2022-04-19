@@ -36,12 +36,6 @@ bool testInsertNode(const vector<shared_ptr<Employee>>& employees, BinSearchTree
     return true;
 }
 
-void testInorder(BinSearchTree<shared_ptr<Employee>, int>& tree)
-{
-    tree.inorder(tree.getRoot());
-    std::cout << std::endl;
-}
-
 bool testFindElement(const vector<shared_ptr<Employee>>& employees, BinSearchTree<shared_ptr<Employee>, int>& tree){
     shared_ptr<Employee> dummy_employee(new Employee(0, 0, 0, 0));
     try{
@@ -74,8 +68,6 @@ bool testDeleteNode(const vector<shared_ptr<Employee>>& employees, BinSearchTree
         for (shared_ptr<Employee> employee : employees)
         {
             auto node = tree.deleteNode(tree.getRoot() ,employee->GetEmployeeId());
-            tree.inorder(tree.getRoot());
-            std::cout << std::endl;
         }
     }catch(const std::exception& e){return false;}
     if(tree.getRoot() != nullptr){
@@ -103,7 +95,6 @@ int main(){
     vector<shared_ptr<Employee>> employees;
     fillVector(employees);
     testFunction(testInsertNode, employees, tree);
-    testInorder(tree);
     testFunction(testFindElement, employees, tree);
     testFunction(testDeleteNode, employees, tree);
     return 0;

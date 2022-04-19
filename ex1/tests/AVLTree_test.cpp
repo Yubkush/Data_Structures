@@ -90,13 +90,6 @@ bool testInsertNode(const vector<shared_ptr<Employee>>& employees, AVLTree<share
     return true;
 }
 
-void testInorder(const AVLTree<shared_ptr<Employee>, int>& tree)
-{
-    std::cout << "Testing " << __func__ << " ";
-    tree.inorder(tree.getRoot());
-    std::cout << std::endl;
-}
-
 bool testFindElement(const vector<shared_ptr<Employee>>& employees, AVLTree<shared_ptr<Employee>, int>& tree){
     std::cout << "Testing " << __func__ << " ";
     shared_ptr<Employee> dummy_employee(new Employee(0, 0, 0, 0));
@@ -117,8 +110,7 @@ bool testFindElement(const vector<shared_ptr<Employee>>& employees, AVLTree<shar
     vector<int> to_find {employees[0]->GetEmployeeId(),
                         employees[7]->GetEmployeeId(),
                         employees[6]->GetEmployeeId(),
-                        employees[8]->GetEmployeeId(),
-                        employees[10]->GetEmployeeId()};
+                        employees[8]->GetEmployeeId()};
     for(int id : to_find){
         shared_ptr<Employee> employee_to_find = tree.findElement(id, tree.getRoot())->getData();
         if(employee_to_find->GetEmployeeId() != id){
@@ -212,27 +204,49 @@ void fillVector2(vector<shared_ptr<Employee>>& employees)
     }
 }
 
+void fillVector3(vector<shared_ptr<Employee>>& employees)
+{
+    for (int i = 1; i < 5; i++)
+    {
+        shared_ptr<Employee> employee(new Employee(10*i, 2, 1000*i, i+5));
+        employees.push_back(employee);
+    }
+    shared_ptr<Employee> employee(new Employee(35, 2, 1000, 1));
+    employees.push_back(employee);
+    for (int i = 11; i < 16; i++)
+    {
+        shared_ptr<Employee> employee(new Employee(i, 2, 1000*i, i+5));
+        employees.push_back(employee);
+    }
+}
+
+
 int main(){
     AVLTree<shared_ptr<Employee>, int> tree;
     vector<shared_ptr<Employee>> employees;
     fillVector1(employees);
     testFunction(testDeleteEmptyTree, employees, tree);
     testFunction(testSingleNode, employees, tree);
-    //test fillVector1 tree
+    // test fillVector1 tree
     testFunction(testInsertNode, employees, tree);
-    testInorder(tree);
-    //print2D(tree.getRoot());
     testFunction(testFindElement, employees, tree);
     testFunction(testDeleteNode, employees, tree);
      
     // test fillVector2 tree
-    // employees.clear();
-    // fillVector2(employees);
-    // testFunction(testInsertNode, employees, tree);
-    // testInorder(tree);
-    // //print2D(tree.getRoot());
-    // testFunction(testFindElement, employees, tree);
-    // testFunction(testDeleteNode, employees, tree);
+    employees.clear();
+    fillVector2(employees);
+    testFunction(testInsertNode, employees, tree);
+    // print2D(tree.getRoot());
+    testFunction(testFindElement, employees, tree);
+    // print2D(tree.getRoot());
+    testFunction(testDeleteNode, employees, tree);
+
+    // test fillVector3 tree
+    employees.clear();
+    fillVector3(employees);
+    testFunction(testInsertNode, employees, tree);
+    testFunction(testFindElement, employees, tree);
+    testFunction(testDeleteNode, employees, tree);
     
     return 0;
 }

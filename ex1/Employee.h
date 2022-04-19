@@ -1,24 +1,27 @@
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
 
+#include "Company.h"
+
+class Company;
+
 class Employee
 {
     private:
         int id;
-        int company_id;
         int salary;
         int grade;
+        Company* company;
     
     public:
-        Employee(const int employee_id, const int company_id, const int salary, const int grade);
+        Employee(const int employee_id, Company* company_id, const int salary, const int grade);
         int GetEmployeeId() const;
-        int GetCompanyId() const;
+        Company* GetCompanyPtr() const;
         int GetSalary() const;
         int GetGrade() const;
-        void SetCompanyId(const int company_id);
+        void SetCompanyPtr(Company* company);
         void SetSalary(const int salary); 
         void SetGrade(const int grade);
-        bool operator<(const Employee& employee) const;
 };
 
 #endif /* EMPLOYEE_H_ */
