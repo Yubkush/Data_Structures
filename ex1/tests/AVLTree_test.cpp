@@ -28,7 +28,7 @@ void print2DUtil(AVLTree<Employee*, IdCondition>::Node* root, int space)
     cout<<std::endl;
     for (int i = COUNT; i < space; i++)
         cout<<" ";
-    cout<<root->data<<"\n";
+    cout<<root->data->GetEmployeeId()<<"\n";
  
     // Process left child
     print2DUtil(root->left, space);
@@ -120,6 +120,7 @@ bool testFindElement(const vector<Employee*>& employees, AVLTree<Employee*, IdCo
             return false;
         }
     }
+    delete dummy_employee;
     return true;
 }
 //doesnt use employees
@@ -134,6 +135,7 @@ bool testDeleteEmptyTree(const vector<Employee*>& employees, AVLTree<Employee*, 
     if(tree.getRoot() != nullptr){
         return false;
     }
+    delete dummy_employee;
     return true;
 }
 //empty the tree
@@ -143,7 +145,7 @@ bool testDeleteNode(const vector<Employee*>& employees, AVLTree<Employee*, IdCon
     try{
         for (Employee* employee : employees)
         {
-            print2D(tree.getRoot());
+            // print2D(tree.getRoot());
             tree.deleteNode(employee);
             if(!inorderCheckBalance(tree.getRoot())){
                 return false;
@@ -224,6 +226,15 @@ void fillVector3(vector<Employee*>& employees)
     }
 }
 
+void clearVector(vector<Employee*>& employees)
+{
+    for (auto p : employees)
+    {
+        delete p;
+    } 
+    employees.clear();
+}
+
 
 int main(){
     IdCondition cond;
@@ -238,7 +249,7 @@ int main(){
     testFunction(testDeleteNode, employees, tree);
      
     // test fillVector2 tree
-    employees.clear();
+    clearVector(employees);
     fillVector2(employees);
     testFunction(testInsertNode, employees, tree);
     // print2D(tree.getRoot());
@@ -247,11 +258,12 @@ int main(){
     testFunction(testDeleteNode, employees, tree);
 
     // test fillVector3 tree
-    employees.clear();
+    clearVector(employees);
     fillVector3(employees);
     testFunction(testInsertNode, employees, tree);
     testFunction(testFindElement, employees, tree);
     testFunction(testDeleteNode, employees, tree);
     
+    clearVector(employees);
     return 0;
 }

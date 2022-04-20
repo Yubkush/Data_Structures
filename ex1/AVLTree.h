@@ -105,7 +105,7 @@ class AVLTree
         }
 
         //right rotation
-        void LLR(Node* root)
+        Node* LLR(Node* root)
         {
             Node* left_of_root = root->left;
             //move left_of_root right subtree to be root's left subtree
@@ -119,9 +119,10 @@ class AVLTree
             //update heights
             fixHeight(root);
             fixHeight(left_of_root);
+            return left_of_root;
         }
         //left rotation
-        void RRR(Node* root)
+        Node* RRR(Node* root)
         {
             Node* right_of_root = root->right;
             //move right_of_root left subtree to be root's right subtree
@@ -135,32 +136,34 @@ class AVLTree
             //update heights
             fixHeight(root);
             fixHeight(right_of_root);
+            return right_of_root;
         }
 
-        void rebalance(Node* node)
+        Node* rebalance(Node* node)
         {
             if(getBalanceFactor(node) >= 2){
                 //LR_rotation
                 if(getBalanceFactor(node->left) < 0){
-                    RRR(node->left);
-                    LLR(node);
+                    node->left = RRR(node->left);
+                    return LLR(node);
                 }
                 //LL rotation
                 else{
-                    LLR(node);
+                    return LLR(node);
                 }
             }
             else if(getBalanceFactor(node) <= -2){
                 //RL rotation
                 if(getBalanceFactor(node->right) > 0){
-                    LLR(node->right);
-                    RRR(node);
+                    node->right = LLR(node->right);
+                    return RRR(node);
                 }
                 //RR rotation
                 else{
-                    RRR(node);
+                    return RRR(node);
                 }
             }
+            return node;
         }
 
         //O(log(n))
@@ -187,11 +190,11 @@ class AVLTree
             }
             else if(condition(value, start->data)){
                 start->left = insertNodeHelper(value, start->left);
-                rebalance(start);
+                start = rebalance(start);
             }
             else if(condition(start->data, value)){
                 start->right = insertNodeHelper(value, start->right);
-                rebalance(start);
+                start = rebalance(start);
             }
             start->height = ((getHeight((start->left)) > getHeight(start->right)) ? 
                             getHeight((start->left)) : getHeight(start->right)) + 1;
@@ -256,7 +259,7 @@ class AVLTree
             }
             to_delete->height = ((getHeight((to_delete->left)) > getHeight(to_delete->right)) ? 
                             getHeight((to_delete->left)) : getHeight(to_delete->right)) + 1;
-            rebalance(to_delete);
+            to_delete = rebalance(to_delete);
             return to_delete;
         }
 
