@@ -1,7 +1,7 @@
 #include "Employee.h"
 
-Employee::Employee(const int employee_id, const int company_id, const int salary, const int grade):
-id(employee_id), company_id(company_id), salary(salary), grade(grade)
+Employee::Employee(const int employee_id, Company* company, const int salary, const int grade):
+id(employee_id), company(company), salary(salary), grade(grade)
 {
     
 }
@@ -10,9 +10,9 @@ int Employee::GetEmployeeId() const{
     return this->id;
 }
 
-int Employee::GetCompanyId() const
+Company* Employee::GetCompany() const
 {
-    return company_id;
+    return company;
 }
 
 int Employee::GetSalary() const
@@ -25,9 +25,9 @@ int Employee::GetGrade() const
     return grade;
 }
 
-void Employee::SetCompanyId(const int company_id)
+void Employee::SetCompany(Company* company)
 {
-    this->company_id = company_id;
+    this->company = company;
 }
 
 void Employee::SetSalary(const int salary)
@@ -38,9 +38,4 @@ void Employee::SetSalary(const int salary)
 void Employee::SetGrade(const int grade)
 {
     this->grade = grade;
-}
-
-bool Employee::operator<(const Employee& employee) const
-{
-    return this->id < employee.GetEmployeeId();
 }

@@ -4,16 +4,11 @@
 #include <string>
 #include <exception>
 #include <math.h>
+#include <functional>
 #include "Conditions.h"
 #include "Employee.h"
 using std::string;
 using std::exception;
-
-// class Condition
-// {
-//     public:
-//         virtual bool operator()(const Employee* e1, const Employee* e2) = 0;
-// };
 
 template <class T, class Cond>
 class AVLTree
@@ -40,19 +35,9 @@ class AVLTree
                 {
                     return data;
                 }
-                
         };
-
-        Node* root;
-        Cond condition;
-        class ElementNotInTree: exception{};
-        class ElementAlreadyInTree: exception{};
-        class MaxElementInTree: exception{};
-        AVLTree(const Cond& condition): root(nullptr), condition(condition)
-        {
-            
-        }
-
+    
+    private:
         void destroyRecursive(Node* node)
         {
             if(node != nullptr){
@@ -62,24 +47,14 @@ class AVLTree
             }
         }
 
-        virtual ~AVLTree()
-        {
-            destroyRecursive(root);
-        }
-
-        Node* getRoot()
-        {
-            return this->root;
-        }
-
-        static int getHeight(const Node* node)
+        int getHeight(const Node* node)
         {
             if(node == nullptr)
                 return -1;
             return node->height;
         }
 
-        static int getBalanceFactor(const Node* node)
+        int getBalanceFactor(const Node* node)
         {
             if(node == nullptr){
                 return 0;
@@ -166,23 +141,6 @@ class AVLTree
             return node;
         }
 
-        //O(log(n))
-        Node* findElement(const T& data, Node* start)
-        {
-            if(start == nullptr){
-                throw ElementNotInTree();
-            }
-            else if(!condition(start->data, data) && !condition(data, start->data)){
-                return start;
-            }
-            else if(condition(data, start->data)){
-                return findElement(data, start->left);
-            }
-            else{
-                return findElement(data, start->right);
-            }
-        }
-
         Node* insertNodeHelper(const T& value, Node* start)
         {
             if(start == nullptr){
@@ -201,23 +159,6 @@ class AVLTree
             return start;
         }
 
-        //O(log(n))
-        void insertNode(const T& value)
-        {
-            try{
-                this->findElement(value, this->root);
-                throw ElementAlreadyInTree();
-            }
-            catch(const ElementNotInTree& e){}
-            this->root = insertNodeHelper(value, this->root);
-        }
-
-        //O(1)
-        bool isEmpty() const
-        {
-            return root == nullptr;
-        }
-        
         //O(log n)
         Node* deleteNodeHelper(const T& data ,Node* to_delete)
         {
@@ -263,6 +204,110 @@ class AVLTree
             return to_delete;
         }
 
+        void treeToSortedArray(Node* root ,T arr[], int index = 0)
+        {
+            if(root != nullptr){
+                treeToSortedArray(root->left, arr, index);
+                arr[index] = root->data;
+                index++;
+                treeToSortedArray(root->right, arr, index);
+            }
+        }
+
+        void mergeArrays(T merged[], T arr1[], T arr2[], int len1, int len2)
+        {
+            int i = 0, j = 0, p = 0;
+            while(i<len1 && j<len2){
+                if(condition(arr1[i], arr2[j])){
+                    merged[p] = arr1[i];
+                    i++;
+                }
+                else{
+                    merged[p] = arr2[j];
+                    j++;
+                }
+                p++;
+            }
+            for(;i<len1;i++, p++){merged[p] = arr1[i];}
+            for(;j<len2;j++, p++){merged[p] = arr2[j];}
+        }
+
+        Node* sortedArrayToAVLTree(T merged, int start, int end)
+        {
+            if(start > end){
+                return nullptr;
+            }
+            
+            int mid = (start+end)/2;
+            Node* root = new Node(merged[mid]);
+            root->left = sortedArrayToAVLTree(merged, start, mid - 1);
+            root->right = sortedArrayToAVLTree(merged, mid + 1, end);
+
+            return root;
+        }
+
+        int countElements(Node* root)
+        {
+            if(root == nullptr)
+                return 0;
+            return 1 + countElements(root->left) + countElements(root->right);
+        }
+
+    public:
+        Node* root;
+        Cond condition;
+        class ElementNotInTree: exception{};
+        class ElementAlreadyInTree: exception{};
+        class MaxElementInTree: exception{};
+        AVLTree(const Cond& condition): root(nullptr), condition(condition)
+        {
+            
+        }
+
+        virtual ~AVLTree()
+        {
+            destroyRecursive(root);
+        }
+
+        Node* getRoot()
+        {
+            return this->root;
+        }
+
+        //O(log(n))
+        Node* findElement(const T& data, Node* start)
+        {
+            if(start == nullptr){
+                throw ElementNotInTree();
+            }
+            else if(!condition(start->data, data) && !condition(data, start->data)){
+                return start;
+            }
+            else if(condition(data, start->data)){
+                return findElement(data, start->left);
+            }
+            else{
+                return findElement(data, start->right);
+            }
+        }
+
+        //O(log(n))
+        void insertNode(const T& value)
+        {
+            try{
+                this->findElement(value, this->root);
+                throw ElementAlreadyInTree();
+            }
+            catch(const ElementNotInTree& e){}
+            this->root = insertNodeHelper(value, this->root);
+        }
+
+        //O(1)
+        bool isEmpty() const
+        {
+            return root == nullptr;
+        }
+
         void deleteNode(const T& data)
         {
             try{
@@ -305,23 +350,51 @@ class AVLTree
             return current;
         }
 
-        //O(log n)
-        Node* findNextInorder(Node* start)
+        //O(h+m) where m is number of elements in range and h is the height of the tree
+        int elementsInRange(Node* root, const T& low, const T& high, std::function<bool(T&)> extra_condition) const
         {
-            if(start->right != nullptr){
-                return findMinNode(start->right);
+            if(root == nullptr){
+                return 0;
             }
-            if(start == findMaxNode(root)){
-                throw MaxElementInTree();
+            //root is in range of data
+            if(!condition(root->data, low) && !condition(high, root->data)){
+                if(extra_condition(root->data)){
+                    return 1 + elementsInRange(root->left, low, high, extra_condition) 
+                        + elementsInRange(root->right, low, high, extra_condition);
+                }
+                else{
+                    return elementsInRange(root->left, low, high, extra_condition) + 
+                        elementsInRange(root->right, low, high, extra_condition);
+                }   
             }
-            Node* temp = start;
-            Node* next = start->parent;
-            while (next != nullptr && temp == next->right)
-            {
-                temp = next;
-                next = next->parent;
+            //out of range
+            else if(condition(root->data, low)){
+                return elementsInRange(root->right, low, high, extra_condition);
             }
-            return next;
+
+            else{
+                return elementsInRange(root->left, low, high, extra_condition);
+            }
+        }
+        
+        // O(m+n) where m is number of elements in this and n in number of elements in tree
+        void absorbTree(AVLTree tree)
+        {
+            int len1 = countElements(this->root);
+            int len2 = countElements(tree.getRoot());
+            T *arr1 = new T[len1];
+            T *arr2 = new T[len2];
+            T *merged = new T[len1 + len2];
+            treeToSortedArray(this->root, arr1);
+            treeToSortedArray(this->root, arr2);
+            mergeArrays(merged, arr1, arr2, len1, len2);
+            Node* temp = this->root;
+            this->root = sortedArrayToAVLTree(merged, 0, len1 + len2 - 1);
+            //destroy arrays and old tree
+            destroyRecursive(temp);
+            delete [] arr1;
+            delete [] arr2;
+            delete [] merged;
         }
 };
 

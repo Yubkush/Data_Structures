@@ -3,6 +3,7 @@
 
 #include "Employee.h"
 #include "AVLTree.h"
+//#include "Company.h"
 
 class IdCondition
 {
@@ -29,5 +30,14 @@ class SalaryCondition
             }
         }
 };
+
+// class CompanyCondition
+// {
+//     public:
+//         bool operator()(const Company* c1, const Company* c2)
+//         {
+//             return c1->getId() < c2->getId();
+//         }
+// };
 
 #endif /* CONDITIONS_H */
