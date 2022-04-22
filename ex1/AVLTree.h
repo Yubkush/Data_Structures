@@ -320,15 +320,6 @@ class AVLTree
         }
 
         //O(log n)
-        template <class Action>
-        void inorder(Node* root, const Action& action) {
-            if (root == NULL) {return;}
-            inorder(root->left);
-            action(root->data);
-            inorder(root->right);
-        }
-
-        //O(log n)
         Node* findMinNode(Node* node)
         {
             Node* current = node;
@@ -395,6 +386,32 @@ class AVLTree
             delete [] arr1;
             delete [] arr2;
             delete [] merged;
+        }
+
+        void destroyRecursiveData(Node* node)
+        {
+            if(node != nullptr){
+                destroyRecursive(node->left);
+                destroyRecursive(node->right);
+                delete node->data;
+            }
+        }
+
+        template <class Action>
+        void inorder(Node* root, const Action& action) {
+            if (root == NULL) {return;}
+            inorder(root->left);
+            action(root->data);
+            inorder(root->right);
+        }
+
+        template <class K>
+        void inorder(Node* root, std::function<void(T,K)> visit) const
+        {
+            if (root == nullptr) {return;}
+            inorder(root->left, visit);
+            visit(root->data);
+            inorder(root->right, visit);
         }
 };
 
