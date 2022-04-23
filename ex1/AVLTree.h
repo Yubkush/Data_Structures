@@ -342,7 +342,8 @@ class AVLTree
         }
 
         //O(h+m) where m is number of elements in range and h is the height of the tree
-        int elementsInRange(Node* root, const T& low, const T& high, std::function<bool(T&)> extra_condition) const
+        template <class EX>
+        int elementsInRange(Node* root, const T& low, const T& high, EX extra_condition)
         {
             if(root == nullptr){
                 return 0;

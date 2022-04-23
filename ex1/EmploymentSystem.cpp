@@ -1,7 +1,7 @@
 #include "EmploymentSystem.h"
 
 
-EmploymentSystem::EmploymentSystem() : id_cond(), salary_cond(), company_cond(), highest_earner(nullptr),
+EmploymentSystem::EmploymentSystem() : id_cond(), salary_cond(), company_cond(), highest_earner(nullptr), num_of_employees(0), num_companies_with_employees(0),
 employees_id_dict(id_cond), employees_salary_dict(salary_cond), all_companies(company_cond), companies_with_employees(company_cond)
 {
     
@@ -57,10 +57,14 @@ void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, in
         employees_salary_dict.insertNode(employee_to_add);
         //update highest_earner
         highest_earner = employees_salary_dict.findMaxNode(employees_salary_dict.getRoot())->getData();
+        num_of_employees++;
         //insert employee to company employees tree
         company_ptr->AddEmployee(employee_to_add);
-        //insert company to companies_with_employees tree (3)
-        companies_with_employees.insertNode(company_ptr);
+        //insert company to companies_with_employees tree
+        if(company_ptr->getNumOfEmployees() == 1){
+            companies_with_employees.insertNode(company_ptr);
+        }
+        num_companies_with_employees++;
     }
     catch(const CompanyNotInSystem& e){ // 1
         throw e;
@@ -68,13 +72,13 @@ void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, in
     catch(const AVLTree<Employee*, IdCondition>::ElementAlreadyInTree& e){ // 2
         throw EmployeeAlreadyExists();
     }
-    catch(const AVLTree<Company*, CompanyCondition>::ElementAlreadyInTree& e){} // 3
     catch(const std::bad_alloc& e){throw e;}
 }
 
 void EmploymentSystem::removeCompanyIfEmpty(Company* company){
     if(company->getNumOfEmployees() == 0){
         companies_with_employees.deleteNode(company);
+        num_companies_with_employees--;
     }
 }
 
@@ -83,12 +87,16 @@ void EmploymentSystem::RemoveEmployee(int EmployeeID)
     try{
         //find employee (1)
         Employee* employee_to_remove = GetEmployeeInfo(EmployeeID);
-        //remove employee (2)
+        //remove employee from company (2)
         employee_to_remove->GetCompany()->removeEmployee(employee_to_remove);
         //remove company from companies_with_employees if it becomes empty
         removeCompanyIfEmpty(employee_to_remove->GetCompany());
+        //remove employee from employees trees
         employees_id_dict.deleteNode(employee_to_remove);
         employees_salary_dict.deleteNode(employee_to_remove);
+        //updadte num_of_employees and highest_earner
+        highest_earner = employees_salary_dict.findMaxNode(employees_salary_dict.getRoot())->getData();
+        num_of_employees--;
         delete employee_to_remove;
     }
     catch(const EmployeeNotInSystem& e){ // 1
@@ -160,16 +168,16 @@ void EmploymentSystem::HireEmployee(int EmployeeID, int NewCompanyID)
         new_company->AddEmployee(employee);
         if(new_company->getNumOfEmployees() == 1){
             companies_with_employees.insertNode(new_company);
+            num_companies_with_employees++;
         }
         employee->SetCompany(new_company);
     }
     catch(const EmployeeNotInSystem& e){throw e;}
     catch(const CompanyNotInSystem& e){throw e;}
-    catch(const Company::EmployeeNotInCompany& e){throw e;}
     catch(const Company::EmployeeAlreadyInCompany& e){throw e;}
 }
 
-Employee* EmploymentSystem::GetHighestEarner(int CompanyID, int EmployeeID)
+Employee* EmploymentSystem::GetHighestEarner(int CompanyID)
 {
     if(highest_earner == nullptr){
         throw NoEmployeesInSystem();
@@ -179,6 +187,9 @@ Employee* EmploymentSystem::GetHighestEarner(int CompanyID, int EmployeeID)
     }
     try{
        Company* company = GetCompanyInfo(CompanyID);
+       if(company->getNumOfEmployees() == 0){
+           throw NoEmployeesInCompany();
+       }
        return company->getHighestEarner();
     }
     catch(const CompanyNotInSystem& e){throw e;}
@@ -205,10 +216,15 @@ void EmploymentSystem::AcquireCompany(int AcquirerID, int TargetID, double Facto
            throw AcquireFailed();
        }
        changeEmployer(target->getEmployeeIdDict().getRoot(), acquirer);
-       //remove target from company trees
+       //remove target from company trees and add acquirer if it didnt have employees
        all_companies.deleteNode(target);
        if(target->getNumOfEmployees() != 0){
            companies_with_employees.deleteNode(target);
+           num_companies_with_employees--;
+           if(acquirer->getNumOfEmployees() == 0){
+                companies_with_employees.insertNode(acquirer);
+                num_companies_with_employees++;
+           }
        }
        //update acquirer highest_earner
        acquirer->setHighestEarner((acquirer->getHighestEarner()->GetSalary() > target->getHighestEarner()->GetSalary()) ?
@@ -220,6 +236,93 @@ void EmploymentSystem::AcquireCompany(int AcquirerID, int TargetID, double Facto
        acquirer->setValue((int)((target_value + acquirer->getValue()) * Factor));
        acquirer->setNumOfEmployees(acquirer->getNumOfEmployees() + target_num_of_employees); 
        delete target;
+    }
+    catch(const CompanyNotInSystem& e){throw e;}
+    catch(const std::bad_alloc& e){throw e;}
+}
+
+static void reverseInorderSalary(AVLTree<Employee*, SalaryCondition>::Node* root, int **Employees, int index = 0)
+{
+    if (root == nullptr) {return;}
+    reverseInorderSalary(root->right, Employees, index);
+    *Employees[index] = root->getData()->GetEmployeeId();
+    index++;
+    reverseInorderSalary(root->left, Employees, index);
+}
+
+void EmploymentSystem::GetAllEmployeesBySalary(int CompanyID, int **Employees, int *NumOfEmployees)
+{
+    if(CompanyID < 0 && num_of_employees == 0){
+        throw NoEmployeesInSystem();
+    }
+    try{
+        AVLTree<Employee*, SalaryCondition> tree(salary_cond);
+        if(CompanyID > 0){
+            Company* company = GetCompanyInfo(CompanyID);
+            if(company->getNumOfEmployees() == 0){
+                throw NoEmployeesInCompany();
+            }
+            AVLTree<Employee*, SalaryCondition> tree = company->getEmployeeSalaryDict();
+            *NumOfEmployees = company->getNumOfEmployees();
+        }
+        else{
+            AVLTree<Employee*, SalaryCondition> tree = employees_salary_dict;
+            *NumOfEmployees = num_of_employees;
+        }
+        *Employees = (int*)malloc(sizeof(int) * (*NumOfEmployees));
+        if(*Employees == NULL){
+            throw std::bad_alloc();
+        }
+        reverseInorderSalary(tree.getRoot(), Employees);
+    }
+    catch(const CompanyNotInSystem& e){throw e;}
+}
+
+static void inorderHighestEarners(AVLTree<Company*, CompanyCondition>::Node* root, int **Employees, int NumOfCompanies, int index = 0)
+{
+    if (root == nullptr || index + 1 >= NumOfCompanies) {return;}
+    inorderHighestEarners(root->left, Employees, NumOfCompanies, index);
+    *Employees[index] = root->getData()->getHighestEarner()->GetEmployeeId();
+    index++;
+    inorderHighestEarners(root->right, Employees, NumOfCompanies, index);
+}
+
+void EmploymentSystem::GetHighestEarnerInEachCompany(int NumOfCompanies, int **Employees)
+{
+    if(NumOfCompanies > num_companies_with_employees){
+        throw NotEnoughCompanies();
+    }
+    *Employees = (int*)malloc(sizeof(int) * (NumOfCompanies));
+    if(*Employees == NULL){
+        throw std::bad_alloc();
+    }
+    inorderHighestEarners(companies_with_employees.getRoot(), Employees, NumOfCompanies);
+}
+
+void EmploymentSystem::GetNumEmployeesMatching(int CompanyID, int MinEmployeeID, int MaxEmployeeId,
+                        int MinSalary, int MinGrade, int *TotalNumOfEmployees, int *NumOfEmployees)
+{
+    try{
+        if(num_of_employees <= 0){
+            throw NoEmployeesInSystem();
+        }
+        AVLTree<Employee*, IdCondition> tree(id_cond);
+        if(CompanyID > 0){
+            Company* company = GetCompanyInfo(CompanyID);
+            if(company->getNumOfEmployees() == 0){
+                throw NoEmployeesInCompany();
+            }
+            AVLTree<Employee*, IdCondition> tree = company->getEmployeeIdDict();
+        }
+        else{
+            AVLTree<Employee*, IdCondition> tree = employees_id_dict;
+        }
+        ExtraPlaceholder dummy;
+        ExtraEmployeeConditions salary_grade(MinSalary, MinGrade);
+        Employee dummy_min_id(MinEmployeeID, nullptr, 0, 0);
+        Employee dummy_max_id(MaxEmployeeId, nullptr, 0, 0);
+        *TotalNumOfEmployees = tree.elementsInRange<ExtraPlaceholder>(tree.getRoot(), &dummy_min_id, &dummy_max_id, dummy);
+        *NumOfEmployees = tree.elementsInRange<ExtraEmployeeConditions>(tree.getRoot(), &dummy_min_id, &dummy_max_id, salary_grade);
     }
     catch(const CompanyNotInSystem& e){throw e;}
     catch(const std::bad_alloc& e){throw e;}
