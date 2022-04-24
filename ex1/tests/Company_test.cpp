@@ -175,55 +175,55 @@ bool finalTest(const vector<Employee*>& employees, Company& company)
     return true;
 }
 
-void fillVector1(vector<Employee*>& employees)
+void fillVector1(vector<Employee*>& employees, Company* company)
 {
-    Employee* employee = new Employee(5, 1, 1000, 1);
+    Employee* employee = new Employee(5, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(2, 1, 1000, 1);
+    employee = new Employee(2, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(8, 1, 1000, 1);
+    employee = new Employee(8, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(1, 1, 1000, 1);
+    employee = new Employee(1, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(4, 1, 1000, 1);
+    employee = new Employee(4, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(6, 1, 1000, 1);
+    employee = new Employee(6, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(10, 1, 1000, 1);
+    employee = new Employee(10, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(3, 1, 1000, 1);
+    employee = new Employee(3, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(7, 1, 1000, 1);
+    employee = new Employee(7, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(9, 1, 1000, 1);
+    employee = new Employee(9, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(12, 1, 1000, 1);
+    employee = new Employee(12, company, 1000, 1);
     employees.push_back(employee);
-    employee = new Employee(11, 1, 1000, 1);
+    employee = new Employee(11, company, 1000, 1);
     employees.push_back(employee);
 }
 
-void fillVector2(vector<Employee*>& employees)
+void fillVector2(vector<Employee*>& employees, Company* company)
 {
     for (int i = 0; i < 10; i++)
     {
-        Employee* employee = new Employee(i+1, 2, 1000*i, i+5);
+        Employee* employee = new Employee(i+1, company, 1000*i, i+5);
         employees.push_back(employee);
     }
 }
 
-void fillVector3(vector<Employee*>& employees)
+void fillVector3(vector<Employee*>& employees, Company* company)
 {
     for (int i = 1; i < 5; i++)
     {
-        Employee* employee = new Employee(101*i, 2, 10*i, i+5);
+        Employee* employee = new Employee(101*i, company, 10*i, i+5);
         employees.push_back(employee);
     }
-    Employee* employee = new Employee(35, 2, 1000, 1);
+    Employee* employee = new Employee(35, company, 1000, 1);
     employees.push_back(employee);
     for (int i = 11; i < 16; i++)
     {
-        Employee* employee = new Employee(i, 2, 1000, i+5);
+        Employee* employee = new Employee(i, company, 1000, i+5);
         employees.push_back(employee);
     }
 }
@@ -237,20 +237,30 @@ void clearVector(vector<Employee*>& employees)
     employees.clear();
 }
 
+void acquirCompany(Company* acquirer, Company* target)
+{
+    acquirer->getEmployeeIdDict().absorbTree(target->getEmployeeIdDict());
+    acquirer->getEmployeeSalaryDict().absorbTree(target->getEmployeeSalaryDict());
+}
 
 int main(){
-    Company company(1, 10000);
+    Company company(1, 100);
+    Company company1(1, 2000);
+    Company company2(1, 100000);
     vector<Employee*> employees;
-    fillVector1(employees);
+    fillVector1(employees, &company);
     testFunction(testEmptyCompany, employees, company);
     testFunction(testSingleEmployee, employees, company);
     // test fillVector1 company
     testFunction(testAddEmployee, employees, company);
+    acquirCompany(&company1, &company);
     testFunction(testRemoveEmployee, employees, company);
-     
+    testFunction(testAddEmployee, employees, company1);
+    //acquirCompany(&company1, &company);
+
     // test fillVector2 company
     clearVector(employees);
-    fillVector2(employees);
+    fillVector2(employees, &company);
     testFunction(testAddEmployee, employees, company);
     // print2D(company.getRoot());
     // print2D(company.getRoot());
@@ -258,7 +268,7 @@ int main(){
 
     // test fillVector3 company
     clearVector(employees);
-    fillVector3(employees);
+    fillVector3(employees, &company);
     testFunction(testAddEmployee, employees, company);
     testFunction(testRemoveEmployee, employees, company);
 

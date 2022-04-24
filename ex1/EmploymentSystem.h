@@ -3,8 +3,8 @@
 
 #include "AVLTree.h"
 #include "Employee.h"
-#include "Company.h"
 #include "Conditions.h"
+#include "Company.h"
 #include <exception>
 
 class CompanyCondition
@@ -18,10 +18,11 @@ class CompanyCondition
 
 class ExtraPlaceholder
 {
-    virtual bool operator()(Employee* employee) const
-    {
-        return true;
-    }
+    public:
+        bool operator()(Employee* employee) const
+        {
+            return true;
+        }
 };
 
 class ExtraEmployeeConditions

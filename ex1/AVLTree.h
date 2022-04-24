@@ -5,10 +5,9 @@
 #include <exception>
 #include <math.h>
 #include <functional>
-#include "Conditions.h"
-#include "Employee.h"
 using std::string;
 using std::exception;
+
 
 template <class T, class Cond>
 class AVLTree
@@ -232,7 +231,7 @@ class AVLTree
             for(;j<len2;j++, p++){merged[p] = arr2[j];}
         }
 
-        Node* sortedArrayToAVLTree(T merged, int start, int end)
+        Node* sortedArrayToAVLTree(T merged[], int start, int end)
         {
             if(start > end){
                 return nullptr;
@@ -244,6 +243,15 @@ class AVLTree
             root->right = sortedArrayToAVLTree(merged, mid + 1, end);
 
             return root;
+        }
+
+        void AVLTreeFixHeight(Node* root)
+        {
+            if(root!=nullptr){
+                AVLTreeFixHeight(root->left);
+                AVLTreeFixHeight(root->right);
+                fixHeight(root);
+            }
         }
 
         int countElements(Node* root)
@@ -370,7 +378,7 @@ class AVLTree
         }
         
         // O(m+n) where m is number of elements in this and n in number of elements in tree
-        void absorbTree(AVLTree tree)
+        void absorbTree(AVLTree& tree)
         {
             int len1 = countElements(this->root);
             int len2 = countElements(tree.getRoot());
@@ -378,10 +386,11 @@ class AVLTree
             T *arr2 = new T[len2];
             T *merged = new T[len1 + len2];
             treeToSortedArray(this->root, arr1);
-            treeToSortedArray(this->root, arr2);
+            treeToSortedArray(tree.root, arr2);
             mergeArrays(merged, arr1, arr2, len1, len2);
             Node* temp = this->root;
             this->root = sortedArrayToAVLTree(merged, 0, len1 + len2 - 1);
+            AVLTreeFixHeight(this->root);
             //destroy arrays and old tree
             destroyRecursive(temp);
             delete [] arr1;

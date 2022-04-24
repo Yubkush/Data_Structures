@@ -76,10 +76,10 @@ void Company::removeEmployee(Employee* employee)
         employee->SetCompany(nullptr);
         //update highest_earner and num_of_employees
         if(id_dict.isEmpty()){
-            highest_earner = salary_dict.findMaxNode(salary_dict.getRoot())->getData();
+            highest_earner = nullptr;
         }
         else{
-            highest_earner = nullptr;
+            highest_earner = salary_dict.findMaxNode(salary_dict.getRoot())->getData();
         }
         num_of_employees--;
     }

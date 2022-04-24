@@ -2,42 +2,23 @@
 #define CONDITIONS_H
 
 #include "Employee.h"
-#include "AVLTree.h"
-//#include "Company.h"
+
+class Employee;
 
 class IdCondition
 {
     public:
-        bool operator()(const Employee* e1, const Employee* e2)
-        {
-            return e1->GetEmployeeId() < e2->GetEmployeeId();
-        }
+        IdCondition() = default;
+        ~IdCondition() = default;
+        bool operator()(const Employee* e1, const Employee* e2) const;
 };
 
 class SalaryCondition
 {
     public:
-        bool operator()(const Employee* e1, const Employee* e2)
-        {
-            if(e1->GetSalary() < e2->GetSalary()){
-                return true;
-            }
-            else if(e1->GetSalary() > e2->GetSalary()){
-                return false;
-            }
-            else{
-                return e1->GetEmployeeId() > e2->GetEmployeeId();
-            }
-        }
+        SalaryCondition() = default;
+        ~SalaryCondition() = default;
+        bool operator()(const Employee* e1, const Employee* e2) const;
 };
-
-// class CompanyCondition
-// {
-//     public:
-//         bool operator()(const Company* c1, const Company* c2)
-//         {
-//             return c1->getId() < c2->getId();
-//         }
-// };
 
 #endif /* CONDITIONS_H */

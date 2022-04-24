@@ -88,9 +88,10 @@ void EmploymentSystem::RemoveEmployee(int EmployeeID)
         //find employee (1)
         Employee* employee_to_remove = GetEmployeeInfo(EmployeeID);
         //remove employee from company (2)
+        Company* company = employee_to_remove -> GetCompany();
         employee_to_remove->GetCompany()->removeEmployee(employee_to_remove);
         //remove company from companies_with_employees if it becomes empty
-        removeCompanyIfEmpty(employee_to_remove->GetCompany());
+        removeCompanyIfEmpty(company);
         //remove employee from employees trees
         employees_id_dict.deleteNode(employee_to_remove);
         employees_salary_dict.deleteNode(employee_to_remove);
@@ -140,11 +141,13 @@ void EmploymentSystem::PromoteEmployee(int EmployeeID, int SalaryIncrease, int B
         if(BumpGrade > 0){
             employee->SetGrade(employee->GetGrade() + 1);
         }
-        //update highest_earner
+        //update employee placement in trees
+        Company* company = employee->GetCompany();
         employee->GetCompany()->removeEmployee(employee);
         employees_salary_dict.deleteNode(employee);
-        employee->GetCompany()->AddEmployee(employee);
+        company->AddEmployee(employee);
         employees_salary_dict.insertNode(employee);
+        //update highest_earner
         highest_earner = employees_salary_dict.findMaxNode(employees_salary_dict.getRoot())->getData();
     }
     catch(const EmployeeNotInSystem& e){throw e;}
@@ -162,8 +165,9 @@ void EmploymentSystem::HireEmployee(int EmployeeID, int NewCompanyID)
         Employee* employee = GetEmployeeInfo(EmployeeID);
         Company* new_company = GetCompanyInfo(NewCompanyID);
         //remove employee from old_company and remove old_company from companies_with_employees if needed
+        Company* old_company = employee->GetCompany();
         employee->GetCompany()->removeEmployee(employee);
-        removeCompanyIfEmpty(employee->GetCompany());
+        removeCompanyIfEmpty(old_company);
         //add employee to new_company and insert new_company to companies_with_employees if needed
         new_company->AddEmployee(employee);
         if(new_company->getNumOfEmployees() == 1){
@@ -256,24 +260,24 @@ void EmploymentSystem::GetAllEmployeesBySalary(int CompanyID, int **Employees, i
         throw NoEmployeesInSystem();
     }
     try{
-        AVLTree<Employee*, SalaryCondition> tree(salary_cond);
+        AVLTree<Employee*, SalaryCondition> *tree;
         if(CompanyID > 0){
             Company* company = GetCompanyInfo(CompanyID);
             if(company->getNumOfEmployees() == 0){
                 throw NoEmployeesInCompany();
             }
-            AVLTree<Employee*, SalaryCondition> tree = company->getEmployeeSalaryDict();
+            tree = &(company->getEmployeeSalaryDict());
             *NumOfEmployees = company->getNumOfEmployees();
         }
         else{
-            AVLTree<Employee*, SalaryCondition> tree = employees_salary_dict;
+            tree = &employees_salary_dict;
             *NumOfEmployees = num_of_employees;
         }
         *Employees = (int*)malloc(sizeof(int) * (*NumOfEmployees));
         if(*Employees == NULL){
             throw std::bad_alloc();
         }
-        reverseInorderSalary(tree.getRoot(), Employees);
+        reverseInorderSalary(tree->getRoot(), Employees);
     }
     catch(const CompanyNotInSystem& e){throw e;}
 }
@@ -306,23 +310,24 @@ void EmploymentSystem::GetNumEmployeesMatching(int CompanyID, int MinEmployeeID,
         if(num_of_employees <= 0){
             throw NoEmployeesInSystem();
         }
-        AVLTree<Employee*, IdCondition> tree(id_cond);
+        ExtraPlaceholder dummy;
+        ExtraEmployeeConditions salary_grade(MinSalary, MinGrade);
+        Employee dummy_min_id(MinEmployeeID, nullptr, 0, 0);
+        Employee dummy_max_id(MaxEmployeeId, nullptr, 0, 0);
         if(CompanyID > 0){
             Company* company = GetCompanyInfo(CompanyID);
             if(company->getNumOfEmployees() == 0){
                 throw NoEmployeesInCompany();
             }
-            AVLTree<Employee*, IdCondition> tree = company->getEmployeeIdDict();
+            AVLTree<Employee*, IdCondition> &tree = company->getEmployeeIdDict();
+            *TotalNumOfEmployees = tree.elementsInRange<ExtraPlaceholder>(tree.getRoot(), &dummy_min_id, &dummy_max_id, dummy);
+            *NumOfEmployees = tree.elementsInRange<ExtraEmployeeConditions>(tree.getRoot(), &dummy_min_id, &dummy_max_id, salary_grade);
         }
         else{
-            AVLTree<Employee*, IdCondition> tree = employees_id_dict;
+            AVLTree<Employee*, IdCondition> &tree = employees_id_dict;
+            *TotalNumOfEmployees = tree.elementsInRange<ExtraPlaceholder>(tree.getRoot(), &dummy_min_id, &dummy_max_id, dummy);
+            *NumOfEmployees = tree.elementsInRange<ExtraEmployeeConditions>(tree.getRoot(), &dummy_min_id, &dummy_max_id, salary_grade);
         }
-        ExtraPlaceholder dummy;
-        ExtraEmployeeConditions salary_grade(MinSalary, MinGrade);
-        Employee dummy_min_id(MinEmployeeID, nullptr, 0, 0);
-        Employee dummy_max_id(MaxEmployeeId, nullptr, 0, 0);
-        *TotalNumOfEmployees = tree.elementsInRange<ExtraPlaceholder>(tree.getRoot(), &dummy_min_id, &dummy_max_id, dummy);
-        *NumOfEmployees = tree.elementsInRange<ExtraEmployeeConditions>(tree.getRoot(), &dummy_min_id, &dummy_max_id, salary_grade);
     }
     catch(const CompanyNotInSystem& e){throw e;}
     catch(const std::bad_alloc& e){throw e;}

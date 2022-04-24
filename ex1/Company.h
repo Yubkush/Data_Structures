@@ -2,9 +2,11 @@
 #define COMPANY_H_
 
 #include "Employee.h"
-#include "Conditions.h"
 #include "AVLTree.h"
+#include "Conditions.h"
 #include <exception>
+
+class Employee;
 
 class Company
 {

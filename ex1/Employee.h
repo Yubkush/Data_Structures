@@ -1,8 +1,6 @@
 #ifndef EMPLOYEE_H_
 #define EMPLOYEE_H_
 
-#include "Company.h"
-
 class Company;
 
 class Employee
