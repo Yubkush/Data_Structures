@@ -203,14 +203,15 @@ class AVLTree
             return to_delete;
         }
 
-        void treeToSortedArray(Node* root ,T arr[], int index = 0)
+        int treeToSortedArray(Node* root ,T arr[], int index = 0)
         {
             if(root != nullptr){
-                treeToSortedArray(root->left, arr, index);
+                index = treeToSortedArray(root->left, arr, index);
                 arr[index] = root->data;
                 index++;
-                treeToSortedArray(root->right, arr, index);
+                index = treeToSortedArray(root->right, arr, index);
             }
+            return index;
         }
 
         void mergeArrays(T merged[], T arr1[], T arr2[], int len1, int len2)

@@ -1,7 +1,7 @@
 #include "library1.h"
 #include "EmploymentSystem.h"
 
-void *Init()
+void* Init()
 {
     EmploymentSystem *DS = new EmploymentSystem();
     return (void*)DS;
@@ -184,5 +184,5 @@ void Quit(void** DS)
 {
     void **temp = DS;
     *DS = NULL;
-    delete ((EmploymentSystem *)(*temp));
+    delete static_cast<EmploymentSystem*>(*temp);
 }
