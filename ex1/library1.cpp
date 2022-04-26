@@ -183,6 +183,6 @@ StatusType GetNumEmployeesMatching(void *DS, int CompanyID, int MinEmployeeID, i
 void Quit(void** DS)
 {
     void **temp = DS;
-    *DS = NULL;
     delete static_cast<EmploymentSystem*>(*temp);
+    *DS = NULL;
 }

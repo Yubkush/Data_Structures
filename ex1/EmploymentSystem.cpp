@@ -15,11 +15,13 @@ EmploymentSystem::~EmploymentSystem()
 
 void EmploymentSystem::AddCompany(int CompanyID, int Value)
 {
+    Company* company;
     try{
-        Company* company = new Company(CompanyID, Value);
+        company = new Company(CompanyID, Value);
         all_companies.insertNode(company);
     }
     catch(const AVLTree<Company*, CompanyCondition>::ElementAlreadyInTree& e){
+        delete company;
         throw CompanyAlreadyExists();
     }
     catch(const std::bad_alloc& e){
@@ -50,6 +52,7 @@ Employee* EmploymentSystem::GetEmployeeInfo(int EmployeeID)
 void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, int Grade)
 {
     Company* company_ptr;
+    Employee* employee_to_add;
     try{
         company_ptr = GetCompanyInfo(CompanyID);
         if(GetEmployeeInfo(EmployeeID)->GetCompany()->getId() == CompanyID){
@@ -61,7 +64,7 @@ void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, in
     try{
         // find company to add employee to (1)
         company_ptr = GetCompanyInfo(CompanyID);
-        Employee* employee_to_add = new Employee(EmployeeID, company_ptr, Salary, Grade);
+        employee_to_add = new Employee(EmployeeID, company_ptr, Salary, Grade);
         //insert employee to employees trees (2)
         employees_id_dict.insertNode(employee_to_add);
         employees_salary_dict.insertNode(employee_to_add);
@@ -80,6 +83,7 @@ void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, in
         throw e;
     }
     catch(const AVLTree<Employee*, IdCondition>::ElementAlreadyInTree& e){ // 2
+        delete employee_to_add;
         throw EmployeeAlreadyExists();
     }
     catch(const std::bad_alloc& e){throw e;}
@@ -154,6 +158,7 @@ void EmploymentSystem::PromoteEmployee(int EmployeeID, int SalaryIncrease, int B
         Company* company = employee->GetCompany();
         company->removeEmployee(employee);
         employees_salary_dict.deleteNode(employee);
+        //update salary
         employee->SetSalary(employee->GetSalary() + SalaryIncrease);
         company->AddEmployee(employee);
         employees_salary_dict.insertNode(employee);
@@ -298,10 +303,12 @@ void EmploymentSystem::GetAllEmployeesBySalary(int CompanyID, int **Employees, i
 
 static int inorderHighestEarners(AVLTree<Company*, CompanyCondition>::Node* root, int **Employees, int NumOfCompanies, int index = 0)
 {
-    if (root != nullptr && index < NumOfCompanies){
+    if (root != nullptr){
         index = inorderHighestEarners(root->left, Employees, NumOfCompanies, index);
-        (*Employees)[index] = root->getData()->getHighestEarner()->GetEmployeeId();
-        index++;
+        if(index < NumOfCompanies){
+            (*Employees)[index] = root->getData()->getHighestEarner()->GetEmployeeId();
+            index++;
+        }
         index = inorderHighestEarners(root->right, Employees, NumOfCompanies, index);
     }
     return index;

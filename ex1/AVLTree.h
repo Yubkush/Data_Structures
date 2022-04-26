@@ -273,7 +273,7 @@ class AVLTree
             
         }
 
-        virtual ~AVLTree()
+        ~AVLTree()
         {
             destroyRecursive(root);
         }
@@ -402,27 +402,10 @@ class AVLTree
         void destroyRecursiveData(Node* node)
         {
             if(node != nullptr){
-                destroyRecursive(node->left);
-                destroyRecursive(node->right);
+                destroyRecursiveData(node->left);
+                destroyRecursiveData(node->right);
                 delete node->data;
             }
-        }
-
-        template <class Action>
-        void inorder(Node* root, const Action& action) {
-            if (root == NULL) {return;}
-            inorder(root->left);
-            action(root->data);
-            inorder(root->right);
-        }
-
-        template <class K>
-        void inorder(Node* root, std::function<void(T,K)> visit) const
-        {
-            if (root == nullptr) {return;}
-            inorder(root->left, visit);
-            visit(root->data);
-            inorder(root->right, visit);
         }
 };
 
