@@ -255,7 +255,7 @@ void EmploymentSystem::AcquireCompany(int AcquirerID, int TargetID, double Facto
        acquirer->setValue((int)((target_value + acquirer->getValue()) * Factor));
        acquirer->setNumOfEmployees(acquirer->getNumOfEmployees() + target_num_of_employees);
         //update acquirer highest_earner
-       acquirer->setHighestEarner(acquirer->getEmployeeSalaryDict().findMaxNode(employees_salary_dict.getRoot())->getData());
+       acquirer->setHighestEarner(acquirer->getEmployeeSalaryDict().findMaxNode(acquirer->getEmployeeSalaryDict().getRoot())->getData());
        delete target;
     }
     catch(const CompanyNotInSystem& e){throw e;}
