@@ -10,7 +10,6 @@ class Employee
         Company* company;
         int salary;
         int grade;
-        Company* company;
     
     public:
         Employee(const int employee_id, Company* company, const int salary, const int grade);
