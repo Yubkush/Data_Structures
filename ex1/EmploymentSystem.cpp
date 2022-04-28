@@ -110,8 +110,13 @@ void EmploymentSystem::RemoveEmployee(int EmployeeID)
         employees_id_dict.deleteNode(employee_to_remove);
         employees_salary_dict.deleteNode(employee_to_remove);
         //updadte num_of_employees and highest_earner
-        highest_earner = employees_salary_dict.findMaxNode(employees_salary_dict.getRoot())->getData();
         num_of_employees--;
+        if(num_of_employees == 0){
+           highest_earner = nullptr;
+        }
+        else{
+            highest_earner = employees_salary_dict.findMaxNode(employees_salary_dict.getRoot())->getData();
+        }
         delete employee_to_remove;
     }
     catch(const EmployeeNotInSystem& e){ // 1
@@ -255,7 +260,12 @@ void EmploymentSystem::AcquireCompany(int AcquirerID, int TargetID, double Facto
        acquirer->setValue((int)((target_value + acquirer->getValue()) * Factor));
        acquirer->setNumOfEmployees(acquirer->getNumOfEmployees() + target_num_of_employees);
         //update acquirer highest_earner
-       acquirer->setHighestEarner(acquirer->getEmployeeSalaryDict().findMaxNode(acquirer->getEmployeeSalaryDict().getRoot())->getData());
+       if(acquirer->getNumOfEmployees() == 0){
+           acquirer->setHighestEarner(nullptr);
+       }
+       else{
+            acquirer->setHighestEarner(acquirer->getEmployeeSalaryDict().findMaxNode(acquirer->getEmployeeSalaryDict().getRoot())->getData()); 
+       }
        delete target;
     }
     catch(const CompanyNotInSystem& e){throw e;}
