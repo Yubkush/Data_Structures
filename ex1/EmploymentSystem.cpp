@@ -76,8 +76,8 @@ void EmploymentSystem::AddEmployee(int EmployeeID, int CompanyID, int Salary, in
         //insert company to companies_with_employees tree
         if(company_ptr->getNumOfEmployees() == 1){
             companies_with_employees.insertNode(company_ptr);
+            num_companies_with_employees++;
         }
-        num_companies_with_employees++;
     }
     catch(const CompanyNotInSystem& e){ // 1
         throw e;
