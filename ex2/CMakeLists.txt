@@ -12,18 +12,19 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-  list_test
-  tests/LinkedList_test.cpp
+  hash_test
+  tests/HashTable_test.cpp
+  HashTable.cpp
   LinkedList.cpp
   Employee.cpp
 )
 target_link_libraries(
-  list_test
+    hash_test
   gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(list_test)
+gtest_discover_tests(hash_test)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
