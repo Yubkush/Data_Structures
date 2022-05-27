@@ -5,6 +5,11 @@ HashTable::HashTable() : values(new LinkedList[INITIAL_SIZE]), occupancy(0), tab
 
 }
 
+HashTable::~HashTable()
+{
+    delete[] values;
+}
+
 int HashTable::getOccupancy(){
     return occupancy;
 }

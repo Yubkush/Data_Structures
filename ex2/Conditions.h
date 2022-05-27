@@ -5,6 +5,14 @@
 
 class Employee;
 
+class IdCondition
+{
+    public:
+        IdCondition() = default;
+        ~IdCondition() = default;
+        bool operator()(const Employee* e1, const Employee* e2) const;
+};
+
 class SalaryCondition
 {
     public:
