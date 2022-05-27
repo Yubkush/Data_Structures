@@ -58,6 +58,7 @@ class HashTable
         int getOccupancy();
         void setOccupancy(const int&);
         int getTableSize();
+        LinkedList* getValues();
         Employee* find(const int& employee_id);
         void insert(Employee* employee);
         void remove(const int& employee_id);

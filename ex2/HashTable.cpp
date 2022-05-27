@@ -11,6 +11,9 @@ int HashTable::getOccupancy(){
 int HashTable::getTableSize(){
     return table_size;
 }
+LinkedList* HashTable::getValues(){
+    return values;
+}
 
 void HashTable::setOccupancy(const int& occupancy){
     this->occupancy = occupancy;

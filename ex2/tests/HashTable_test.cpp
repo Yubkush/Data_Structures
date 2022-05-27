@@ -36,6 +36,42 @@ TEST(InsertTest, InsertElementsAndExpand)
     employees_vector.clear();
 }
 
+TEST(InsertTest, ModuluCorrectnessInsert)
+{
+    HashTable table;
+    vector<Employee*> employees_vector;
+    for (int i = 0; i < 15; i++)
+    {
+        employees_vector.push_back(new Employee(i*7,nullptr,i,i));
+        table.insert(employees_vector[i]);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
+    }
+    for (int i = 15; i < 60; i++)
+    {
+        employees_vector.push_back(new Employee(i*7,nullptr,i,i));
+        table.insert(employees_vector[i]);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
+    }
+    for(auto e : employees_vector){
+        delete e;
+    }
+    employees_vector.clear();
+}
+
 TEST(findTest, findTest1)
 {
     HashTable table;
@@ -91,6 +127,63 @@ TEST(removeTest, removeAll)
     employees_vector.clear();
 }
 
+TEST(removeTest, ModuluCorrectnessRemove)
+{
+    HashTable table;
+    vector<Employee*> employees_vector;
+    for (int i = 0; i < 15; i++)
+    {
+        employees_vector.push_back(new Employee(i*7,nullptr,i,i));
+        table.insert(employees_vector[i]);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
+    }
+    int occupancy = table.getOccupancy();
+    //remove all employees
+    for(auto e : employees_vector){
+        table.remove(e->GetEmployeeId());
+        occupancy--;
+        EXPECT_EQ(table.getOccupancy(), occupancy);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
+    }
+    EXPECT_EQ(table.getTableSize(), 5);
+    for(auto e : employees_vector){
+        EXPECT_THROW(table.find(e->GetEmployeeId()), HashTable::ElementNotInTable);
+    }
+    //insert 5 employees, size still 5
+    for (int i = 3; i < 8; i++)
+    {
+        table.insert(employees_vector[i]);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
+    }
+    EXPECT_EQ(table.getTableSize(), 5);
+    EXPECT_EQ(table.getOccupancy(), 5);
+    for(auto e : employees_vector){
+        delete e;
+    }
+    employees_vector.clear();
+}
+
 TEST(CombinedTest, Demo)
 {
     HashTable table;
@@ -99,6 +192,14 @@ TEST(CombinedTest, Demo)
     {
         employees_vector.push_back(new Employee(i*7,nullptr,i,i));
         table.insert(employees_vector[i]);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
     }
     EXPECT_EQ(table.getOccupancy(), 15);
     EXPECT_EQ(table.getTableSize(), 20);
@@ -119,6 +220,14 @@ TEST(CombinedTest, Demo)
     for (int i = 0; i < 12; i++)
     {
         table.remove(i*7);
+    }
+    for (int i = 0; i < table.getTableSize(); i++)
+    {
+        Node* head = table.getValues()[i].getHead();
+        while(head != nullptr){
+            EXPECT_EQ((head->getData()->GetEmployeeId())%table.getTableSize(), i);
+            head = head->getNext();
+        }
     }
     EXPECT_EQ(table.getOccupancy(), 9);
     EXPECT_EQ(table.getTableSize(), 20);
