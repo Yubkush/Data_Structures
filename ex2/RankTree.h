@@ -15,6 +15,8 @@ class RankNode
         int height;
         int num_employees_sub_tree;
         int sum_grades_sub_tree;
+        RankNode(): data(nullptr), left(nullptr), right(nullptr), height(0),
+                                num_employees_sub_tree(0), sum_grades_sub_tree(0){};
         RankNode(Employee* data): data(data), left(nullptr), right(nullptr), height(0),
                                 num_employees_sub_tree(1), sum_grades_sub_tree(data->GetGrade()){};
         ~RankNode() = default;
@@ -41,12 +43,26 @@ class RankTree
 {
     private:
         RankNode* root;
-
+        
         int getHeight(RankNode* node)
         {
             if(node == nullptr)
                 return -1;
             return node->height;
+        }
+
+        int getNumEmployees(RankNode* node)
+        {
+            if(node == nullptr)
+                return 0;
+            return node->num_employees_sub_tree;
+        }
+
+        int getSumGrades(RankNode* node)
+        {
+            if(node == nullptr)
+                return 0;
+            return node->sum_grades_sub_tree;
         }
 
         int getBalanceFactor(const RankNode* node)
@@ -298,9 +314,11 @@ class RankTree
         }
 
     public:
-        class ElementNotInTree: exception{};
-        class ElementAlreadyInTree: exception{};
-        class MaxElementInTree: exception{};
+        class ElementNotInTree: public exception{};
+        class ElementAlreadyInTree: public exception{};
+        class MaxElementInTree: public exception{};
+        class NotEnoughEmployees: public exception{};
+        class RankNotFound: public exception{};
 
         RankTree();
         ~RankTree();
@@ -312,7 +330,9 @@ class RankTree
         void remove(Employee* data);
         RankNode* findMinNode(RankNode* start);
         RankNode* findMaxNode(RankNode* start);
-        double averageGradesInSalaryRange(RankNode* root, int lower, int higher);
+        int sumOfGradeTopWorkers(int m);
+        void averageGradesInSalaryRange(RankNode* root, int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range);
+        Employee* getElementByReverseRank(int reverse_rank);
         void absorbTree(RankTree& tree);
         void destroyRecursiveData(RankNode* node);
 };

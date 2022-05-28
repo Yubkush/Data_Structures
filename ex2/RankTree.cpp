@@ -86,10 +86,58 @@ RankNode* RankTree::findMaxNode(RankNode* start)
     return current;
 }
 
-double RankTree::averageGradesInSalaryRange(RankNode* root, int lower, int higher)
+Employee* RankTree::getElementByReverseRank(int reverse_rank)
 {
-    int num_employees_in_range = root->getNumEmployees();
-    int sum_grades_in_range = root->getSumGrades();
+    int sum_right = 0;
+    RankNode* temp = root;
+    while(temp != nullptr && reverse_rank != sum_right + getNumEmployees(temp->getRight()) + 1){
+        //going right
+        if(reverse_rank < sum_right + getNumEmployees(temp->getRight()) + 1){
+            temp = temp->getRight();
+        }
+        //going left
+        else if(reverse_rank > sum_right + getNumEmployees(temp->getRight())){
+            sum_right += getNumEmployees(temp->getRight()) + 1;
+            temp = temp->getLeft();
+        }
+        else{
+            throw RankNotFound();
+        }
+    }
+    if(temp == nullptr){
+        throw RankNotFound();
+    }
+    return temp->getData();
+}
+
+int RankTree::sumOfGradeTopWorkers(int m)
+{
+    int sum = 0;
+    RankNode *temp = root;
+    if(temp->getNumEmployees() < m){
+        throw NotEnoughEmployees();
+    }
+    Employee *m_reverse_ranked = getElementByReverseRank(m);
+    while (temp != nullptr)
+    {
+        if(SalaryCondition(temp->data, m_reverse_ranked)){
+            temp = temp->getRight();
+        }
+        else if(SalaryCondition(m_reverse_ranked, temp->data)){
+            sum += getSumGrades(temp->right) + temp->getData()->GetGrade();
+            temp = temp->getLeft();
+        }
+        else{
+            return sum + temp->getData()->GetGrade() + getSumGrades(temp->right);
+        }
+    }
+    throw RankNotFound();
+}
+
+void RankTree::averageGradesInSalaryRange(RankNode* root, int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range)
+{
+    *num_employees_in_range = root->getNumEmployees();
+    *sum_grades_in_range = root->getSumGrades();
     RankNode* temp = root;
     //run to lower bound
     while(temp != nullptr){
@@ -97,11 +145,11 @@ double RankTree::averageGradesInSalaryRange(RankNode* root, int lower, int highe
             temp = temp->getLeft();
         }
         else{
-            num_employees_in_range -= 1;
-            sum_grades_in_range -= temp->data->GetGrade();
+            *num_employees_in_range -= 1;
+            *sum_grades_in_range -= temp->data->GetGrade();
             if(temp->left != nullptr){
-                num_employees_in_range -= temp->left->getNumEmployees();
-                sum_grades_in_range -= temp->left->getSumGrades();
+                *num_employees_in_range -= temp->left->getNumEmployees();
+                *sum_grades_in_range -= temp->left->getSumGrades();
             }
             temp = temp->getRight();
         }
@@ -113,16 +161,15 @@ double RankTree::averageGradesInSalaryRange(RankNode* root, int lower, int highe
             temp = temp->getRight();
         }
         else{
-            num_employees_in_range -= 1;
-            sum_grades_in_range -= temp->data->GetGrade();
+            *num_employees_in_range -= 1;
+            *sum_grades_in_range -= temp->data->GetGrade();
             if(temp->right != nullptr){
-                num_employees_in_range -= temp->right->getNumEmployees();
-                sum_grades_in_range -= temp->right->getSumGrades();
+                *num_employees_in_range -= temp->right->getNumEmployees();
+                *sum_grades_in_range -= temp->right->getSumGrades();
             }
             temp = temp->getLeft();
         }
     }
-    return (double)sum_grades_in_range / (double)num_employees_in_range;
 }
 
 void RankTree::absorbTree(RankTree& tree)
