@@ -136,6 +136,35 @@ TEST(FullTree, CheckRemoveLLR)
     tree.destroyRecursiveData(tree.getRoot());
 }
 
+TEST(FullTree, CheckRemoveRRR)
+{
+    RankTree tree = createFullTree();
+    Employee to_remove(68,nullptr, 33,6);
+    tree.remove(&to_remove);
+    EXPECT_FALSE(tree.isEmpty());
+    EXPECT_EQ(tree.getRoot()->getNumEmployees(), 6);
+    EXPECT_EQ(tree.getRoot()->getSumGrades(), 509);
+    EXPECT_EQ(tree.getRoot()->getData()->GetSalary(), 50);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getNumEmployees(), 2);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getSumGrades(), 21);
+    to_remove = Employee(2,nullptr, 20,16);
+    tree.remove(&to_remove);
+    EXPECT_EQ(tree.getRoot()->getNumEmployees(), 5);
+    EXPECT_EQ(tree.getRoot()->getSumGrades(), 493);
+    EXPECT_EQ(tree.getRoot()->getData()->GetSalary(), 50);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getNumEmployees(), 1);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getSumGrades(), 5);
+    to_remove = Employee(1,nullptr, 10,5);
+    tree.remove(&to_remove);
+    EXPECT_EQ(tree.getRoot()->getNumEmployees(), 4);
+    EXPECT_EQ(tree.getRoot()->getSumGrades(), 488);
+    EXPECT_EQ(tree.getRoot()->getData()->GetSalary(), 56);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getNumEmployees(), 2);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getData()->GetSalary(), 50);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getSumGrades(), 12);
+    tree.destroyRecursiveData(tree.getRoot());
+}
+
 TEST(FullTree, CheckAverageGradesInSalaryRange)
 {
     RankTree tree = createFullTree();
@@ -250,6 +279,41 @@ TEST(SmallTree, CheckInsert)
     tree.destroyRecursiveData(root);
 }
 
+TEST(SmallTree, CheckInsertRLR)
+{
+    RankTree tree = createSmallTree();
+    RankNode* root = tree.getRoot();
+    EXPECT_TRUE(postorderCheckHeight(root));
+    EXPECT_FALSE(tree.isEmpty());
+    Employee* e = new Employee(55, nullptr, 52, 22);
+    EXPECT_NO_THROW(tree.insert(e));
+    e = new Employee(56, nullptr, 51, 22);
+    EXPECT_NO_THROW(tree.insert(e));
+    EXPECT_EQ(tree.getRoot()->getRight()->getNumEmployees(), 3);
+    EXPECT_EQ(tree.getRoot()->getRight()->getSumGrades(), 66);
+    EXPECT_EQ(tree.getRoot()->getRight()->getData()->GetEmployeeId(), 56);
+    EXPECT_EQ(tree.getRoot()->getRight()->getData()->GetSalary(), 51);
+    tree.destroyRecursiveData(root);
+}
+
+TEST(SmallTree, CheckRemoveLR)
+{
+    RankTree tree = createSmallTree();
+    RankNode* root = tree.getRoot();
+    Employee temp = Employee(50,nullptr, 50,50);
+    EXPECT_NO_THROW(tree.remove(&temp));
+    EXPECT_EQ(tree.getRoot()->getRight()->getNumEmployees(), 1);
+    EXPECT_EQ(tree.getRoot()->getRight()->getSumGrades(), 22);
+    EXPECT_EQ(tree.getRoot()->getRight()->getData()->GetEmployeeId(), 54);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getData()->GetSalary(), 44);
+    EXPECT_EQ(tree.getRoot()->getLeft()->getData()->GetEmployeeId(), 51);
+    EXPECT_EQ(tree.getRoot()->getNumEmployees(), 3);
+    EXPECT_EQ(tree.getRoot()->getSumGrades(), 29);
+    EXPECT_EQ(tree.getRoot()->getData()->GetEmployeeId(), 52);
+    EXPECT_TRUE(postorderCheckHeight(root));
+    tree.destroyRecursiveData(root);
+}
+
 TEST(SmallTree, CheckGetElementByReverseRank)
 {
     RankTree tree = createSmallTree();
@@ -263,6 +327,20 @@ TEST(SmallTree, CheckGetElementByReverseRank)
     e = tree.getElementByReverseRank(2);
     EXPECT_EQ(e->GetEmployeeId(), 50);
     EXPECT_THROW(tree.getElementByReverseRank(8), RankTree::RankNotFound);
+    tree.destroyRecursiveData(root);
+}
+
+TEST(SmallTree, CheckSumOfGradeTopWorkers)
+{
+    RankTree tree = createSmallTree();
+    RankNode* root = tree.getRoot();
+    EXPECT_EQ(tree.sumOfGradeTopWorkers(1), 22);
+    EXPECT_EQ(tree.sumOfGradeTopWorkers(2), 72);
+    EXPECT_EQ(tree.sumOfGradeTopWorkers(3), 77);
+    EXPECT_EQ(tree.sumOfGradeTopWorkers(4), 79);
+    EXPECT_THROW(tree.sumOfGradeTopWorkers(8), RankTree::NotEnoughEmployees);
+    EXPECT_THROW(tree.sumOfGradeTopWorkers(0), RankTree::RankNotFound);
+    EXPECT_THROW(tree.sumOfGradeTopWorkers(5), RankTree::NotEnoughEmployees);
     tree.destroyRecursiveData(root);
 }
 
