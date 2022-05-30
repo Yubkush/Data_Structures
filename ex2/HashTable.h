@@ -52,6 +52,7 @@ class HashTable
     public:
         HashTable();
         ~HashTable();
+        void destroyHashData();
 
         class ElementNotInTable: public std::exception{};
 

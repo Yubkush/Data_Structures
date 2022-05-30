@@ -12,14 +12,17 @@ class UFNode{
         Group* group;
         //added value for companies which purchased other companies according to the requirements of the exercise
         double fixer;
+        UFNode* parent;
     public:
-        UFNode(Company* company, Group* group):company(company), group(group), fixer(0){};
+        UFNode(Company* company, Group* group):company(company), group(group), fixer(0), parent(nullptr){};
         ~UFNode(){delete company;}
         Company* getCompany(){return company;}
         Group* getGroup(){return group;}
         double getFixer(){return fixer;}
+        UFNode* getParent(){return parent;}
         void setGroup(Group* group){this->group = group;}
         void setFixer(double fixer){this->fixer = fixer;}
+        void setParent(UFNode* parent){this->parent = parent;}
 };
 
 typedef struct Group
@@ -45,8 +48,8 @@ class UFCompanies{
     public:
         UFCompanies(int k);
         ~UFCompanies();
+        void Union(int group_a, int group_b, double factor);
         //returns company name
-        int Union(int group_a, int group_b);
         int Find(int company_id);
         //employee functions
         void addEmployee(int employee_id, int company_id, int grade);

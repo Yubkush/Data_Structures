@@ -10,6 +10,18 @@ HashTable::~HashTable()
     delete[] values;
 }
 
+void HashTable::destroyHashData()
+{
+    for (int i = 0; i < table_size; i++)
+    {
+        Node* head = values[i].getHead();
+        while(head != nullptr)
+        {
+            delete head->getData();
+        }
+    }
+}
+
 int HashTable::getOccupancy(){
     return occupancy;
 }
