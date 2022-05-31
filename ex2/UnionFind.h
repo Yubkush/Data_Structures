@@ -1,8 +1,7 @@
-#ifndef UF_COMPANIES
-#define UF_COMPANIES
+#ifndef UNION_FIND
+#define UNION_FIND
 
 #include "Company.h"
-#include "HashTable.h"
 
 struct Group;
 
@@ -33,35 +32,27 @@ typedef struct Group
     UFNode* root;
 }Group;
 
-
-class UFCompanies{
-
+class UnionFind{
     private:
         int num_companies;
         UFNode** company_nodes;
         Group* groups;
-        int num_interns;
-        int sum_interns_grades;
-        HashTable all_employees;
-        RankTree employees_with_salary;
-
     public:
-        UFCompanies(int k);
-        ~UFCompanies();
+        UnionFind(int k);
+        ~UnionFind();
+
+        /**
+         * @brief group b acquire a
+         * 
+         * @param group_a group_a id
+         * @param group_b group_b id
+         * @param factor all companies in group b add factor*(group_a.value)
+         */
         void Union(int group_a, int group_b, double factor);
         //returns company name
         int Find(int company_id);
-        //employee functions
-        void addEmployee(int employee_id, int company_id, int grade);
-        void removeEmployee(int employee_id);
-        void employeeSalaryIncrease(int employee_id, int salaryIncrease);
-        void promoteEmployee(int employee_id, int bump_grade);
-        //company functions
-        void acquireCompany(int acquirer_id, int target_id, double factor);
-        void companyValue(int company_id, void* standing);
-        //DS functions
-        void sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m, void* sumBumpGrade);
-        void averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary, void* average_bump_grade);
+        double getCompanyValue(int company_id);
+        Company* getCompany(int company_id);
 };
 
-#endif /* UF_COMPANIES */
+#endif /* UNION_FIND */

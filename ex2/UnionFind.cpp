@@ -1,7 +1,6 @@
-#include "UFCompanies.h"
+#include "UnionFind.h"
 
-UFCompanies::UFCompanies(int k):num_companies(k), company_nodes(new UFNode*[k+1]), groups(new Group[k+1]), num_interns(0), 
-                                sum_interns_grades(0), all_employees(), employees_with_salary()
+UnionFind::UnionFind(int k):num_companies(k), company_nodes(new UFNode*[k+1]), groups(new Group[k+1])
 {
     for (int i = 1; i < k+1; i++)
     {
@@ -15,11 +14,8 @@ UFCompanies::UFCompanies(int k):num_companies(k), company_nodes(new UFNode*[k+1]
     }
 }
 
-UFCompanies::~UFCompanies()
+UnionFind::~UnionFind()
 {
-    //delete employees
-    all_employees.destroyHashData();
-    //deletes companies
     for (int i = 1; i < num_companies+1; i++)
     {
         delete company_nodes[i];
@@ -30,15 +26,14 @@ UFCompanies::~UFCompanies()
 
 //Assume that we get 2 groups
 //b acquire a
-void UFCompanies::Union(int group_a, int group_b, double factor)
+void UnionFind::Union(int group_a, int group_b, double factor)
 {
     UFNode* group_a_root = groups[group_a].root;
     UFNode* group_b_root = groups[group_b].root;
-    groups[group_b].num_elements += groups[group_a].num_elements;
     if(groups[group_a].num_elements < groups[group_b].num_elements){
         group_a_root->setParent(group_b_root);
         //update total_value
-        groups[group_b].total_value += factor*(groups[group_a].total_value)*(groups[group_a].num_elements);
+        groups[group_b].total_value += factor*(groups[group_a].total_value);
         //update fixers
         group_b_root->setFixer(group_b_root->getFixer() + (groups[group_a].total_value * factor));
         group_a_root->setFixer(group_a_root->getFixer() - group_b_root->getFixer());
@@ -46,14 +41,16 @@ void UFCompanies::Union(int group_a, int group_b, double factor)
     else{
         group_b_root->setParent(group_a_root);
         group_a_root->setGroup(group_b_root->getGroup());
+        groups[group_b].root = group_a_root;
         //update total_value
-        groups[group_b].total_value += factor*(groups[group_a].total_value)*(groups[group_a].num_elements);
+        groups[group_b].total_value += factor*(groups[group_a].total_value);
         //update fixers
-        group_b_root->setFixer(group_b_root->getFixer() + groups[group_a].total_value - group_a_root->getFixer());
+        group_b_root->setFixer(group_b_root->getFixer() + ((factor)*groups[group_a].total_value) - group_a_root->getFixer());
     }
+    groups[group_b].num_elements += groups[group_a].num_elements;
 }
 
-int UFCompanies::Find(int company_id)
+int UnionFind::Find(int company_id)
 {
     //Node of interest
     UFNode* temp = company_nodes[company_id];
@@ -84,19 +81,19 @@ int UFCompanies::Find(int company_id)
     return group_to_return;
 }
 
-// void UFCompanies::addEmployee(int employee_id, int company_id, int grade)
+double UnionFind::getCompanyValue(int company_id)
+{
+    UFNode* start = company_nodes[company_id];
+    double sum_fixers = start->getCompany()->getValue();
+    while(start != nullptr)
+    {
+        sum_fixers += start->getFixer();
+        start = start->getParent();
+    }
+    return sum_fixers;
+}
 
-// void UFCompanies::removeEmployee(int employee_id)
-
-// void UFCompanies::employeeSalaryIncrease(int employee_id, int salaryIncrease)
-
-// void UFCompanies::promoteEmployee(int employee_id, int bump_grade)
-
-// void UFCompanies::acquireCompany(int acquirer_id, int target_id, double factor)
-
-// void UFCompanies::companyValue(int company_id, void* standing)
-
-// void UFCompanies::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m, void* sumBumpGrade)
-
-// void UFCompanies::averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary, void* average_bump_grade)
-
+Company* UnionFind::getCompany(int company_id)
+{
+    return company_nodes[company_id]->getCompany();
+}
