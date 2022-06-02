@@ -331,7 +331,7 @@ class RankTree
         RankNode* findMinNode(RankNode* start);
         RankNode* findMaxNode(RankNode* start);
         int sumOfGradeTopWorkers(int m);
-        void averageGradesInSalaryRange(RankNode* root, int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range);
+        void averageGradesInSalaryRange(int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range);
         Employee* getElementByReverseRank(int reverse_rank);
         void absorbTree(RankTree& tree);
         void destroyRecursiveData(RankNode* node);

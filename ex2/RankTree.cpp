@@ -134,7 +134,7 @@ int RankTree::sumOfGradeTopWorkers(int m)
     throw RankNotFound();
 }
 
-void RankTree::averageGradesInSalaryRange(RankNode* root, int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range)
+void RankTree::averageGradesInSalaryRange(int lower, int higher, int* num_employees_in_range, int *sum_grades_in_range)
 {
     *num_employees_in_range = root->getNumEmployees();
     *sum_grades_in_range = root->getSumGrades();

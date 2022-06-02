@@ -2,6 +2,7 @@
 #define COMPANY_SYSTEM
 
 #include "Company.h"
+#include "LinkedList.h"
 #include "HashTable.h"
 #include "UnionFind.h"
 
@@ -18,6 +19,9 @@ class CompanySystem{
     public:
         class EmployeeAlreadyInSystem: public std::exception{};
         class EmployeeNotInSystem: public std::exception{};
+        class SameCompany: public std::exception{};
+        class NotEnoughEmployees: public std::exception{};
+        class NoEmployeesInRange: public std::exception{};
 
         CompanySystem(int k);
         ~CompanySystem();

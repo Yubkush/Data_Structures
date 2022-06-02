@@ -3,6 +3,7 @@
 
 #include "Employee.h"
 #include "RankTree.h"
+#include "HashTable.h"
 #include <exception>
 
 class Employee;
@@ -14,7 +15,8 @@ class Company
         int value;
         int num_of_interns;
         int sum_of_interns_grades;
-        RankTree employees;
+        HashTable* all_employees;
+        RankTree employees_with_salary;
 
     public:
         class EmployeesUnderZero: public std::exception{};
@@ -28,7 +30,8 @@ class Company
         int getValue() const;
         int getNumOfInterns() const;
         int getSumOfInternsGrades() const;
-        RankTree& getEmployeeTree();
+        RankTree& getEmployeesWithSalaryTree();
+        HashTable* getEmployeesHash();
         //setters
         void setValue(int value);
         void increaseNumOfInterns(int num_of_interns);

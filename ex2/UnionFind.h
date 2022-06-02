@@ -52,6 +52,7 @@ class UnionFind{
         //returns company name
         int Find(int company_id);
         double getCompanyValue(int company_id);
+        //O(1)
         Company* getCompany(int company_id);
 };
 
