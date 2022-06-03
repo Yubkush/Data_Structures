@@ -1,7 +1,7 @@
 #include "CompanySystem.h"
 
-CompanySystem::CompanySystem(int k):companies(k), num_interns(0), 
-                                sum_interns_grades(0), all_employees(), employees_with_salary()
+CompanySystem::CompanySystem(int k):num_companies(k), num_interns(0), sum_interns_grades(0), 
+                                    companies(k), all_employees(), employees_with_salary()
 {
     
 }
@@ -15,7 +15,7 @@ CompanySystem::~CompanySystem()
 void CompanySystem::addEmployee(int employee_id, int company_id, int grade)
 {
     try{
-        Employee* to_find = all_employees.find(employee_id);
+        all_employees.find(employee_id);
         throw EmployeeAlreadyInSystem();
     }
     catch(const HashTable::ElementNotInTable& e){}
@@ -98,8 +98,8 @@ static void mergeHashTables(Company* acquirer_company, HashTable* acquirer, Hash
         }
     }
     HashTable* temp = target;
-    delete target;
-    temp = nullptr;
+    delete temp;
+    target = nullptr;
 }
 
 void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor)
@@ -120,6 +120,7 @@ void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor
         target_company->increaseSumOfInternsGrades(-target_company->getSumOfInternsGrades());
         companies.Union(companies.Find(target_id), companies.Find(acquirer_id), factor);
     }
+    catch(const Company::EmployeesUnderZero& e){throw e;}
     catch(const SameCompany& e){throw e;}
     catch(const std::bad_alloc& e){throw e;}
 }
@@ -136,11 +137,11 @@ void CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m
 {
     try{
         if(company_id == 0){
-            *(double*)sumBumpGrade = employees_with_salary.sumOfGradeTopWorkers(m);
+            *(int*)sumBumpGrade = employees_with_salary.sumOfGradeTopWorkers(m);
         }
         else{
             Company* company = companies.getCompany(companies.Find(company_id));
-            *(double*)sumBumpGrade = (company->getEmployeesWithSalaryTree()).sumOfGradeTopWorkers(m);
+            *(int*)sumBumpGrade = (company->getEmployeesWithSalaryTree()).sumOfGradeTopWorkers(m);
         }   
     }
     catch(const RankTree::NotEnoughEmployees& e){throw NotEnoughEmployees();}
@@ -157,7 +158,12 @@ void CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, int low
         }
         else{
             Company* company = companies.getCompany(companies.Find(company_id));
-            (company->getEmployeesWithSalaryTree()).averageGradesInSalaryRange(lower_salary, higher_salary, &num_employees_in_range, &sum_grades_in_range);
+            if((company->getEmployeesWithSalaryTree()).getRoot() == nullptr){
+                throw NoEmployeesInRange();
+            }
+            else{
+                (company->getEmployeesWithSalaryTree()).averageGradesInSalaryRange(lower_salary, higher_salary, &num_employees_in_range, &sum_grades_in_range);
+            }
         }
         if(num_employees_in_range == 0){
             throw NoEmployeesInRange();

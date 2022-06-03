@@ -10,6 +10,7 @@
 class CompanySystem{
 
     private:
+        int num_companies;
         int num_interns;
         int sum_interns_grades;
         UnionFind companies;
@@ -25,6 +26,7 @@ class CompanySystem{
 
         CompanySystem(int k);
         ~CompanySystem();
+        int getNumCompanies(){return num_companies;}
     
         //employee functions
         void addEmployee(int employee_id, int company_id, int grade);

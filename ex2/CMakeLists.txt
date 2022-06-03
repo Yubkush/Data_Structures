@@ -16,6 +16,7 @@ enable_testing()
 add_executable(
   unionfind_test
   tests/UnionFind_test.cpp
+  HashTable.cpp
   UnionFind.cpp
   Company.cpp
   RankTree.cpp

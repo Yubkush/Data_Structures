@@ -114,7 +114,7 @@ int RankTree::sumOfGradeTopWorkers(int m)
 {
     int sum = 0;
     RankNode *temp = root;
-    if(temp->getNumEmployees() < m){
+    if(temp == nullptr || temp->getNumEmployees() < m){
         throw NotEnoughEmployees();
     }
     Employee *m_reverse_ranked = getElementByReverseRank(m);

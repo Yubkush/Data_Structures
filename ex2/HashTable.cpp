@@ -18,6 +18,7 @@ void HashTable::destroyHashData()
         while(head != nullptr)
         {
             delete head->getData();
+            head = head->getNext();
         }
     }
 }

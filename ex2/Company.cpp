@@ -1,7 +1,7 @@
 #include "Company.h"
 
 Company::Company(const int id, const int value): id(id), value(value), num_of_interns(0), sum_of_interns_grades(0),
-                                    employees_with_salary(), all_employees(new HashTable())
+                                    all_employees(new HashTable()), employees_with_salary()
 {
     
 }
@@ -43,7 +43,7 @@ void Company::setValue(int value)
 
 void Company::increaseNumOfInterns(int num_of_interns)
 {
-    if(this->num_of_interns - num_of_interns < 0){
+    if(this->num_of_interns + num_of_interns < 0){
         throw EmployeesUnderZero();
     }
     this->num_of_interns += num_of_interns;
@@ -51,7 +51,7 @@ void Company::increaseNumOfInterns(int num_of_interns)
 
 void Company::increaseSumOfInternsGrades(int sum_of_interns_grades)
 {
-    if(this->sum_of_interns_grades - sum_of_interns_grades < 0){
+    if(this->sum_of_interns_grades + sum_of_interns_grades < 0){
         throw EmployeesUnderZero();
     }
     this->sum_of_interns_grades += sum_of_interns_grades;

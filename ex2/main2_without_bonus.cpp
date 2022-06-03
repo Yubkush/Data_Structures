@@ -321,14 +321,14 @@ static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup (void* DS, const char*
     int m;
     ValidateRead(sscanf(command, "%d %d", &companyID, &m), 2,
                  "SumOfBumpGradeBetweenTopWorkersByGroup failed.\n");
-    void* sumBumpGrade;
+    void* sumBumpGrade = malloc(sizeof(double));
     StatusType res = SumOfBumpGradeBetweenTopWorkersByGroup(DS, companyID, m, &sumBumpGrade);
 
     if (res != SUCCESS) {
         printf("SumOfBumpGradeBetweenTopWorkersByGroup: %s\n", ReturnValToStr(res));
         return error_free;
     }
-
+    free(sumBumpGrade);
     /*
      * Implement here the printing of the variable
      */
@@ -345,14 +345,14 @@ static errorType OnAverageBumpGradeBetweenSalaryByGroup (void* DS, const char* c
     int higherSalary;
     ValidateRead(sscanf(command, "%d %d %d", &companyID, &lowerSalary, &higherSalary), 3,
                  "AverageBumpGradeBetweenSalaryByGroup failed.\n");
-    void* averageBumpGrade;
+    void* averageBumpGrade = malloc(sizeof(double));
     StatusType res = AverageBumpGradeBetweenSalaryByGroup(DS, companyID, lowerSalary, higherSalary, &averageBumpGrade);
 
     if (res != SUCCESS) {
         printf("AverageBumpGradeBetweenSalaryByGroup: %s\n", ReturnValToStr(res));
         return error_free;
     }
-
+    free(averageBumpGrade);
     /*
      * Implement here the printing of the variable
      */
@@ -367,17 +367,16 @@ static errorType OnCompanyValue(void* DS, const char* const command) {
     int companyID;
     ValidateRead(sscanf(command, "%d", &companyID), 1,
                  "CompanyValue failed.\n");
-    void* standing;
+    void* standing = malloc(sizeof(double));
     StatusType res = CompanyValue(DS, companyID, &standing);
 
     if (res != SUCCESS) {
         printf("CompanyValue: %s\n", ReturnValToStr(res));
         return error_free;
     }
-
-    /*
-     * Implement here the printing of the variable
-     */
+    else{
+        printf("CompanyValue: %f\n", *((double*)standing));
+    }
 
     return error_free;
 }
