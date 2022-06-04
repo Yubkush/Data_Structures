@@ -15,7 +15,7 @@ class Company
         int value;
         int num_of_interns;
         int sum_of_interns_grades;
-        HashTable* all_employees;
+        HashTable all_employees;
         RankTree employees_with_salary;
 
     public:
@@ -31,7 +31,7 @@ class Company
         int getNumOfInterns() const;
         int getSumOfInternsGrades() const;
         RankTree& getEmployeesWithSalaryTree();
-        HashTable* getEmployeesHash();
+        HashTable& getEmployeesHash();
         //setters
         void setValue(int value);
         void increaseNumOfInterns(int num_of_interns);

@@ -23,6 +23,24 @@ void HashTable::destroyHashData()
     }
 }
 
+void HashTable::clearHash()
+{
+    //empty values
+    for (int i = 0; i < table_size; i++)
+    {
+        while(values[i].getHead() != nullptr)
+        {
+            values[i].remove(values[i].getHead()->getData()->GetEmployeeId());
+        }
+    }
+    LinkedList* new_values = new LinkedList[SIZE_AFTER_CLEAR];
+    LinkedList* temp = values;
+    values = new_values;
+    table_size = SIZE_AFTER_CLEAR;
+    occupancy = 0;
+    delete[] temp;
+}
+
 int HashTable::getOccupancy(){
     return occupancy;
 }

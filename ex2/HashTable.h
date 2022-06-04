@@ -6,6 +6,7 @@
 #include <exception>
 #define SHRINK_EXPANSE_RATE 2
 #define INITIAL_SIZE 10
+#define SIZE_AFTER_CLEAR 4
 
 class HashTable
 {
@@ -53,6 +54,7 @@ class HashTable
         HashTable();
         ~HashTable();
         void destroyHashData();
+        void clearHash();
 
         class ElementNotInTable: public std::exception{};
 

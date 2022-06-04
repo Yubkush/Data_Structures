@@ -326,6 +326,7 @@ static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup (void* DS, const char*
 
     if (res != SUCCESS) {
         printf("SumOfBumpGradeBetweenTopWorkersByGroup: %s\n", ReturnValToStr(res));
+        free(sumBumpGrade);
         return error_free;
     }
     free(sumBumpGrade);
@@ -350,6 +351,7 @@ static errorType OnAverageBumpGradeBetweenSalaryByGroup (void* DS, const char* c
 
     if (res != SUCCESS) {
         printf("AverageBumpGradeBetweenSalaryByGroup: %s\n", ReturnValToStr(res));
+        free(averageBumpGrade);
         return error_free;
     }
     free(averageBumpGrade);
@@ -372,12 +374,13 @@ static errorType OnCompanyValue(void* DS, const char* const command) {
 
     if (res != SUCCESS) {
         printf("CompanyValue: %s\n", ReturnValToStr(res));
+        free(standing);
         return error_free;
     }
     else{
         printf("CompanyValue: %f\n", *((double*)standing));
     }
-
+    free(standing);
     return error_free;
 }
 

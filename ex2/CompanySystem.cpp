@@ -85,21 +85,21 @@ void CompanySystem::promoteEmployee(int employee_id, int bump_grade)
     catch(const std::bad_alloc& e){throw e;}
 }
 
-static void mergeHashTables(Company* acquirer_company, HashTable* acquirer, HashTable* target)
+static void mergeHashTables(Company* acquirer_company, HashTable& acquirer, HashTable& target)
 {
-    LinkedList* values_target = target->getValues();
-    for (int i = 0; i < target->getTableSize(); i++)
+    LinkedList* values_target = target.getValues();
+    //insert all target employees to acquirer
+    for (int i = 0; i < target.getTableSize(); i++)
     {
         Node* head = values_target[i].getHead();
         while(head != nullptr){
             head->getData()->SetCompany(acquirer_company);
-            acquirer->insert(head->getData());
+            acquirer.insert(head->getData());
             head = head->getNext();
         }
     }
-    HashTable* temp = target;
-    delete temp;
-    target = nullptr;
+    //clear target
+    target.clearHash();
 }
 
 void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor)

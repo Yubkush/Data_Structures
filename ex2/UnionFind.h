@@ -14,7 +14,7 @@ class UFNode{
         UFNode* parent;
     public:
         UFNode(Company* company, Group* group):company(company), group(group), fixer(0), parent(nullptr){};
-        ~UFNode(){delete company;}
+        ~UFNode(){}
         Company* getCompany(){return company;}
         Group* getGroup(){return group;}
         double getFixer(){return fixer;}

@@ -1,7 +1,7 @@
 #include "Company.h"
 
 Company::Company(const int id, const int value): id(id), value(value), num_of_interns(0), sum_of_interns_grades(0),
-                                    all_employees(new HashTable()), employees_with_salary()
+                                    all_employees(), employees_with_salary()
 {
     
 }
@@ -31,7 +31,7 @@ RankTree& Company::getEmployeesWithSalaryTree()
     return employees_with_salary;
 }
 
-HashTable* Company::getEmployeesHash()
+HashTable& Company::getEmployeesHash()
 {
     return all_employees;
 }
@@ -62,7 +62,7 @@ void Company::AddEmployee(Employee* employee)
     //update num_of_interns and sum_of_interns_grades
     num_of_interns++;
     sum_of_interns_grades += employee->GetGrade();
-    all_employees->insert(employee);
+    all_employees.insert(employee);
     //update employee company*
     employee->SetCompany(this);
 }
@@ -71,7 +71,7 @@ void Company::removeEmployee(Employee* employee)
 {
     try{
         employee->SetCompany(nullptr);
-        all_employees->remove(employee->GetEmployeeId());
+        all_employees.remove(employee->GetEmployeeId());
         //remove from tree
         if(employee->GetSalary() > 0){
             employees_with_salary.remove(employee);

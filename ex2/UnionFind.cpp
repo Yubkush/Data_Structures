@@ -18,6 +18,7 @@ UnionFind::~UnionFind()
 {
     for (int i = 1; i < num_companies+1; i++)
     {
+        delete company_nodes[i]->getCompany();
         delete company_nodes[i];
     }
     delete[] groups;
