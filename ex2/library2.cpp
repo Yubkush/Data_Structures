@@ -38,7 +38,7 @@ StatusType RemoveEmployee(void *DS, int employeeID)
 StatusType AcquireCompany(void *DS, int companyID1, int companyID2, double factor)
 {
     if(DS == nullptr || companyID1<=0 || companyID1 > (((CompanySystem*)DS)->getNumCompanies()) || 
-        companyID2<=0 || companyID2 > (((CompanySystem*)DS)->getNumCompanies()) || factor <= 0.0){
+        companyID2 <= 0 || companyID2 > (((CompanySystem*)DS)->getNumCompanies()) || factor <= 0.0){
         return INVALID_INPUT;
     }
     try{

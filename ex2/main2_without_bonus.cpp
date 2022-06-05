@@ -321,7 +321,7 @@ static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup (void* DS, const char*
     int m;
     ValidateRead(sscanf(command, "%d %d", &companyID, &m), 2,
                  "SumOfBumpGradeBetweenTopWorkersByGroup failed.\n");
-    void* sumBumpGrade = malloc(sizeof(double));
+    void* sumBumpGrade = malloc(sizeof(int));
     StatusType res = SumOfBumpGradeBetweenTopWorkersByGroup(DS, companyID, m, &sumBumpGrade);
 
     if (res != SUCCESS) {
@@ -329,10 +329,10 @@ static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup (void* DS, const char*
         free(sumBumpGrade);
         return error_free;
     }
+    else{
+        printf("SumOfBumpGradeBetweenTopWorkersByGroup: %d\n", *(int*)sumBumpGrade);
+    }
     free(sumBumpGrade);
-    /*
-     * Implement here the printing of the variable
-     */
     return error_free;
 }
 
@@ -354,10 +354,10 @@ static errorType OnAverageBumpGradeBetweenSalaryByGroup (void* DS, const char* c
         free(averageBumpGrade);
         return error_free;
     }
+    else{
+        printf("AverageBumpGradeBetweenSalaryByGroup: %.3f\n", *(double*)averageBumpGrade);
+    }
     free(averageBumpGrade);
-    /*
-     * Implement here the printing of the variable
-     */
     return error_free;
 }
 
@@ -378,7 +378,7 @@ static errorType OnCompanyValue(void* DS, const char* const command) {
         return error_free;
     }
     else{
-        printf("CompanyValue: %f\n", *((double*)standing));
+        printf("CompanyValue: %.3f\n", *((double*)standing));
     }
     free(standing);
     return error_free;

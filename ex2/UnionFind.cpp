@@ -53,18 +53,20 @@ void UnionFind::Union(int group_a, int group_b, double factor)
 
 int UnionFind::Find(int company_id)
 {
+    if(company_id == 2){
+        company_id += 1;
+        company_id -= 1;
+    }
     //Node of interest
     UFNode* temp = company_nodes[company_id];
     //For fixing fixers during second phase of find
-    int sum_fixers = 0, prev_fixer = 0;
+    double sum_fixers = 0, prev_fixer = 0;
     while(temp->getParent() != nullptr)
     {
         sum_fixers += temp->getFixer();
         temp = temp->getParent();
     }
     UFNode *root = temp, *next;
-    //dont need root fixer in sum
-    sum_fixers -= root->getFixer();
     int group_to_return = root->getGroup()->group_num;
     //temp returns to Node of interest
     temp = company_nodes[company_id];

@@ -70,7 +70,6 @@ void Company::AddEmployee(Employee* employee)
 void Company::removeEmployee(Employee* employee)
 {
     try{
-        employee->SetCompany(nullptr);
         all_employees.remove(employee->GetEmployeeId());
         //remove from tree
         if(employee->GetSalary() > 0){
@@ -79,10 +78,14 @@ void Company::removeEmployee(Employee* employee)
         else{
             //update num_of_interns and sum_of_interns_grades
             increaseNumOfInterns(-1);
-            increaseSumOfInternsGrades(employee->GetGrade());
+            increaseSumOfInternsGrades(-(employee->GetGrade()));
         }
+        employee->SetCompany(nullptr);
     }
     catch(const RankTree::ElementNotInTree& e){
+        throw EmployeeNotInCompany();
+    }
+    catch(const HashTable::ElementNotInTable& e){
         throw EmployeeNotInCompany();
     }
     catch(const EmployeesUnderZero& e){
