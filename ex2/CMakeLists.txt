@@ -14,21 +14,23 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(
-  unionfind_test
-  tests/UnionFind_test.cpp
+  company_system_test
+  tests/CompanySystem_test.cpp
+  CompanySystem.cpp
   HashTable.cpp
   UnionFind.cpp
   Company.cpp
   RankTree.cpp
   Employee.cpp
+  LinkedList.cpp
 )
 target_link_libraries(
-  unionfind_test
+  company_system_test
   gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(unionfind_test)
+gtest_discover_tests(company_system_test)
 
 # set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 # set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
