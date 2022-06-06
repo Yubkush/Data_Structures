@@ -38,10 +38,11 @@ typedef enum {
     SUM_OF_BUMP_GRADE_BETWEEN_TOP_WORKERS_BY_GROUP_CMD = 6,
     AVERAGE_BUMP_GRADE_BETWEEN_SALARY_BY_GROUP_CMD = 7,
     COMPANY_VALUE_CMD = 8,
-    QUIT_CMD = 9
+    BUMP_GRADE_TO_EMPLOYEES_CMD = 9,
+    QUIT_CMD = 10
 } commandType;
 
-static const int numActions = 10;
+static const int numActions = 11;
 static const char *commandStr[] = {
         "Init",
         "AddEmployee",
@@ -52,7 +53,9 @@ static const char *commandStr[] = {
         "SumOfBumpGradeBetweenTopWorkersByGroup ",
         "AverageBumpGradeBetweenSalaryByGroup ",
         "CompanyValue",
-        "Quit" };
+        "BumpGradeToEmployees",
+        "Quit"
+};
 
 static const char* ReturnValToStr(int val) {
     switch (val) {
@@ -136,6 +139,7 @@ static errorType OnPromoteEmployee(void* DS, const char* const command);
 static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup(void* DS, const char* const command);
 static errorType OnAverageBumpGradeBetweenSalaryByGroup(void* DS, const char* const command);
 static errorType OnCompanyValue(void* DS, const char* const command);
+static errorType OnBumpGradeToEmployees(void* DS, const char* const command);
 static errorType OnQuit(void** DS, const char* const command);
 
 /***************************************************************************/
@@ -177,6 +181,9 @@ static errorType parser(const char* const command) {
             break;
         case (COMPANY_VALUE_CMD):
             rtn_val = OnCompanyValue(DS, command_args);
+            break;
+        case (BUMP_GRADE_TO_EMPLOYEES_CMD):
+            rtn_val = OnBumpGradeToEmployees(DS, command_args);
             break;
         case (QUIT_CMD):
             rtn_val = OnQuit(&DS, command_args);
@@ -321,18 +328,13 @@ static errorType OnSumOfBumpGradeBetweenTopWorkersByGroup (void* DS, const char*
     int m;
     ValidateRead(sscanf(command, "%d %d", &companyID, &m), 2,
                  "SumOfBumpGradeBetweenTopWorkersByGroup failed.\n");
-    void* sumBumpGrade = malloc(sizeof(int));
-    StatusType res = SumOfBumpGradeBetweenTopWorkersByGroup(DS, companyID, m, &sumBumpGrade);
+    StatusType res = SumOfBumpGradeBetweenTopWorkersByGroup(DS, companyID, m);
 
     if (res != SUCCESS) {
         printf("SumOfBumpGradeBetweenTopWorkersByGroup: %s\n", ReturnValToStr(res));
-        free(sumBumpGrade);
         return error_free;
     }
-    else{
-        printf("SumOfBumpGradeBetweenTopWorkersByGroup: %d\n", *(int*)sumBumpGrade);
-    }
-    free(sumBumpGrade);
+
     return error_free;
 }
 
@@ -346,18 +348,13 @@ static errorType OnAverageBumpGradeBetweenSalaryByGroup (void* DS, const char* c
     int higherSalary;
     ValidateRead(sscanf(command, "%d %d %d", &companyID, &lowerSalary, &higherSalary), 3,
                  "AverageBumpGradeBetweenSalaryByGroup failed.\n");
-    void* averageBumpGrade = malloc(sizeof(double));
-    StatusType res = AverageBumpGradeBetweenSalaryByGroup(DS, companyID, lowerSalary, higherSalary, &averageBumpGrade);
+    StatusType res = AverageBumpGradeBetweenSalaryByGroup(DS, companyID, lowerSalary, higherSalary);
 
     if (res != SUCCESS) {
         printf("AverageBumpGradeBetweenSalaryByGroup: %s\n", ReturnValToStr(res));
-        free(averageBumpGrade);
         return error_free;
     }
-    else{
-        printf("AverageBumpGradeBetweenSalaryByGroup: %.3f\n", *(double*)averageBumpGrade);
-    }
-    free(averageBumpGrade);
+
     return error_free;
 }
 
@@ -369,20 +366,39 @@ static errorType OnCompanyValue(void* DS, const char* const command) {
     int companyID;
     ValidateRead(sscanf(command, "%d", &companyID), 1,
                  "CompanyValue failed.\n");
-    void* standing = malloc(sizeof(double));
-    StatusType res = CompanyValue(DS, companyID, &standing);
+    StatusType res = CompanyValue(DS, companyID);
 
     if (res != SUCCESS) {
         printf("CompanyValue: %s\n", ReturnValToStr(res));
-        free(standing);
         return error_free;
     }
-    else{
-        printf("CompanyValue: %.3f\n", *((double*)standing));
-    }
-    free(standing);
+
     return error_free;
 }
+
+/***************************************************************************/
+/* OnBumpGradeToEmployees                                                        */
+/***************************************************************************/
+/*
+ * 20 points Bonus function:
+static errorType OnBumpGradeToEmployees(void* DS, const char* const command) {
+    int lowerSalary;
+    int higherSalary;
+    int bumpGrade;
+    ValidateRead(sscanf(command, "%d %d %d", &lowerSalary, &higherSalary, &bumpGrade), 3,
+                 "BumpGradeToEmployees failed.\n");
+    StatusType res = BumpGradeToEmployees(DS, lowerSalary, higherSalary, bumpGrade);
+
+    if (res != SUCCESS) {
+        printf("BumpGradeToEmployees: %s\n", ReturnValToStr(res));
+        return error_free;
+    }
+
+    printf("BumpGradeToEmployees: %s\n", ReturnValToStr(res));
+
+    return error_free;
+}
+*/
 
 /***************************************************************************/
 /* OnQuit                                                                  */
