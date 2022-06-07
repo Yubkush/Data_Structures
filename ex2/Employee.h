@@ -10,7 +10,6 @@ class Employee
         Company* company;
         int salary;
         int grade;
-        int bump_grade_balance;
     
     public:
         Employee(const int employee_id, Company* company, const int salary, const int grade);

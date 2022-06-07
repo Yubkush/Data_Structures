@@ -1,7 +1,7 @@
 #include "Employee.h"
 
 Employee::Employee(const int employee_id, Company* company, const int salary, const int grade):
-id(employee_id), company(company), salary(salary), grade(grade), bump_grade_balance(0)
+id(employee_id), company(company), salary(salary), grade(grade)
 {
     
 }

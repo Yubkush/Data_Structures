@@ -1,0 +1,3101 @@
+Init 10
+AddEmployee 321 9 38
+AddEmployee 184 7 43
+AddEmployee 189 -2 0
+AddEmployee 398 10 31
+AddEmployee 215 13 10
+AddEmployee 27 -2 48
+AddEmployee 486 7 65
+AddEmployee 384 -1 -9
+AddEmployee 204 -1 27
+AddEmployee 31 3 9
+AddEmployee 89 10 66
+AddEmployee 344 1 89
+AddEmployee 281 10 54
+AddEmployee 234 14 8
+AddEmployee 473 4 1
+AddEmployee 255 -2 94
+AddEmployee 427 13 38
+AddEmployee 492 -2 22
+AddEmployee 377 -2 27
+AddEmployee 213 -4 90
+AddEmployee 38 14 45
+AddEmployee 275 9 34
+AddEmployee 257 -3 20
+AddEmployee 82 11 17
+AddEmployee 90 13 76
+AddEmployee 405 13 13
+AddEmployee 37 15 74
+AddEmployee 453 5 55
+AddEmployee 238 14 1
+AddEmployee 32 15 79
+AddEmployee 78 -5 7
+AddEmployee 104 7 -10
+AddEmployee 224 7 39
+AddEmployee 143 5 31
+AddEmployee 381 4 45
+AddEmployee 499 11 44
+AddEmployee 43 13 20
+AddEmployee 149 4 29
+AddEmployee 151 2 80
+AddEmployee 113 -2 63
+AddEmployee 272 14 44
+AddEmployee 412 -3 63
+AddEmployee 4 -5 31
+AddEmployee 270 8 5
+AddEmployee 132 -1 17
+AddEmployee 127 15 31
+AddEmployee 276 8 3
+AddEmployee 139 10 51
+AddEmployee 404 -3 78
+AddEmployee 35 -3 86
+AddEmployee 354 2 71
+AddEmployee 139 -5 69
+AddEmployee 163 7 25
+AddEmployee 197 -4 0
+AddEmployee 292 13 19
+AddEmployee 465 8 -9
+AddEmployee 357 -3 51
+AddEmployee 345 7 81
+AddEmployee 456 12 44
+AddEmployee 288 9 -6
+AddEmployee 273 15 23
+AddEmployee 399 8 45
+AddEmployee 9 15 22
+AddEmployee -2 -2 16
+AddEmployee 407 -1 37
+AddEmployee 53 15 22
+AddEmployee 459 9 35
+AddEmployee 62 9 52
+AddEmployee 139 11 60
+AddEmployee 73 9 56
+AddEmployee 372 1 30
+AddEmployee 31 7 21
+AddEmployee 35 12 64
+AddEmployee 457 10 17
+AddEmployee 393 5 65
+AddEmployee 212 12 85
+AddEmployee 423 1 85
+AddEmployee 232 -4 98
+AddEmployee 295 9 73
+AddEmployee 131 3 3
+AddEmployee 415 -2 -9
+AddEmployee 47 1 3
+AddEmployee 413 1 5
+AddEmployee 364 9 22
+AddEmployee 140 -2 74
+AddEmployee 151 -3 66
+AddEmployee 335 -1 73
+AddEmployee 31 7 35
+AddEmployee 178 -3 -2
+AddEmployee 55 -3 35
+AddEmployee 254 -3 21
+AddEmployee 439 6 75
+AddEmployee 130 4 38
+AddEmployee 325 13 7
+AddEmployee 307 6 57
+AddEmployee 423 11 24
+AddEmployee 139 2 23
+AddEmployee 119 9 60
+AddEmployee 314 7 83
+AddEmployee 216 2 41
+RemoveEmployee 480
+SumOfBumpGradeBetweenTopWorkersByGroup  9 28
+CompanyValue 9
+PromoteEmployee 177 91
+EmployeeSalaryIncrease 234 2
+RemoveEmployee 42
+SumOfBumpGradeBetweenTopWorkersByGroup  6 14
+PromoteEmployee 17 51
+AddEmployee 378 13 73
+CompanyValue -5
+EmployeeSalaryIncrease 482 34
+CompanyValue 3
+AcquireCompany 8 8 0.3
+AddEmployee 189 3 38
+PromoteEmployee 77 25
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 52
+CompanyValue 7
+AddEmployee 175 0 -8
+PromoteEmployee 200 56
+AddEmployee 185 -4 2
+EmployeeSalaryIncrease 248 90
+SumOfBumpGradeBetweenTopWorkersByGroup  13 50
+PromoteEmployee -8 58
+CompanyValue -2
+EmployeeSalaryIncrease 425 61
+AddEmployee 450 15 52
+PromoteEmployee 181 5
+EmployeeSalaryIncrease 277 70
+PromoteEmployee 239 39
+SumOfBumpGradeBetweenTopWorkersByGroup  14 62
+AverageBumpGradeBetweenSalaryByGroup  3 24 986
+AcquireCompany 14 8 1.803
+PromoteEmployee 82 -2
+CompanyValue 11
+PromoteEmployee 476 93
+AddEmployee 121 13 55
+EmployeeSalaryIncrease 370 61
+RemoveEmployee 220
+AverageBumpGradeBetweenSalaryByGroup  14 57 709
+CompanyValue 6
+AcquireCompany -5 0 3.13
+RemoveEmployee 150
+EmployeeSalaryIncrease 341 38
+CompanyValue 6
+PromoteEmployee 115 98
+EmployeeSalaryIncrease 493 69
+SumOfBumpGradeBetweenTopWorkersByGroup  8 0
+AddEmployee 473 14 68
+PromoteEmployee 490 19
+AverageBumpGradeBetweenSalaryByGroup  4 4 568
+AverageBumpGradeBetweenSalaryByGroup  7 84 280
+AverageBumpGradeBetweenSalaryByGroup  -5 23 83
+EmployeeSalaryIncrease 342 15
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 43
+CompanyValue -5
+PromoteEmployee 447 82
+AverageBumpGradeBetweenSalaryByGroup  7 -2 223
+AddEmployee 274 13 94
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 66
+EmployeeSalaryIncrease 459 33
+PromoteEmployee 115 23
+AddEmployee 395 12 42
+PromoteEmployee 46 78
+EmployeeSalaryIncrease 491 58
+PromoteEmployee 488 -2
+AddEmployee 109 -1 55
+EmployeeSalaryIncrease 354 81
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 80
+EmployeeSalaryIncrease 24 52
+AverageBumpGradeBetweenSalaryByGroup  0 96 230
+AverageBumpGradeBetweenSalaryByGroup  15 5 998
+CompanyValue 10
+PromoteEmployee 26 63
+EmployeeSalaryIncrease 155 55
+AverageBumpGradeBetweenSalaryByGroup  2 -7 995
+AcquireCompany -1 -1 3.245
+CompanyValue 1
+AcquireCompany 8 5 -0.736
+AverageBumpGradeBetweenSalaryByGroup  -4 33 341
+CompanyValue 15
+AverageBumpGradeBetweenSalaryByGroup  6 67 763
+CompanyValue 0
+PromoteEmployee 40 64
+AverageBumpGradeBetweenSalaryByGroup  -1 5 262
+AddEmployee 273 7 21
+AverageBumpGradeBetweenSalaryByGroup  7 43 75
+CompanyValue 10
+AcquireCompany 3 1 1.786
+AcquireCompany -5 8 1.285
+AcquireCompany 4 9 -0.138
+SumOfBumpGradeBetweenTopWorkersByGroup  2 5
+EmployeeSalaryIncrease 252 66
+AddEmployee 393 -4 20
+PromoteEmployee 175 23
+RemoveEmployee 27
+EmployeeSalaryIncrease 192 -7
+AverageBumpGradeBetweenSalaryByGroup  2 46 330
+SumOfBumpGradeBetweenTopWorkersByGroup  5 76
+AverageBumpGradeBetweenSalaryByGroup  1 92 744
+AverageBumpGradeBetweenSalaryByGroup  5 73 522
+AddEmployee 351 15 92
+AcquireCompany 10 14 3.906
+RemoveEmployee 292
+AcquireCompany -5 9 -0.555
+PromoteEmployee 128 29
+AddEmployee 138 10 50
+AddEmployee 85 9 37
+AcquireCompany 1 13 -0.216
+EmployeeSalaryIncrease 490 65
+RemoveEmployee 114
+PromoteEmployee 29 33
+AverageBumpGradeBetweenSalaryByGroup  6 28 322
+CompanyValue 1
+AcquireCompany 7 -1 -0.92
+EmployeeSalaryIncrease 277 -3
+CompanyValue 11
+AcquireCompany 2 11 1.139
+AcquireCompany 3 3 4.039
+AverageBumpGradeBetweenSalaryByGroup  7 26 29
+PromoteEmployee 310 84
+SumOfBumpGradeBetweenTopWorkersByGroup  1 10
+AddEmployee 486 9 63
+PromoteEmployee 414 2
+SumOfBumpGradeBetweenTopWorkersByGroup  11 -3
+EmployeeSalaryIncrease 292 88
+AddEmployee 136 11 34
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 69
+CompanyValue 10
+AddEmployee 12 2 59
+EmployeeSalaryIncrease 444 77
+CompanyValue 6
+AverageBumpGradeBetweenSalaryByGroup  -2 68 77
+EmployeeSalaryIncrease 382 93
+PromoteEmployee 410 38
+AcquireCompany 3 7 0.71
+AverageBumpGradeBetweenSalaryByGroup  -3 -8 854
+RemoveEmployee 385
+AverageBumpGradeBetweenSalaryByGroup  3 -1 262
+EmployeeSalaryIncrease 242 3
+EmployeeSalaryIncrease 13 8
+AddEmployee 472 -3 100
+AverageBumpGradeBetweenSalaryByGroup  2 45 984
+EmployeeSalaryIncrease 54 87
+AddEmployee 84 15 100
+PromoteEmployee 86 40
+CompanyValue 12
+PromoteEmployee 366 29
+CompanyValue 5
+EmployeeSalaryIncrease 124 6
+AddEmployee 131 15 -3
+RemoveEmployee -1
+CompanyValue 4
+AverageBumpGradeBetweenSalaryByGroup  12 54 958
+PromoteEmployee 277 94
+CompanyValue -1
+AverageBumpGradeBetweenSalaryByGroup  10 63 562
+RemoveEmployee 335
+PromoteEmployee 414 64
+AverageBumpGradeBetweenSalaryByGroup  3 84 483
+AcquireCompany 6 -1 1.518
+PromoteEmployee 423 36
+CompanyValue -2
+AverageBumpGradeBetweenSalaryByGroup  4 79 740
+CompanyValue 0
+AddEmployee 498 11 86
+AcquireCompany 7 10 4.321
+AcquireCompany 1 4 4.481
+PromoteEmployee 39 97
+RemoveEmployee 227
+AddEmployee 310 -5 36
+AddEmployee 302 12 39
+AddEmployee 88 -3 31
+SumOfBumpGradeBetweenTopWorkersByGroup  0 15
+AcquireCompany -2 7 -0.401
+PromoteEmployee 0 15
+PromoteEmployee 249 62
+PromoteEmployee 430 31
+AcquireCompany 2 1 2.325
+AverageBumpGradeBetweenSalaryByGroup  -4 19 440
+RemoveEmployee 479
+RemoveEmployee 375
+AcquireCompany 7 6 -0.654
+AcquireCompany 2 -3 1.82
+EmployeeSalaryIncrease 154 25
+AverageBumpGradeBetweenSalaryByGroup  11 97 944
+CompanyValue -2
+AverageBumpGradeBetweenSalaryByGroup  5 36 837
+AverageBumpGradeBetweenSalaryByGroup  9 74 410
+AverageBumpGradeBetweenSalaryByGroup  2 92 682
+CompanyValue 0
+AverageBumpGradeBetweenSalaryByGroup  9 75 459
+RemoveEmployee 499
+AddEmployee 284 11 76
+SumOfBumpGradeBetweenTopWorkersByGroup  13 89
+RemoveEmployee 402
+AverageBumpGradeBetweenSalaryByGroup  12 88 664
+AddEmployee 122 2 93
+AddEmployee 237 9 -6
+RemoveEmployee 130
+EmployeeSalaryIncrease 307 100
+CompanyValue 3
+PromoteEmployee 8 94
+EmployeeSalaryIncrease 69 18
+CompanyValue 7
+RemoveEmployee 408
+RemoveEmployee 265
+AverageBumpGradeBetweenSalaryByGroup  9 72 130
+PromoteEmployee 63 27
+AcquireCompany 15 3 1.951
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 23
+RemoveEmployee 342
+AverageBumpGradeBetweenSalaryByGroup  9 90 273
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 74
+PromoteEmployee 492 87
+AddEmployee 453 5 4
+AcquireCompany 11 12 1.898
+CompanyValue 11
+PromoteEmployee 487 36
+AcquireCompany -5 2 3.171
+RemoveEmployee 308
+AddEmployee 123 7 -10
+CompanyValue -1
+AddEmployee 238 7 82
+RemoveEmployee 323
+AddEmployee 481 15 37
+AcquireCompany -5 -3 3.014
+EmployeeSalaryIncrease 345 70
+AddEmployee 142 15 27
+AcquireCompany 11 14 3.553
+AcquireCompany -1 4 2.206
+CompanyValue 2
+CompanyValue 5
+AcquireCompany -5 -1 1.979
+AcquireCompany 1 6 0.565
+RemoveEmployee 364
+SumOfBumpGradeBetweenTopWorkersByGroup  5 31
+AcquireCompany 0 3 -0.3
+EmployeeSalaryIncrease 10 36
+EmployeeSalaryIncrease 95 -3
+AverageBumpGradeBetweenSalaryByGroup  2 3 580
+AcquireCompany -3 8 2.134
+AddEmployee 73 10 68
+EmployeeSalaryIncrease 481 13
+SumOfBumpGradeBetweenTopWorkersByGroup  1 67
+AddEmployee 9 0 100
+PromoteEmployee 84 96
+RemoveEmployee 405
+AverageBumpGradeBetweenSalaryByGroup  12 6 590
+AverageBumpGradeBetweenSalaryByGroup  -4 0 736
+RemoveEmployee 40
+AcquireCompany -4 1 4.861
+SumOfBumpGradeBetweenTopWorkersByGroup  7 67
+SumOfBumpGradeBetweenTopWorkersByGroup  5 53
+RemoveEmployee 465
+RemoveEmployee 356
+EmployeeSalaryIncrease 230 58
+AcquireCompany -2 5 2.771
+AcquireCompany 1 -2 1.187
+PromoteEmployee 283 13
+RemoveEmployee 391
+AddEmployee 229 3 100
+EmployeeSalaryIncrease 151 94
+EmployeeSalaryIncrease 231 -3
+PromoteEmployee 195 23
+CompanyValue 0
+CompanyValue 5
+PromoteEmployee 18 19
+PromoteEmployee 202 0
+AddEmployee 386 -5 -8
+EmployeeSalaryIncrease 244 76
+AddEmployee 434 7 21
+AverageBumpGradeBetweenSalaryByGroup  4 54 777
+AcquireCompany 0 10 0.761
+RemoveEmployee 275
+CompanyValue 14
+EmployeeSalaryIncrease 177 70
+CompanyValue 1
+AcquireCompany 3 9 4.638
+RemoveEmployee 486
+CompanyValue 3
+AverageBumpGradeBetweenSalaryByGroup  12 90 723
+RemoveEmployee 116
+RemoveEmployee 290
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 15
+AddEmployee 456 12 88
+PromoteEmployee 166 31
+PromoteEmployee 262 37
+EmployeeSalaryIncrease 19 55
+AddEmployee 138 -4 27
+SumOfBumpGradeBetweenTopWorkersByGroup  7 74
+RemoveEmployee 356
+PromoteEmployee 397 63
+EmployeeSalaryIncrease 290 33
+CompanyValue 15
+CompanyValue -4
+CompanyValue -3
+AddEmployee 126 8 61
+PromoteEmployee 128 42
+AcquireCompany 8 8 3.464
+SumOfBumpGradeBetweenTopWorkersByGroup  11 54
+EmployeeSalaryIncrease 290 63
+EmployeeSalaryIncrease 55 51
+AverageBumpGradeBetweenSalaryByGroup  -1 94 384
+RemoveEmployee 223
+CompanyValue -3
+RemoveEmployee 329
+SumOfBumpGradeBetweenTopWorkersByGroup  5 91
+AcquireCompany -1 11 1.601
+AddEmployee 390 7 -9
+RemoveEmployee 327
+AcquireCompany 10 0 3.677
+AcquireCompany 5 12 3.401
+AverageBumpGradeBetweenSalaryByGroup  -1 -6 238
+AddEmployee 324 7 45
+AddEmployee 375 14 35
+RemoveEmployee 479
+AverageBumpGradeBetweenSalaryByGroup  -5 50 51
+PromoteEmployee 118 35
+CompanyValue 15
+SumOfBumpGradeBetweenTopWorkersByGroup  7 51
+AverageBumpGradeBetweenSalaryByGroup  5 97 609
+RemoveEmployee 238
+CompanyValue 10
+EmployeeSalaryIncrease 325 79
+EmployeeSalaryIncrease 353 10
+EmployeeSalaryIncrease 244 53
+AverageBumpGradeBetweenSalaryByGroup  -3 96 60
+EmployeeSalaryIncrease 342 97
+AddEmployee 111 1 95
+AcquireCompany -4 -3 0.818
+PromoteEmployee 409 59
+EmployeeSalaryIncrease 248 99
+SumOfBumpGradeBetweenTopWorkersByGroup  8 45
+AverageBumpGradeBetweenSalaryByGroup  0 27 925
+CompanyValue 1
+EmployeeSalaryIncrease 321 -5
+CompanyValue 15
+EmployeeSalaryIncrease 265 60
+CompanyValue 6
+EmployeeSalaryIncrease 159 65
+AverageBumpGradeBetweenSalaryByGroup  9 39 865
+EmployeeSalaryIncrease 381 97
+AcquireCompany -3 7 4.448
+PromoteEmployee 460 15
+AddEmployee 7 -5 85
+AcquireCompany 0 -4 1.239
+SumOfBumpGradeBetweenTopWorkersByGroup  14 97
+CompanyValue 9
+CompanyValue 0
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 90
+CompanyValue 10
+RemoveEmployee 500
+SumOfBumpGradeBetweenTopWorkersByGroup  2 7
+AddEmployee 83 1 9
+SumOfBumpGradeBetweenTopWorkersByGroup  11 36
+AddEmployee 357 -1 20
+RemoveEmployee 5
+AddEmployee 351 0 72
+AcquireCompany -2 15 1.197
+AverageBumpGradeBetweenSalaryByGroup  10 69 594
+AverageBumpGradeBetweenSalaryByGroup  7 80 750
+EmployeeSalaryIncrease 468 1
+AcquireCompany 9 -3 -0.065
+AverageBumpGradeBetweenSalaryByGroup  13 5 609
+SumOfBumpGradeBetweenTopWorkersByGroup  11 15
+CompanyValue -1
+AverageBumpGradeBetweenSalaryByGroup  3 71 998
+AverageBumpGradeBetweenSalaryByGroup  11 85 289
+AverageBumpGradeBetweenSalaryByGroup  14 6 436
+EmployeeSalaryIncrease 443 -1
+PromoteEmployee 369 21
+AcquireCompany 13 1 3.392
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 60
+AverageBumpGradeBetweenSalaryByGroup  6 -9 786
+SumOfBumpGradeBetweenTopWorkersByGroup  9 68
+EmployeeSalaryIncrease 457 21
+AddEmployee 403 7 66
+PromoteEmployee 6 90
+PromoteEmployee -9 39
+SumOfBumpGradeBetweenTopWorkersByGroup  5 1
+RemoveEmployee 28
+AcquireCompany -5 -2 2.051
+CompanyValue 0
+RemoveEmployee 214
+PromoteEmployee 244 30
+RemoveEmployee 500
+AddEmployee 443 -1 68
+CompanyValue -2
+SumOfBumpGradeBetweenTopWorkersByGroup  3 16
+RemoveEmployee 152
+AverageBumpGradeBetweenSalaryByGroup  13 42 8
+RemoveEmployee 480
+CompanyValue 0
+AverageBumpGradeBetweenSalaryByGroup  4 86 97
+SumOfBumpGradeBetweenTopWorkersByGroup  7 32
+AddEmployee 416 8 51
+RemoveEmployee 320
+RemoveEmployee 154
+EmployeeSalaryIncrease 358 77
+AverageBumpGradeBetweenSalaryByGroup  -1 -6 138
+PromoteEmployee 99 52
+AverageBumpGradeBetweenSalaryByGroup  12 59 649
+AverageBumpGradeBetweenSalaryByGroup  0 92 745
+PromoteEmployee 400 22
+SumOfBumpGradeBetweenTopWorkersByGroup  3 69
+AverageBumpGradeBetweenSalaryByGroup  3 64 116
+AverageBumpGradeBetweenSalaryByGroup  -2 36 548
+CompanyValue -4
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 22
+AddEmployee 178 7 20
+AcquireCompany 2 -3 -0.441
+AcquireCompany 15 14 2.5
+CompanyValue 0
+PromoteEmployee 422 27
+AddEmployee 314 -4 21
+AddEmployee 493 14 94
+AddEmployee 402 -3 90
+SumOfBumpGradeBetweenTopWorkersByGroup  7 44
+SumOfBumpGradeBetweenTopWorkersByGroup  15 -1
+AddEmployee 188 13 30
+AddEmployee 89 6 30
+PromoteEmployee 379 81
+AddEmployee 1 -3 100
+EmployeeSalaryIncrease 390 57
+CompanyValue 1
+CompanyValue 3
+AverageBumpGradeBetweenSalaryByGroup  9 -6 6
+AddEmployee 321 6 20
+AverageBumpGradeBetweenSalaryByGroup  15 94 428
+RemoveEmployee 489
+RemoveEmployee 431
+PromoteEmployee 332 95
+AddEmployee 390 -1 19
+RemoveEmployee 421
+AcquireCompany -2 14 4.898
+CompanyValue 1
+AddEmployee 174 10 13
+SumOfBumpGradeBetweenTopWorkersByGroup  11 3
+PromoteEmployee 1 82
+EmployeeSalaryIncrease 148 33
+CompanyValue -4
+RemoveEmployee 175
+CompanyValue 11
+AddEmployee 319 13 83
+AddEmployee 92 1 65
+AverageBumpGradeBetweenSalaryByGroup  5 -5 30
+AverageBumpGradeBetweenSalaryByGroup  11 29 353
+PromoteEmployee 268 5
+AcquireCompany -3 2 -0.677
+AddEmployee 136 12 -8
+RemoveEmployee 197
+EmployeeSalaryIncrease 231 87
+PromoteEmployee 273 44
+AcquireCompany -2 4 4.259
+PromoteEmployee 133 37
+CompanyValue 13
+RemoveEmployee 258
+EmployeeSalaryIncrease 48 86
+AddEmployee 246 -3 69
+SumOfBumpGradeBetweenTopWorkersByGroup  9 6
+SumOfBumpGradeBetweenTopWorkersByGroup  15 94
+RemoveEmployee 20
+AddEmployee 305 1 18
+AddEmployee 22 4 87
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 20
+AcquireCompany -2 3 1.097
+AcquireCompany -5 1 2.951
+SumOfBumpGradeBetweenTopWorkersByGroup  9 14
+EmployeeSalaryIncrease 351 25
+AddEmployee 452 10 0
+AcquireCompany 4 14 0.236
+EmployeeSalaryIncrease 276 56
+AverageBumpGradeBetweenSalaryByGroup  15 35 963
+CompanyValue 10
+AddEmployee 354 3 63
+CompanyValue 9
+AddEmployee 416 -3 -5
+EmployeeSalaryIncrease 483 12
+CompanyValue 14
+EmployeeSalaryIncrease 408 23
+RemoveEmployee 245
+EmployeeSalaryIncrease 128 -3
+CompanyValue -1
+CompanyValue 7
+EmployeeSalaryIncrease -5 16
+AddEmployee 124 -2 53
+AddEmployee 336 9 40
+RemoveEmployee 88
+CompanyValue 11
+AverageBumpGradeBetweenSalaryByGroup  15 0 840
+AcquireCompany 6 -5 0.577
+AverageBumpGradeBetweenSalaryByGroup  9 38 89
+CompanyValue 0
+AverageBumpGradeBetweenSalaryByGroup  15 -6 401
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 23
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 100
+PromoteEmployee 250 75
+SumOfBumpGradeBetweenTopWorkersByGroup  13 69
+AddEmployee 7 3 5
+CompanyValue 3
+RemoveEmployee 489
+CompanyValue 6
+AverageBumpGradeBetweenSalaryByGroup  -1 -6 500
+AverageBumpGradeBetweenSalaryByGroup  2 92 953
+AverageBumpGradeBetweenSalaryByGroup  3 24 98
+PromoteEmployee 249 54
+AcquireCompany 5 7 1.172
+AcquireCompany -3 11 0.021
+AverageBumpGradeBetweenSalaryByGroup  15 -10 642
+AverageBumpGradeBetweenSalaryByGroup  -1 99 970
+CompanyValue -5
+AddEmployee 167 10 10
+SumOfBumpGradeBetweenTopWorkersByGroup  2 53
+PromoteEmployee 30 47
+RemoveEmployee 416
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 -8
+AddEmployee 23 13 92
+PromoteEmployee 144 89
+EmployeeSalaryIncrease 131 29
+AcquireCompany 7 -4 3.701
+EmployeeSalaryIncrease 257 99
+CompanyValue 9
+EmployeeSalaryIncrease -10 50
+CompanyValue -4
+SumOfBumpGradeBetweenTopWorkersByGroup  14 48
+SumOfBumpGradeBetweenTopWorkersByGroup  3 50
+RemoveEmployee 420
+AcquireCompany 10 15 1.323
+RemoveEmployee 439
+AddEmployee 361 7 73
+RemoveEmployee 422
+EmployeeSalaryIncrease 471 96
+SumOfBumpGradeBetweenTopWorkersByGroup  6 0
+SumOfBumpGradeBetweenTopWorkersByGroup  8 95
+RemoveEmployee 355
+AverageBumpGradeBetweenSalaryByGroup  -2 60 647
+CompanyValue -1
+AcquireCompany -3 8 1.667
+RemoveEmployee 124
+RemoveEmployee 274
+AddEmployee 351 3 92
+AddEmployee 203 4 58
+CompanyValue 14
+AddEmployee 81 8 53
+SumOfBumpGradeBetweenTopWorkersByGroup  10 91
+AddEmployee 242 -4 -6
+AverageBumpGradeBetweenSalaryByGroup  14 48 718
+SumOfBumpGradeBetweenTopWorkersByGroup  0 92
+AcquireCompany 8 3 0.035
+CompanyValue 3
+PromoteEmployee 260 79
+SumOfBumpGradeBetweenTopWorkersByGroup  12 5
+RemoveEmployee 421
+CompanyValue 11
+AddEmployee 208 -5 26
+AverageBumpGradeBetweenSalaryByGroup  7 90 531
+SumOfBumpGradeBetweenTopWorkersByGroup  7 74
+AddEmployee 203 -1 10
+EmployeeSalaryIncrease 106 -5
+PromoteEmployee 284 31
+SumOfBumpGradeBetweenTopWorkersByGroup  4 2
+RemoveEmployee 81
+AddEmployee 11 -5 76
+CompanyValue 1
+PromoteEmployee 160 46
+SumOfBumpGradeBetweenTopWorkersByGroup  10 62
+AverageBumpGradeBetweenSalaryByGroup  -3 24 691
+PromoteEmployee 232 21
+AddEmployee 284 3 100
+EmployeeSalaryIncrease 157 57
+PromoteEmployee 295 -8
+RemoveEmployee 439
+RemoveEmployee 232
+EmployeeSalaryIncrease 186 44
+RemoveEmployee 381
+CompanyValue 7
+EmployeeSalaryIncrease 74 44
+AddEmployee 429 0 97
+AddEmployee 494 -5 41
+EmployeeSalaryIncrease 71 16
+SumOfBumpGradeBetweenTopWorkersByGroup  10 32
+PromoteEmployee 85 52
+CompanyValue 0
+AverageBumpGradeBetweenSalaryByGroup  0 91 423
+CompanyValue 12
+AverageBumpGradeBetweenSalaryByGroup  -2 7 42
+RemoveEmployee 96
+EmployeeSalaryIncrease 418 51
+AddEmployee 42 15 5
+AddEmployee 275 1 46
+AcquireCompany 12 11 4.642
+SumOfBumpGradeBetweenTopWorkersByGroup  14 19
+AverageBumpGradeBetweenSalaryByGroup  1 71 372
+AddEmployee 319 15 41
+EmployeeSalaryIncrease 56 51
+AcquireCompany -5 5 4.746
+AcquireCompany 2 8 3.699
+RemoveEmployee 69
+EmployeeSalaryIncrease 108 1
+SumOfBumpGradeBetweenTopWorkersByGroup  15 40
+AverageBumpGradeBetweenSalaryByGroup  14 21 575
+RemoveEmployee 23
+EmployeeSalaryIncrease -2 76
+PromoteEmployee 470 96
+EmployeeSalaryIncrease 67 83
+AddEmployee 23 -1 20
+AddEmployee 233 9 43
+RemoveEmployee 342
+AverageBumpGradeBetweenSalaryByGroup  9 51 14
+CompanyValue 4
+PromoteEmployee 414 43
+RemoveEmployee 215
+SumOfBumpGradeBetweenTopWorkersByGroup  15 86
+EmployeeSalaryIncrease 267 16
+EmployeeSalaryIncrease 177 96
+AverageBumpGradeBetweenSalaryByGroup  9 -6 999
+AverageBumpGradeBetweenSalaryByGroup  -4 31 836
+EmployeeSalaryIncrease 90 27
+RemoveEmployee 387
+AcquireCompany 15 12 0.766
+CompanyValue 6
+AddEmployee 412 2 19
+RemoveEmployee 257
+AcquireCompany 11 14 1.464
+AcquireCompany -5 5 2.903
+PromoteEmployee 426 93
+EmployeeSalaryIncrease 287 39
+AcquireCompany 3 -2 -0.661
+AddEmployee 422 -4 -4
+PromoteEmployee 404 -9
+RemoveEmployee 257
+EmployeeSalaryIncrease 490 10
+PromoteEmployee 68 14
+SumOfBumpGradeBetweenTopWorkersByGroup  14 29
+AcquireCompany -5 -5 -0.835
+PromoteEmployee 421 0
+CompanyValue 14
+PromoteEmployee 297 29
+EmployeeSalaryIncrease 212 95
+CompanyValue 15
+EmployeeSalaryIncrease 67 46
+AverageBumpGradeBetweenSalaryByGroup  6 -9 540
+PromoteEmployee 487 19
+RemoveEmployee 237
+CompanyValue 14
+AverageBumpGradeBetweenSalaryByGroup  0 62 944
+RemoveEmployee 241
+RemoveEmployee 370
+EmployeeSalaryIncrease 78 12
+EmployeeSalaryIncrease 229 72
+RemoveEmployee 95
+SumOfBumpGradeBetweenTopWorkersByGroup  7 80
+AddEmployee 47 8 73
+PromoteEmployee 311 66
+CompanyValue 8
+RemoveEmployee 3
+CompanyValue 4
+SumOfBumpGradeBetweenTopWorkersByGroup  14 93
+AddEmployee 312 7 24
+RemoveEmployee 490
+AverageBumpGradeBetweenSalaryByGroup  -5 94 118
+EmployeeSalaryIncrease 113 25
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 39
+CompanyValue 4
+PromoteEmployee 270 73
+PromoteEmployee 291 27
+RemoveEmployee 21
+EmployeeSalaryIncrease 231 33
+PromoteEmployee 99 15
+AverageBumpGradeBetweenSalaryByGroup  12 23 818
+AcquireCompany 8 2 2.224
+AverageBumpGradeBetweenSalaryByGroup  -1 64 381
+AcquireCompany 10 -1 1.137
+AverageBumpGradeBetweenSalaryByGroup  5 21 611
+SumOfBumpGradeBetweenTopWorkersByGroup  10 99
+EmployeeSalaryIncrease 17 87
+AverageBumpGradeBetweenSalaryByGroup  -2 92 16
+PromoteEmployee 130 20
+PromoteEmployee 80 35
+AddEmployee 40 9 66
+CompanyValue 5
+EmployeeSalaryIncrease 418 95
+EmployeeSalaryIncrease 449 56
+RemoveEmployee 43
+CompanyValue 12
+RemoveEmployee 316
+SumOfBumpGradeBetweenTopWorkersByGroup  5 37
+AddEmployee 203 2 25
+AddEmployee 361 -5 43
+CompanyValue 2
+AverageBumpGradeBetweenSalaryByGroup  3 -7 379
+AddEmployee 8 -4 14
+AcquireCompany 10 7 0.581
+CompanyValue 5
+RemoveEmployee 321
+EmployeeSalaryIncrease 463 -10
+PromoteEmployee 383 -2
+EmployeeSalaryIncrease 242 88
+AddEmployee 220 12 90
+SumOfBumpGradeBetweenTopWorkersByGroup  3 39
+EmployeeSalaryIncrease 407 71
+CompanyValue 9
+AcquireCompany 2 -1 0.208
+SumOfBumpGradeBetweenTopWorkersByGroup  10 52
+AcquireCompany 10 9 2.166
+CompanyValue 10
+EmployeeSalaryIncrease 481 76
+RemoveEmployee -3
+CompanyValue 13
+PromoteEmployee 110 99
+AcquireCompany 7 -3 3.456
+SumOfBumpGradeBetweenTopWorkersByGroup  2 -7
+EmployeeSalaryIncrease 179 95
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 26
+AddEmployee 13 15 83
+AddEmployee 450 -3 57
+AddEmployee 423 2 69
+SumOfBumpGradeBetweenTopWorkersByGroup  6 82
+AverageBumpGradeBetweenSalaryByGroup  -3 66 317
+AverageBumpGradeBetweenSalaryByGroup  0 12 855
+SumOfBumpGradeBetweenTopWorkersByGroup  7 1
+RemoveEmployee 482
+CompanyValue 7
+PromoteEmployee 199 26
+PromoteEmployee 446 -10
+PromoteEmployee 351 48
+CompanyValue -1
+SumOfBumpGradeBetweenTopWorkersByGroup  1 53
+AddEmployee 339 10 76
+AddEmployee 271 11 73
+RemoveEmployee 356
+AddEmployee 483 -2 4
+AverageBumpGradeBetweenSalaryByGroup  5 55 888
+PromoteEmployee 455 78
+RemoveEmployee 159
+EmployeeSalaryIncrease 7 7
+AddEmployee 120 2 34
+AcquireCompany -2 3 -0.183
+RemoveEmployee 134
+PromoteEmployee 302 52
+AverageBumpGradeBetweenSalaryByGroup  15 76 324
+SumOfBumpGradeBetweenTopWorkersByGroup  15 74
+EmployeeSalaryIncrease 22 18
+EmployeeSalaryIncrease 136 79
+EmployeeSalaryIncrease 173 90
+AcquireCompany 2 -3 1.881
+RemoveEmployee 254
+RemoveEmployee 244
+AddEmployee 35 13 7
+EmployeeSalaryIncrease 185 95
+SumOfBumpGradeBetweenTopWorkersByGroup  8 4
+PromoteEmployee 98 16
+AcquireCompany -5 0 4.536
+AverageBumpGradeBetweenSalaryByGroup  2 24 290
+PromoteEmployee 358 35
+CompanyValue 6
+SumOfBumpGradeBetweenTopWorkersByGroup  9 96
+PromoteEmployee 423 79
+CompanyValue 6
+PromoteEmployee 132 27
+AcquireCompany 14 15 2.676
+AverageBumpGradeBetweenSalaryByGroup  -1 70 131
+AverageBumpGradeBetweenSalaryByGroup  10 45 297
+AddEmployee 286 9 47
+AverageBumpGradeBetweenSalaryByGroup  -2 93 556
+AverageBumpGradeBetweenSalaryByGroup  1 89 483
+AverageBumpGradeBetweenSalaryByGroup  9 85 659
+PromoteEmployee 24 60
+PromoteEmployee 426 61
+AverageBumpGradeBetweenSalaryByGroup  2 2 152
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 45
+AddEmployee 294 2 -4
+CompanyValue 4
+AddEmployee 252 0 16
+AverageBumpGradeBetweenSalaryByGroup  -4 28 417
+AverageBumpGradeBetweenSalaryByGroup  4 66 355
+SumOfBumpGradeBetweenTopWorkersByGroup  6 17
+CompanyValue 6
+CompanyValue -4
+EmployeeSalaryIncrease 123 68
+CompanyValue 1
+AcquireCompany 15 14 1.722
+SumOfBumpGradeBetweenTopWorkersByGroup  1 60
+CompanyValue -4
+AddEmployee 181 -5 87
+AddEmployee 402 1 37
+AverageBumpGradeBetweenSalaryByGroup  9 30 176
+AcquireCompany 5 2 4.063
+RemoveEmployee 487
+AcquireCompany 15 6 4.346
+AverageBumpGradeBetweenSalaryByGroup  12 43 318
+AverageBumpGradeBetweenSalaryByGroup  10 34 496
+AcquireCompany 9 -4 3.23
+CompanyValue 13
+CompanyValue 7
+AcquireCompany 7 -2 4.206
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 19
+RemoveEmployee 442
+SumOfBumpGradeBetweenTopWorkersByGroup  9 -10
+CompanyValue 12
+EmployeeSalaryIncrease 191 33
+AddEmployee 61 3 -10
+CompanyValue 12
+PromoteEmployee 358 -7
+EmployeeSalaryIncrease 393 -10
+AddEmployee 380 9 30
+AddEmployee 438 13 27
+PromoteEmployee 349 -4
+CompanyValue 2
+AverageBumpGradeBetweenSalaryByGroup  7 -8 213
+AddEmployee 445 7 47
+PromoteEmployee 327 7
+CompanyValue 4
+AcquireCompany 4 11 2.925
+RemoveEmployee 396
+AverageBumpGradeBetweenSalaryByGroup  5 95 977
+AverageBumpGradeBetweenSalaryByGroup  3 77 507
+EmployeeSalaryIncrease 177 -8
+AverageBumpGradeBetweenSalaryByGroup  15 54 574
+RemoveEmployee 27
+AverageBumpGradeBetweenSalaryByGroup  2 99 623
+AcquireCompany -1 8 4.652
+AverageBumpGradeBetweenSalaryByGroup  6 73 377
+PromoteEmployee -5 55
+AverageBumpGradeBetweenSalaryByGroup  6 80 380
+AverageBumpGradeBetweenSalaryByGroup  13 43 298
+AddEmployee 400 2 -2
+AcquireCompany -2 14 1.345
+RemoveEmployee 428
+EmployeeSalaryIncrease 356 47
+CompanyValue 11
+CompanyValue 11
+EmployeeSalaryIncrease 463 100
+EmployeeSalaryIncrease 199 32
+PromoteEmployee 160 64
+PromoteEmployee 80 -7
+AcquireCompany 1 2 0.496
+RemoveEmployee 142
+SumOfBumpGradeBetweenTopWorkersByGroup  7 20
+PromoteEmployee 349 26
+AverageBumpGradeBetweenSalaryByGroup  2 93 187
+PromoteEmployee 314 40
+PromoteEmployee 33 73
+PromoteEmployee 405 2
+SumOfBumpGradeBetweenTopWorkersByGroup  15 63
+PromoteEmployee 404 41
+AddEmployee 349 6 5
+AcquireCompany 10 7 0.118
+RemoveEmployee 433
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 40
+AddEmployee 298 -5 -2
+RemoveEmployee 5
+RemoveEmployee 191
+RemoveEmployee 268
+AddEmployee 194 -5 47
+RemoveEmployee 286
+AcquireCompany 4 13 1.985
+AverageBumpGradeBetweenSalaryByGroup  14 76 580
+AddEmployee 224 9 97
+AddEmployee 377 -1 64
+SumOfBumpGradeBetweenTopWorkersByGroup  13 55
+RemoveEmployee 310
+RemoveEmployee 192
+SumOfBumpGradeBetweenTopWorkersByGroup  12 18
+PromoteEmployee 265 88
+AddEmployee 442 8 63
+AddEmployee 363 12 77
+SumOfBumpGradeBetweenTopWorkersByGroup  0 10
+RemoveEmployee 245
+AverageBumpGradeBetweenSalaryByGroup  3 54 330
+AddEmployee 0 -3 -7
+EmployeeSalaryIncrease 394 100
+PromoteEmployee 406 27
+RemoveEmployee 418
+CompanyValue 15
+RemoveEmployee 455
+RemoveEmployee 320
+CompanyValue 13
+PromoteEmployee 240 69
+EmployeeSalaryIncrease 312 64
+EmployeeSalaryIncrease 244 91
+EmployeeSalaryIncrease 444 88
+CompanyValue 5
+RemoveEmployee 46
+AddEmployee 452 9 21
+EmployeeSalaryIncrease 439 79
+AcquireCompany -5 4 0.419
+RemoveEmployee 467
+AverageBumpGradeBetweenSalaryByGroup  14 81 604
+RemoveEmployee 428
+CompanyValue 3
+AddEmployee 111 1 1
+AverageBumpGradeBetweenSalaryByGroup  7 82 181
+AverageBumpGradeBetweenSalaryByGroup  0 36 834
+RemoveEmployee 17
+RemoveEmployee 344
+EmployeeSalaryIncrease 493 44
+CompanyValue -2
+CompanyValue -3
+CompanyValue 9
+RemoveEmployee 332
+AddEmployee 313 7 9
+RemoveEmployee 468
+PromoteEmployee 214 74
+AddEmployee 191 1 75
+AcquireCompany 5 -3 2.636
+AddEmployee 473 2 18
+RemoveEmployee 73
+AcquireCompany 0 10 -0.769
+SumOfBumpGradeBetweenTopWorkersByGroup  10 97
+CompanyValue 11
+CompanyValue 2
+AverageBumpGradeBetweenSalaryByGroup  -5 7 328
+AddEmployee 250 6 71
+CompanyValue 11
+SumOfBumpGradeBetweenTopWorkersByGroup  1 53
+AverageBumpGradeBetweenSalaryByGroup  10 78 311
+PromoteEmployee 68 66
+EmployeeSalaryIncrease 360 41
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 58
+AddEmployee 177 12 54
+AddEmployee 58 2 73
+SumOfBumpGradeBetweenTopWorkersByGroup  3 5
+AcquireCompany 1 -1 -0.037
+RemoveEmployee 484
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 93
+AcquireCompany 5 14 1.869
+AverageBumpGradeBetweenSalaryByGroup  -3 31 655
+AcquireCompany 10 13 -0.741
+AverageBumpGradeBetweenSalaryByGroup  15 52 597
+AcquireCompany 1 -2 4.965
+AverageBumpGradeBetweenSalaryByGroup  9 4 921
+AverageBumpGradeBetweenSalaryByGroup  4 53 520
+AddEmployee 261 1 6
+CompanyValue 1
+RemoveEmployee 243
+CompanyValue 7
+AverageBumpGradeBetweenSalaryByGroup  5 5 205
+AddEmployee 442 15 14
+RemoveEmployee 114
+AddEmployee 356 8 60
+EmployeeSalaryIncrease 393 39
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 47
+PromoteEmployee 16 68
+AddEmployee 468 13 25
+RemoveEmployee 33
+AverageBumpGradeBetweenSalaryByGroup  6 45 569
+PromoteEmployee 295 46
+AverageBumpGradeBetweenSalaryByGroup  -3 84 409
+EmployeeSalaryIncrease 114 14
+EmployeeSalaryIncrease 340 74
+AverageBumpGradeBetweenSalaryByGroup  11 51 673
+RemoveEmployee 195
+AcquireCompany -5 2 -0.632
+EmployeeSalaryIncrease 226 34
+SumOfBumpGradeBetweenTopWorkersByGroup  3 77
+SumOfBumpGradeBetweenTopWorkersByGroup  3 96
+AddEmployee 304 7 26
+AddEmployee 33 6 68
+AcquireCompany 15 15 3.351
+CompanyValue 1
+CompanyValue 4
+PromoteEmployee 210 86
+CompanyValue 3
+EmployeeSalaryIncrease 34 82
+EmployeeSalaryIncrease 299 98
+AverageBumpGradeBetweenSalaryByGroup  15 -10 433
+AverageBumpGradeBetweenSalaryByGroup  7 75 346
+AcquireCompany 1 2 -0.787
+AddEmployee 339 5 93
+PromoteEmployee 94 94
+AddEmployee 63 4 -10
+SumOfBumpGradeBetweenTopWorkersByGroup  5 78
+EmployeeSalaryIncrease 242 7
+RemoveEmployee 313
+CompanyValue 2
+AcquireCompany -1 4 4.19
+RemoveEmployee 234
+AverageBumpGradeBetweenSalaryByGroup  3 48 185
+PromoteEmployee 158 95
+RemoveEmployee 431
+CompanyValue 2
+RemoveEmployee 210
+PromoteEmployee 100 85
+EmployeeSalaryIncrease 424 24
+AverageBumpGradeBetweenSalaryByGroup  -5 38 411
+AcquireCompany 8 6 1.25
+PromoteEmployee 0 2
+AcquireCompany -2 13 2.076
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 13
+AddEmployee 145 5 9
+EmployeeSalaryIncrease 208 60
+RemoveEmployee 316
+AddEmployee 488 6 48
+EmployeeSalaryIncrease 79 40
+RemoveEmployee 99
+AcquireCompany 7 4 2.766
+PromoteEmployee 387 3
+EmployeeSalaryIncrease 485 -4
+RemoveEmployee 246
+AverageBumpGradeBetweenSalaryByGroup  5 22 107
+SumOfBumpGradeBetweenTopWorkersByGroup  8 21
+EmployeeSalaryIncrease 205 41
+AcquireCompany 8 7 1.407
+AcquireCompany 12 3 -0.561
+RemoveEmployee 52
+RemoveEmployee 4
+AverageBumpGradeBetweenSalaryByGroup  9 73 779
+CompanyValue 0
+EmployeeSalaryIncrease 14 90
+RemoveEmployee 340
+SumOfBumpGradeBetweenTopWorkersByGroup  3 57
+RemoveEmployee 116
+RemoveEmployee 142
+CompanyValue -2
+EmployeeSalaryIncrease 494 83
+PromoteEmployee 121 70
+CompanyValue 14
+PromoteEmployee 259 9
+AcquireCompany 5 3 3.787
+RemoveEmployee 167
+PromoteEmployee 305 46
+AcquireCompany 9 7 2.645
+RemoveEmployee 336
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 51
+PromoteEmployee 478 83
+EmployeeSalaryIncrease 481 17
+EmployeeSalaryIncrease 384 31
+SumOfBumpGradeBetweenTopWorkersByGroup  14 38
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 83
+EmployeeSalaryIncrease 272 62
+AddEmployee 404 13 87
+RemoveEmployee 14
+AverageBumpGradeBetweenSalaryByGroup  7 81 586
+AverageBumpGradeBetweenSalaryByGroup  -4 25 674
+EmployeeSalaryIncrease 304 60
+EmployeeSalaryIncrease 323 26
+CompanyValue -5
+PromoteEmployee 18 -3
+SumOfBumpGradeBetweenTopWorkersByGroup  13 30
+CompanyValue 1
+EmployeeSalaryIncrease 53 -7
+SumOfBumpGradeBetweenTopWorkersByGroup  14 30
+AverageBumpGradeBetweenSalaryByGroup  7 36 455
+SumOfBumpGradeBetweenTopWorkersByGroup  0 73
+AverageBumpGradeBetweenSalaryByGroup  4 67 405
+SumOfBumpGradeBetweenTopWorkersByGroup  3 80
+PromoteEmployee 92 13
+SumOfBumpGradeBetweenTopWorkersByGroup  4 94
+EmployeeSalaryIncrease 472 14
+AddEmployee 242 13 3
+EmployeeSalaryIncrease 221 8
+PromoteEmployee 436 1
+AverageBumpGradeBetweenSalaryByGroup  8 45 306
+RemoveEmployee 406
+EmployeeSalaryIncrease 380 62
+AverageBumpGradeBetweenSalaryByGroup  15 -9 592
+RemoveEmployee 163
+AddEmployee -9 2 80
+CompanyValue 6
+PromoteEmployee 299 91
+AcquireCompany 8 14 0.314
+EmployeeSalaryIncrease 128 66
+CompanyValue 7
+AddEmployee 371 4 70
+PromoteEmployee 120 15
+AcquireCompany -2 0 1.446
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 52
+SumOfBumpGradeBetweenTopWorkersByGroup  12 34
+AverageBumpGradeBetweenSalaryByGroup  -3 57 255
+AcquireCompany -5 -2 -0.028
+PromoteEmployee 283 73
+PromoteEmployee -5 78
+AcquireCompany 1 3 2.952
+AddEmployee 320 12 15
+EmployeeSalaryIncrease 484 6
+AddEmployee 450 7 66
+SumOfBumpGradeBetweenTopWorkersByGroup  15 14
+AddEmployee 413 9 31
+EmployeeSalaryIncrease 46 9
+CompanyValue 12
+AverageBumpGradeBetweenSalaryByGroup  3 47 502
+AverageBumpGradeBetweenSalaryByGroup  15 -6 522
+AddEmployee 127 0 4
+PromoteEmployee 42 13
+EmployeeSalaryIncrease 154 72
+AddEmployee 382 -2 11
+AddEmployee 339 5 88
+AcquireCompany 2 -3 3.528
+AddEmployee 81 5 -9
+RemoveEmployee 34
+AddEmployee 251 -5 65
+AddEmployee 48 -1 26
+PromoteEmployee 200 7
+SumOfBumpGradeBetweenTopWorkersByGroup  6 6
+AverageBumpGradeBetweenSalaryByGroup  1 46 702
+EmployeeSalaryIncrease 365 -8
+RemoveEmployee 66
+AverageBumpGradeBetweenSalaryByGroup  8 36 808
+SumOfBumpGradeBetweenTopWorkersByGroup  6 3
+PromoteEmployee 122 37
+SumOfBumpGradeBetweenTopWorkersByGroup  9 -2
+AverageBumpGradeBetweenSalaryByGroup  9 39 357
+CompanyValue 7
+RemoveEmployee 88
+CompanyValue 9
+AverageBumpGradeBetweenSalaryByGroup  15 18 983
+RemoveEmployee 230
+EmployeeSalaryIncrease 321 53
+AverageBumpGradeBetweenSalaryByGroup  15 21 689
+PromoteEmployee -7 87
+SumOfBumpGradeBetweenTopWorkersByGroup  15 87
+RemoveEmployee 17
+AverageBumpGradeBetweenSalaryByGroup  11 8 204
+RemoveEmployee 392
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 2
+EmployeeSalaryIncrease 271 -9
+AcquireCompany 10 9 3.084
+AcquireCompany 8 12 1.35
+AddEmployee 233 6 32
+AverageBumpGradeBetweenSalaryByGroup  4 52 710
+CompanyValue 0
+AverageBumpGradeBetweenSalaryByGroup  10 18 976
+AcquireCompany 4 0 4.176
+AverageBumpGradeBetweenSalaryByGroup  -4 45 552
+EmployeeSalaryIncrease 448 74
+RemoveEmployee 359
+CompanyValue 3
+EmployeeSalaryIncrease 152 46
+PromoteEmployee 57 59
+EmployeeSalaryIncrease 349 43
+SumOfBumpGradeBetweenTopWorkersByGroup  13 37
+AcquireCompany 0 2 0.321
+AverageBumpGradeBetweenSalaryByGroup  12 60 762
+EmployeeSalaryIncrease 471 29
+CompanyValue 14
+SumOfBumpGradeBetweenTopWorkersByGroup  14 9
+AcquireCompany 7 4 1.495
+AverageBumpGradeBetweenSalaryByGroup  2 -5 567
+EmployeeSalaryIncrease 240 66
+AcquireCompany -3 15 4.446
+CompanyValue 15
+EmployeeSalaryIncrease 292 4
+AcquireCompany 8 12 4.064
+EmployeeSalaryIncrease 42 39
+PromoteEmployee 214 42
+PromoteEmployee 107 59
+AcquireCompany 9 -2 -0.275
+SumOfBumpGradeBetweenTopWorkersByGroup  2 36
+SumOfBumpGradeBetweenTopWorkersByGroup  5 46
+AddEmployee 450 15 74
+AverageBumpGradeBetweenSalaryByGroup  14 75 832
+CompanyValue 10
+EmployeeSalaryIncrease 4 70
+CompanyValue 3
+CompanyValue 8
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 21
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 46
+AddEmployee 361 1 -2
+AddEmployee 237 1 77
+SumOfBumpGradeBetweenTopWorkersByGroup  6 79
+SumOfBumpGradeBetweenTopWorkersByGroup  13 -5
+AverageBumpGradeBetweenSalaryByGroup  -2 21 406
+AverageBumpGradeBetweenSalaryByGroup  6 16 312
+AcquireCompany 7 7 -0.046
+RemoveEmployee 140
+SumOfBumpGradeBetweenTopWorkersByGroup  2 7
+CompanyValue -4
+CompanyValue 7
+EmployeeSalaryIncrease 250 -2
+RemoveEmployee 268
+AcquireCompany 8 6 -0.165
+AcquireCompany 10 11 -0.83
+AddEmployee 439 2 67
+RemoveEmployee 228
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 -7
+AverageBumpGradeBetweenSalaryByGroup  -3 54 796
+AcquireCompany 9 1 0.541
+EmployeeSalaryIncrease 157 50
+AverageBumpGradeBetweenSalaryByGroup  10 60 595
+EmployeeSalaryIncrease 136 47
+SumOfBumpGradeBetweenTopWorkersByGroup  3 48
+PromoteEmployee 298 70
+RemoveEmployee 362
+SumOfBumpGradeBetweenTopWorkersByGroup  8 12
+PromoteEmployee 224 39
+EmployeeSalaryIncrease 5 39
+AcquireCompany 4 7 4.506
+SumOfBumpGradeBetweenTopWorkersByGroup  11 70
+AverageBumpGradeBetweenSalaryByGroup  -2 1 102
+EmployeeSalaryIncrease 305 -2
+AddEmployee 22 3 14
+AcquireCompany 8 12 2.733
+AddEmployee 131 -3 67
+RemoveEmployee 297
+CompanyValue 6
+EmployeeSalaryIncrease 170 38
+PromoteEmployee 204 7
+AddEmployee 249 3 -8
+AcquireCompany 4 3 2.152
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 30
+AverageBumpGradeBetweenSalaryByGroup  14 73 727
+AddEmployee 116 3 61
+RemoveEmployee 348
+PromoteEmployee 8 85
+PromoteEmployee 330 95
+AcquireCompany 1 4 0.019
+SumOfBumpGradeBetweenTopWorkersByGroup  10 82
+EmployeeSalaryIncrease 174 42
+CompanyValue -4
+RemoveEmployee 135
+PromoteEmployee 305 31
+AddEmployee 312 1 66
+EmployeeSalaryIncrease 273 77
+AddEmployee -5 13 20
+AverageBumpGradeBetweenSalaryByGroup  2 48 685
+AcquireCompany 11 4 0.089
+EmployeeSalaryIncrease 124 8
+AddEmployee 264 -5 25
+AddEmployee 11 -5 14
+EmployeeSalaryIncrease 392 89
+AverageBumpGradeBetweenSalaryByGroup  7 96 202
+AddEmployee 226 6 36
+AddEmployee 274 10 75
+RemoveEmployee 66
+AcquireCompany -2 13 4.931
+AddEmployee 273 5 91
+EmployeeSalaryIncrease 334 47
+SumOfBumpGradeBetweenTopWorkersByGroup  5 39
+EmployeeSalaryIncrease 256 77
+CompanyValue 11
+AddEmployee 90 10 91
+CompanyValue -1
+CompanyValue 15
+AcquireCompany 2 13 1.132
+CompanyValue 8
+AverageBumpGradeBetweenSalaryByGroup  -4 35 36
+PromoteEmployee 319 30
+AcquireCompany 13 1 0.319
+RemoveEmployee 112
+AddEmployee 83 11 57
+AverageBumpGradeBetweenSalaryByGroup  2 97 635
+EmployeeSalaryIncrease 246 27
+AcquireCompany 11 -4 2.736
+PromoteEmployee 493 99
+SumOfBumpGradeBetweenTopWorkersByGroup  12 61
+AverageBumpGradeBetweenSalaryByGroup  0 60 527
+PromoteEmployee 197 51
+AddEmployee 116 -2 40
+SumOfBumpGradeBetweenTopWorkersByGroup  11 16
+AddEmployee 405 7 68
+SumOfBumpGradeBetweenTopWorkersByGroup  2 54
+AddEmployee 413 7 91
+EmployeeSalaryIncrease 491 29
+RemoveEmployee 257
+SumOfBumpGradeBetweenTopWorkersByGroup  12 97
+AddEmployee 144 12 100
+EmployeeSalaryIncrease 471 3
+EmployeeSalaryIncrease 193 24
+EmployeeSalaryIncrease 233 82
+AcquireCompany 12 3 2.798
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 3
+AverageBumpGradeBetweenSalaryByGroup  5 42 821
+AverageBumpGradeBetweenSalaryByGroup  -3 62 923
+SumOfBumpGradeBetweenTopWorkersByGroup  9 66
+RemoveEmployee -1
+PromoteEmployee 391 10
+AddEmployee 119 12 88
+RemoveEmployee 442
+AcquireCompany 8 -1 1.873
+AverageBumpGradeBetweenSalaryByGroup  10 44 184
+AverageBumpGradeBetweenSalaryByGroup  4 1 615
+SumOfBumpGradeBetweenTopWorkersByGroup  14 66
+CompanyValue 12
+AcquireCompany -5 13 1.991
+AcquireCompany 14 -1 4.644
+AddEmployee 370 3 -5
+PromoteEmployee 380 0
+AverageBumpGradeBetweenSalaryByGroup  -4 37 194
+AddEmployee 5 1 11
+PromoteEmployee 290 95
+RemoveEmployee 429
+CompanyValue -2
+CompanyValue 9
+AddEmployee 359 15 3
+CompanyValue 10
+RemoveEmployee 278
+AverageBumpGradeBetweenSalaryByGroup  -1 46 347
+AverageBumpGradeBetweenSalaryByGroup  2 19 655
+AverageBumpGradeBetweenSalaryByGroup  11 68 627
+CompanyValue 12
+EmployeeSalaryIncrease 446 -7
+CompanyValue 6
+AcquireCompany 15 -3 -0.062
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 81
+CompanyValue 11
+EmployeeSalaryIncrease 269 64
+AddEmployee 137 -4 1
+RemoveEmployee 383
+CompanyValue 10
+PromoteEmployee 309 68
+CompanyValue 9
+SumOfBumpGradeBetweenTopWorkersByGroup  6 68
+AverageBumpGradeBetweenSalaryByGroup  -5 43 757
+AddEmployee -10 10 19
+AddEmployee 271 6 46
+AddEmployee 417 11 70
+CompanyValue 1
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 36
+EmployeeSalaryIncrease 59 -8
+CompanyValue 13
+AddEmployee 400 10 -2
+PromoteEmployee 336 69
+AddEmployee 274 15 90
+AddEmployee 212 6 20
+CompanyValue 15
+RemoveEmployee 412
+RemoveEmployee 431
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 21
+CompanyValue 14
+PromoteEmployee 423 -2
+PromoteEmployee 165 75
+AddEmployee 144 2 20
+EmployeeSalaryIncrease 316 -6
+CompanyValue -5
+SumOfBumpGradeBetweenTopWorkersByGroup  8 36
+RemoveEmployee 153
+PromoteEmployee 275 74
+EmployeeSalaryIncrease 254 27
+AcquireCompany 4 5 2.43
+AverageBumpGradeBetweenSalaryByGroup  -2 8 374
+AverageBumpGradeBetweenSalaryByGroup  -5 62 453
+AcquireCompany 3 -4 1.816
+EmployeeSalaryIncrease 230 65
+SumOfBumpGradeBetweenTopWorkersByGroup  1 29
+RemoveEmployee 308
+SumOfBumpGradeBetweenTopWorkersByGroup  11 31
+AddEmployee 436 11 12
+AverageBumpGradeBetweenSalaryByGroup  7 83 638
+CompanyValue 15
+CompanyValue 11
+AddEmployee 245 11 43
+AcquireCompany 11 7 4.3
+AcquireCompany 1 14 4.633
+AverageBumpGradeBetweenSalaryByGroup  6 10 138
+RemoveEmployee 115
+AcquireCompany 10 7 1.676
+CompanyValue 5
+CompanyValue 12
+EmployeeSalaryIncrease 284 20
+EmployeeSalaryIncrease 95 -7
+RemoveEmployee 169
+PromoteEmployee 361 75
+RemoveEmployee 13
+EmployeeSalaryIncrease 80 16
+AcquireCompany -5 14 0.28
+AverageBumpGradeBetweenSalaryByGroup  14 68 517
+AverageBumpGradeBetweenSalaryByGroup  3 16 96
+CompanyValue 14
+CompanyValue 9
+AverageBumpGradeBetweenSalaryByGroup  11 85 539
+AddEmployee 426 5 65
+RemoveEmployee 29
+SumOfBumpGradeBetweenTopWorkersByGroup  15 0
+SumOfBumpGradeBetweenTopWorkersByGroup  6 69
+AverageBumpGradeBetweenSalaryByGroup  15 13 847
+CompanyValue 0
+SumOfBumpGradeBetweenTopWorkersByGroup  9 97
+AddEmployee 95 3 35
+AverageBumpGradeBetweenSalaryByGroup  15 88 28
+EmployeeSalaryIncrease 397 47
+AcquireCompany -4 1 1.368
+EmployeeSalaryIncrease 371 -8
+CompanyValue 14
+SumOfBumpGradeBetweenTopWorkersByGroup  13 86
+AcquireCompany 3 -1 1.173
+AcquireCompany 4 7 4.619
+CompanyValue 3
+PromoteEmployee 242 93
+EmployeeSalaryIncrease 336 85
+AcquireCompany -2 8 4.127
+CompanyValue 2
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 11
+RemoveEmployee 198
+EmployeeSalaryIncrease 268 11
+CompanyValue 10
+SumOfBumpGradeBetweenTopWorkersByGroup  9 51
+PromoteEmployee 322 84
+RemoveEmployee 197
+AcquireCompany -2 0 1.441
+AverageBumpGradeBetweenSalaryByGroup  3 -8 951
+AddEmployee 309 14 -7
+RemoveEmployee 167
+SumOfBumpGradeBetweenTopWorkersByGroup  10 84
+SumOfBumpGradeBetweenTopWorkersByGroup  6 30
+RemoveEmployee 380
+RemoveEmployee 297
+EmployeeSalaryIncrease 379 42
+EmployeeSalaryIncrease 6 20
+RemoveEmployee 133
+AcquireCompany 5 14 3.219
+AverageBumpGradeBetweenSalaryByGroup  1 75 824
+AcquireCompany 0 -4 2.389
+AddEmployee 182 -1 89
+PromoteEmployee 381 54
+PromoteEmployee 213 -9
+CompanyValue 14
+AcquireCompany 15 -5 2.064
+SumOfBumpGradeBetweenTopWorkersByGroup  14 22
+AcquireCompany 6 0 4.707
+AddEmployee 119 13 2
+AverageBumpGradeBetweenSalaryByGroup  14 25 322
+AddEmployee -1 14 22
+PromoteEmployee 175 58
+PromoteEmployee 125 -7
+AverageBumpGradeBetweenSalaryByGroup  -3 12 236
+CompanyValue 9
+AcquireCompany 14 -5 3.801
+EmployeeSalaryIncrease 412 93
+AcquireCompany 6 14 1.259
+EmployeeSalaryIncrease 283 34
+RemoveEmployee 432
+AcquireCompany -4 12 0.246
+AverageBumpGradeBetweenSalaryByGroup  6 -5 411
+AcquireCompany 5 -5 -0.911
+CompanyValue 0
+CompanyValue 11
+EmployeeSalaryIncrease 23 -4
+RemoveEmployee 280
+PromoteEmployee 417 86
+PromoteEmployee 105 -9
+AcquireCompany 2 4 0.804
+CompanyValue 10
+CompanyValue 0
+RemoveEmployee 460
+CompanyValue 12
+SumOfBumpGradeBetweenTopWorkersByGroup  8 22
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 18
+RemoveEmployee 208
+EmployeeSalaryIncrease -8 85
+AcquireCompany 14 10 -0.348
+AcquireCompany 12 11 0.713
+AcquireCompany 13 -4 0.469
+AcquireCompany 12 14 0.097
+CompanyValue 5
+AcquireCompany -4 6 2.253
+PromoteEmployee 186 76
+AcquireCompany 1 -3 -0.24
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 65
+PromoteEmployee 227 17
+CompanyValue 11
+AcquireCompany 9 -1 2.473
+AverageBumpGradeBetweenSalaryByGroup  10 78 775
+SumOfBumpGradeBetweenTopWorkersByGroup  0 57
+SumOfBumpGradeBetweenTopWorkersByGroup  12 65
+AcquireCompany 0 11 0.9
+AverageBumpGradeBetweenSalaryByGroup  -1 0 546
+AddEmployee 143 11 19
+PromoteEmployee 340 61
+PromoteEmployee 297 46
+RemoveEmployee 178
+EmployeeSalaryIncrease 396 75
+AddEmployee 242 -3 61
+RemoveEmployee 164
+SumOfBumpGradeBetweenTopWorkersByGroup  11 75
+CompanyValue 8
+CompanyValue 13
+PromoteEmployee 145 54
+AverageBumpGradeBetweenSalaryByGroup  3 56 840
+AverageBumpGradeBetweenSalaryByGroup  9 37 513
+AcquireCompany 7 10 2.666
+PromoteEmployee 231 -5
+CompanyValue -1
+SumOfBumpGradeBetweenTopWorkersByGroup  8 60
+AverageBumpGradeBetweenSalaryByGroup  14 90 208
+EmployeeSalaryIncrease 306 14
+AverageBumpGradeBetweenSalaryByGroup  8 19 969
+AverageBumpGradeBetweenSalaryByGroup  14 5 713
+PromoteEmployee 412 50
+AverageBumpGradeBetweenSalaryByGroup  5 100 862
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 37
+AddEmployee 367 13 85
+AverageBumpGradeBetweenSalaryByGroup  8 69 641
+PromoteEmployee 498 93
+SumOfBumpGradeBetweenTopWorkersByGroup  14 13
+EmployeeSalaryIncrease 335 77
+AcquireCompany 12 -4 2.207
+CompanyValue 9
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 47
+PromoteEmployee 341 2
+AverageBumpGradeBetweenSalaryByGroup  12 76 773
+EmployeeSalaryIncrease 284 17
+RemoveEmployee 423
+AcquireCompany 8 6 4.893
+EmployeeSalaryIncrease 275 59
+AverageBumpGradeBetweenSalaryByGroup  0 -4 222
+AcquireCompany 11 11 4.582
+EmployeeSalaryIncrease 198 57
+AverageBumpGradeBetweenSalaryByGroup  14 78 589
+SumOfBumpGradeBetweenTopWorkersByGroup  6 11
+AcquireCompany 4 5 1.938
+SumOfBumpGradeBetweenTopWorkersByGroup  4 57
+CompanyValue 1
+SumOfBumpGradeBetweenTopWorkersByGroup  9 67
+AcquireCompany 9 -4 1.822
+RemoveEmployee 60
+AddEmployee 72 0 13
+AcquireCompany 15 2 2.601
+CompanyValue 14
+PromoteEmployee 416 46
+AverageBumpGradeBetweenSalaryByGroup  8 0 769
+EmployeeSalaryIncrease 282 76
+RemoveEmployee 80
+RemoveEmployee -8
+PromoteEmployee 346 87
+AcquireCompany 3 8 0.497
+SumOfBumpGradeBetweenTopWorkersByGroup  11 10
+AddEmployee 396 11 73
+AcquireCompany 15 15 3.697
+EmployeeSalaryIncrease 266 72
+AddEmployee 298 5 100
+EmployeeSalaryIncrease 400 38
+PromoteEmployee 164 96
+SumOfBumpGradeBetweenTopWorkersByGroup  13 51
+RemoveEmployee 409
+EmployeeSalaryIncrease 182 77
+AcquireCompany -5 2 0.96
+CompanyValue 0
+RemoveEmployee 425
+SumOfBumpGradeBetweenTopWorkersByGroup  4 70
+SumOfBumpGradeBetweenTopWorkersByGroup  15 33
+AddEmployee 9 -1 52
+CompanyValue 10
+AcquireCompany 13 12 2.986
+AverageBumpGradeBetweenSalaryByGroup  15 54 950
+EmployeeSalaryIncrease 307 97
+AddEmployee 186 3 64
+PromoteEmployee 8 -9
+AcquireCompany -4 3 3.333
+EmployeeSalaryIncrease 413 -9
+PromoteEmployee 45 38
+EmployeeSalaryIncrease 474 14
+PromoteEmployee 373 22
+SumOfBumpGradeBetweenTopWorkersByGroup  0 86
+AcquireCompany 8 9 2.202
+RemoveEmployee 477
+PromoteEmployee 219 64
+SumOfBumpGradeBetweenTopWorkersByGroup  5 73
+AverageBumpGradeBetweenSalaryByGroup  2 86 60
+AcquireCompany 10 5 1.457
+AcquireCompany 7 5 4.415
+AverageBumpGradeBetweenSalaryByGroup  6 89 691
+PromoteEmployee 336 76
+CompanyValue 10
+EmployeeSalaryIncrease 492 -3
+AddEmployee 492 -3 50
+CompanyValue 5
+SumOfBumpGradeBetweenTopWorkersByGroup  0 13
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 39
+AddEmployee -1 12 45
+AcquireCompany 0 5 1.651
+CompanyValue -5
+CompanyValue -4
+SumOfBumpGradeBetweenTopWorkersByGroup  6 59
+AcquireCompany -4 11 -0.24
+AverageBumpGradeBetweenSalaryByGroup  13 27 942
+RemoveEmployee 349
+AverageBumpGradeBetweenSalaryByGroup  1 32 351
+CompanyValue -2
+RemoveEmployee 85
+AcquireCompany 8 15 0.696
+PromoteEmployee 77 72
+EmployeeSalaryIncrease 326 56
+SumOfBumpGradeBetweenTopWorkersByGroup  15 48
+RemoveEmployee 213
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 54
+AddEmployee 482 6 72
+EmployeeSalaryIncrease 191 72
+EmployeeSalaryIncrease 260 68
+CompanyValue -5
+PromoteEmployee 82 40
+EmployeeSalaryIncrease 302 32
+SumOfBumpGradeBetweenTopWorkersByGroup  11 24
+SumOfBumpGradeBetweenTopWorkersByGroup  0 100
+AddEmployee 147 12 86
+AverageBumpGradeBetweenSalaryByGroup  8 4 806
+PromoteEmployee 487 46
+AcquireCompany 2 -1 1.495
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 57
+RemoveEmployee 133
+AverageBumpGradeBetweenSalaryByGroup  6 48 521
+SumOfBumpGradeBetweenTopWorkersByGroup  6 -2
+AverageBumpGradeBetweenSalaryByGroup  6 63 464
+RemoveEmployee 487
+SumOfBumpGradeBetweenTopWorkersByGroup  10 88
+AverageBumpGradeBetweenSalaryByGroup  12 92 -7
+CompanyValue -2
+AverageBumpGradeBetweenSalaryByGroup  1 52 130
+AddEmployee 232 -4 26
+AddEmployee 218 14 44
+RemoveEmployee 87
+AverageBumpGradeBetweenSalaryByGroup  -2 78 853
+SumOfBumpGradeBetweenTopWorkersByGroup  8 95
+SumOfBumpGradeBetweenTopWorkersByGroup  6 89
+EmployeeSalaryIncrease 217 44
+CompanyValue 3
+RemoveEmployee 151
+PromoteEmployee 149 73
+PromoteEmployee 168 75
+EmployeeSalaryIncrease 473 92
+SumOfBumpGradeBetweenTopWorkersByGroup  12 -5
+RemoveEmployee 402
+CompanyValue 14
+PromoteEmployee 279 -10
+PromoteEmployee 469 49
+PromoteEmployee 54 24
+CompanyValue 12
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 62
+AddEmployee 269 12 38
+AcquireCompany 1 0 1.8
+AcquireCompany 10 3 1.231
+AcquireCompany 13 -5 4.496
+CompanyValue 7
+AddEmployee 81 12 32
+AcquireCompany 9 9 3.736
+AcquireCompany -2 -5 0.017
+AddEmployee 162 7 4
+SumOfBumpGradeBetweenTopWorkersByGroup  14 97
+CompanyValue 8
+AcquireCompany 13 2 -0.528
+AcquireCompany 0 4 0.733
+SumOfBumpGradeBetweenTopWorkersByGroup  13 49
+AddEmployee 113 13 25
+AverageBumpGradeBetweenSalaryByGroup  -5 1 878
+SumOfBumpGradeBetweenTopWorkersByGroup  0 -9
+PromoteEmployee 175 84
+AverageBumpGradeBetweenSalaryByGroup  3 56 910
+AverageBumpGradeBetweenSalaryByGroup  6 15 435
+AcquireCompany 0 -2 0.499
+AverageBumpGradeBetweenSalaryByGroup  15 36 221
+CompanyValue 1
+RemoveEmployee 281
+PromoteEmployee 298 20
+AcquireCompany 13 -3 -0.671
+AverageBumpGradeBetweenSalaryByGroup  2 33 609
+AverageBumpGradeBetweenSalaryByGroup  -1 82 848
+AcquireCompany 9 7 2.013
+SumOfBumpGradeBetweenTopWorkersByGroup  3 3
+AverageBumpGradeBetweenSalaryByGroup  13 52 60
+AverageBumpGradeBetweenSalaryByGroup  2 90 25
+SumOfBumpGradeBetweenTopWorkersByGroup  14 80
+AddEmployee 202 6 56
+AddEmployee 51 -3 81
+PromoteEmployee 164 20
+EmployeeSalaryIncrease 137 19
+PromoteEmployee 50 91
+SumOfBumpGradeBetweenTopWorkersByGroup  3 37
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 53
+EmployeeSalaryIncrease 82 13
+AcquireCompany 13 8 1.556
+RemoveEmployee 193
+EmployeeSalaryIncrease 377 14
+EmployeeSalaryIncrease 170 42
+EmployeeSalaryIncrease 345 68
+AcquireCompany 14 8 -0.724
+AcquireCompany 1 -4 -0.228
+AddEmployee 271 0 91
+CompanyValue -4
+AverageBumpGradeBetweenSalaryByGroup  14 9 900
+SumOfBumpGradeBetweenTopWorkersByGroup  2 36
+AverageBumpGradeBetweenSalaryByGroup  6 33 212
+AddEmployee 375 13 8
+AddEmployee 38 -2 36
+CompanyValue 13
+CompanyValue 11
+SumOfBumpGradeBetweenTopWorkersByGroup  10 16
+SumOfBumpGradeBetweenTopWorkersByGroup  14 0
+AddEmployee 207 13 45
+AverageBumpGradeBetweenSalaryByGroup  8 49 372
+AverageBumpGradeBetweenSalaryByGroup  3 11 848
+AverageBumpGradeBetweenSalaryByGroup  -5 61 347
+AddEmployee 28 11 69
+AddEmployee 13 11 56
+RemoveEmployee 0
+AcquireCompany 0 -1 4.911
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 20
+AverageBumpGradeBetweenSalaryByGroup  7 29 418
+RemoveEmployee 165
+EmployeeSalaryIncrease 165 -5
+EmployeeSalaryIncrease 301 17
+PromoteEmployee 29 89
+PromoteEmployee 77 38
+AddEmployee -3 4 41
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 16
+PromoteEmployee 286 88
+RemoveEmployee 220
+CompanyValue -4
+AverageBumpGradeBetweenSalaryByGroup  2 41 462
+AverageBumpGradeBetweenSalaryByGroup  8 81 8
+CompanyValue 7
+AverageBumpGradeBetweenSalaryByGroup  -2 36 882
+AddEmployee 99 7 97
+RemoveEmployee 315
+RemoveEmployee 93
+AcquireCompany 2 6 4.506
+AddEmployee 488 -3 60
+RemoveEmployee 72
+CompanyValue 7
+EmployeeSalaryIncrease -6 76
+RemoveEmployee 71
+AddEmployee 348 8 13
+CompanyValue -2
+PromoteEmployee 449 66
+AcquireCompany 4 -4 1.504
+EmployeeSalaryIncrease 382 41
+AcquireCompany 6 -1 0.004
+AddEmployee 151 5 24
+RemoveEmployee 255
+AcquireCompany 9 6 3.604
+AcquireCompany 9 -5 0.812
+AddEmployee 388 -3 46
+CompanyValue -4
+PromoteEmployee 383 28
+SumOfBumpGradeBetweenTopWorkersByGroup  10 80
+EmployeeSalaryIncrease 167 64
+PromoteEmployee 180 13
+SumOfBumpGradeBetweenTopWorkersByGroup  15 92
+AverageBumpGradeBetweenSalaryByGroup  3 11 999
+EmployeeSalaryIncrease 425 25
+AverageBumpGradeBetweenSalaryByGroup  4 34 221
+AcquireCompany -2 -1 4.697
+AcquireCompany 0 -3 2.921
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 79
+AverageBumpGradeBetweenSalaryByGroup  -1 42 55
+AcquireCompany 7 8 4.172
+AcquireCompany -4 -4 0.253
+CompanyValue 8
+AcquireCompany -5 -3 2.413
+RemoveEmployee 339
+CompanyValue -3
+AverageBumpGradeBetweenSalaryByGroup  -1 95 166
+RemoveEmployee 357
+AverageBumpGradeBetweenSalaryByGroup  13 74 744
+SumOfBumpGradeBetweenTopWorkersByGroup  1 28
+AcquireCompany -4 6 2.589
+AddEmployee 194 15 29
+AverageBumpGradeBetweenSalaryByGroup  -3 41 607
+AddEmployee 231 4 0
+AddEmployee 59 6 17
+EmployeeSalaryIncrease 377 77
+AddEmployee 239 11 69
+AcquireCompany 4 4 1.019
+CompanyValue 13
+PromoteEmployee 482 20
+AcquireCompany 2 13 0.359
+PromoteEmployee 296 -2
+RemoveEmployee 407
+SumOfBumpGradeBetweenTopWorkersByGroup  9 39
+EmployeeSalaryIncrease 1 6
+EmployeeSalaryIncrease 114 50
+RemoveEmployee 453
+AcquireCompany 6 -5 1.694
+EmployeeSalaryIncrease 376 3
+AcquireCompany 7 2 -0.664
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 57
+AcquireCompany 6 -5 2.567
+PromoteEmployee 87 11
+AcquireCompany 10 12 3.535
+AddEmployee 233 2 19
+PromoteEmployee 59 8
+AverageBumpGradeBetweenSalaryByGroup  -1 79 894
+AddEmployee 313 3 89
+SumOfBumpGradeBetweenTopWorkersByGroup  5 73
+PromoteEmployee 310 48
+PromoteEmployee -4 72
+AcquireCompany -4 3 -0.979
+SumOfBumpGradeBetweenTopWorkersByGroup  9 -7
+SumOfBumpGradeBetweenTopWorkersByGroup  9 19
+RemoveEmployee 296
+AddEmployee 423 7 42
+CompanyValue -5
+CompanyValue -1
+RemoveEmployee 469
+AcquireCompany -3 -2 -0.299
+CompanyValue 10
+RemoveEmployee 72
+PromoteEmployee 88 -5
+EmployeeSalaryIncrease 33 65
+AcquireCompany 13 7 2.028
+PromoteEmployee 494 86
+SumOfBumpGradeBetweenTopWorkersByGroup  14 63
+RemoveEmployee 263
+PromoteEmployee 259 69
+AcquireCompany -2 -4 2.643
+AddEmployee 305 -2 2
+AcquireCompany 3 12 -0.667
+CompanyValue -3
+RemoveEmployee 33
+EmployeeSalaryIncrease 75 76
+PromoteEmployee 494 87
+PromoteEmployee 154 28
+CompanyValue 13
+SumOfBumpGradeBetweenTopWorkersByGroup  7 55
+PromoteEmployee 57 73
+AverageBumpGradeBetweenSalaryByGroup  15 97 26
+AddEmployee 51 13 19
+AddEmployee 85 -2 59
+AverageBumpGradeBetweenSalaryByGroup  8 85 18
+SumOfBumpGradeBetweenTopWorkersByGroup  10 85
+EmployeeSalaryIncrease 315 17
+PromoteEmployee 242 14
+SumOfBumpGradeBetweenTopWorkersByGroup  3 49
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 16
+EmployeeSalaryIncrease 45 47
+SumOfBumpGradeBetweenTopWorkersByGroup  10 69
+AverageBumpGradeBetweenSalaryByGroup  10 17 378
+CompanyValue -5
+EmployeeSalaryIncrease 85 78
+PromoteEmployee 384 55
+AcquireCompany 13 15 4.274
+RemoveEmployee 433
+PromoteEmployee 344 38
+PromoteEmployee 351 28
+PromoteEmployee 386 41
+AddEmployee 158 12 85
+AddEmployee 372 3 -4
+AddEmployee 347 15 92
+AddEmployee 319 8 43
+PromoteEmployee 193 99
+CompanyValue -2
+RemoveEmployee 487
+AcquireCompany 9 -5 -0.377
+EmployeeSalaryIncrease 112 55
+CompanyValue 2
+SumOfBumpGradeBetweenTopWorkersByGroup  15 43
+AverageBumpGradeBetweenSalaryByGroup  1 64 874
+AcquireCompany 15 8 2.552
+PromoteEmployee 57 78
+AddEmployee 53 5 42
+RemoveEmployee 360
+AverageBumpGradeBetweenSalaryByGroup  12 92 264
+SumOfBumpGradeBetweenTopWorkersByGroup  14 32
+AcquireCompany -5 -3 1.515
+CompanyValue 10
+RemoveEmployee 268
+CompanyValue 14
+PromoteEmployee 302 5
+AverageBumpGradeBetweenSalaryByGroup  10 52 17
+AddEmployee 319 -1 14
+AcquireCompany 8 13 0.875
+RemoveEmployee 157
+AddEmployee 491 -1 2
+EmployeeSalaryIncrease 135 9
+AcquireCompany 9 -1 -0.349
+AcquireCompany -1 7 2.235
+EmployeeSalaryIncrease 283 88
+AverageBumpGradeBetweenSalaryByGroup  13 14 184
+PromoteEmployee 347 25
+RemoveEmployee 281
+CompanyValue 4
+PromoteEmployee 138 28
+CompanyValue 5
+AddEmployee 377 4 67
+EmployeeSalaryIncrease 480 67
+AcquireCompany -3 2 4.311
+RemoveEmployee 459
+CompanyValue -3
+EmployeeSalaryIncrease 34 60
+CompanyValue 9
+AddEmployee 172 4 79
+PromoteEmployee 315 80
+SumOfBumpGradeBetweenTopWorkersByGroup  11 48
+EmployeeSalaryIncrease 221 7
+AddEmployee 19 12 61
+AddEmployee 226 12 72
+CompanyValue -1
+AverageBumpGradeBetweenSalaryByGroup  5 56 952
+CompanyValue 3
+RemoveEmployee 91
+SumOfBumpGradeBetweenTopWorkersByGroup  2 1
+SumOfBumpGradeBetweenTopWorkersByGroup  8 67
+PromoteEmployee 486 27
+PromoteEmployee 58 -7
+SumOfBumpGradeBetweenTopWorkersByGroup  13 2
+RemoveEmployee 237
+EmployeeSalaryIncrease 60 9
+AddEmployee 48 -4 23
+CompanyValue -3
+EmployeeSalaryIncrease 200 68
+RemoveEmployee 7
+EmployeeSalaryIncrease 411 73
+SumOfBumpGradeBetweenTopWorkersByGroup  3 89
+AcquireCompany 14 11 4.709
+CompanyValue 4
+PromoteEmployee 155 37
+PromoteEmployee 23 55
+SumOfBumpGradeBetweenTopWorkersByGroup  9 29
+AcquireCompany 14 11 3.744
+RemoveEmployee 463
+RemoveEmployee 373
+AddEmployee 433 0 54
+AverageBumpGradeBetweenSalaryByGroup  -1 56 226
+AverageBumpGradeBetweenSalaryByGroup  3 85 125
+SumOfBumpGradeBetweenTopWorkersByGroup  10 34
+RemoveEmployee 84
+PromoteEmployee 149 93
+AverageBumpGradeBetweenSalaryByGroup  15 16 594
+SumOfBumpGradeBetweenTopWorkersByGroup  1 56
+AverageBumpGradeBetweenSalaryByGroup  11 -5 299
+EmployeeSalaryIncrease 209 35
+PromoteEmployee 163 26
+RemoveEmployee 115
+CompanyValue 6
+SumOfBumpGradeBetweenTopWorkersByGroup  12 35
+SumOfBumpGradeBetweenTopWorkersByGroup  13 74
+AddEmployee 296 -5 13
+RemoveEmployee 415
+AverageBumpGradeBetweenSalaryByGroup  2 97 803
+AcquireCompany 4 1 3.967
+CompanyValue 6
+EmployeeSalaryIncrease 10 45
+PromoteEmployee 306 9
+AddEmployee 3 -1 91
+SumOfBumpGradeBetweenTopWorkersByGroup  2 47
+RemoveEmployee 25
+RemoveEmployee 398
+CompanyValue 5
+PromoteEmployee 391 43
+EmployeeSalaryIncrease 205 87
+CompanyValue -5
+RemoveEmployee 169
+RemoveEmployee 14
+CompanyValue -5
+AverageBumpGradeBetweenSalaryByGroup  0 -5 70
+AddEmployee 356 1 -9
+PromoteEmployee 363 5
+AcquireCompany -2 -4 4.051
+PromoteEmployee 104 -5
+AcquireCompany 13 10 4.222
+CompanyValue 11
+EmployeeSalaryIncrease 404 64
+SumOfBumpGradeBetweenTopWorkersByGroup  8 98
+AddEmployee 299 12 49
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 -6
+AverageBumpGradeBetweenSalaryByGroup  -1 60 793
+RemoveEmployee 347
+SumOfBumpGradeBetweenTopWorkersByGroup  2 16
+AverageBumpGradeBetweenSalaryByGroup  3 61 338
+PromoteEmployee 83 76
+PromoteEmployee 178 93
+EmployeeSalaryIncrease 122 32
+PromoteEmployee 349 -10
+CompanyValue -5
+PromoteEmployee 21 83
+PromoteEmployee 490 55
+EmployeeSalaryIncrease 356 49
+AcquireCompany 13 8 2.712
+AverageBumpGradeBetweenSalaryByGroup  6 77 150
+AcquireCompany 3 1 2.338
+SumOfBumpGradeBetweenTopWorkersByGroup  2 -4
+CompanyValue 1
+AcquireCompany 9 2 3.961
+AcquireCompany 1 3 0.976
+AverageBumpGradeBetweenSalaryByGroup  -2 67 298
+AcquireCompany -1 -2 -0.539
+RemoveEmployee 7
+AcquireCompany 1 4 4.842
+RemoveEmployee 277
+CompanyValue 1
+EmployeeSalaryIncrease 175 15
+AddEmployee 18 12 5
+PromoteEmployee 243 10
+PromoteEmployee 403 95
+CompanyValue 15
+CompanyValue 15
+PromoteEmployee 422 0
+AcquireCompany -1 2 1.33
+CompanyValue 4
+CompanyValue 3
+CompanyValue -2
+EmployeeSalaryIncrease 434 61
+EmployeeSalaryIncrease 473 60
+AcquireCompany 14 12 4.976
+RemoveEmployee 214
+EmployeeSalaryIncrease 67 37
+CompanyValue 9
+RemoveEmployee 384
+AverageBumpGradeBetweenSalaryByGroup  -4 33 881
+SumOfBumpGradeBetweenTopWorkersByGroup  9 7
+AddEmployee 319 1 79
+RemoveEmployee 106
+EmployeeSalaryIncrease 197 19
+AverageBumpGradeBetweenSalaryByGroup  -3 80 625
+AcquireCompany 12 12 3.677
+EmployeeSalaryIncrease 212 7
+EmployeeSalaryIncrease 9 66
+RemoveEmployee 29
+RemoveEmployee 228
+AddEmployee 372 7 95
+AverageBumpGradeBetweenSalaryByGroup  -1 37 463
+EmployeeSalaryIncrease 8 93
+CompanyValue -4
+AddEmployee 242 2 14
+CompanyValue -5
+AverageBumpGradeBetweenSalaryByGroup  14 86 338
+PromoteEmployee 355 92
+AcquireCompany 4 -1 2.083
+CompanyValue 0
+SumOfBumpGradeBetweenTopWorkersByGroup  8 11
+CompanyValue 10
+AcquireCompany 7 8 1.959
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 69
+AddEmployee 174 -3 17
+AddEmployee 253 13 62
+EmployeeSalaryIncrease 291 10
+CompanyValue -5
+AddEmployee 218 -3 46
+RemoveEmployee 314
+PromoteEmployee 27 7
+EmployeeSalaryIncrease 387 50
+SumOfBumpGradeBetweenTopWorkersByGroup  12 56
+AcquireCompany 12 14 2.46
+SumOfBumpGradeBetweenTopWorkersByGroup  11 20
+CompanyValue 6
+AverageBumpGradeBetweenSalaryByGroup  4 52 146
+AverageBumpGradeBetweenSalaryByGroup  4 24 230
+SumOfBumpGradeBetweenTopWorkersByGroup  12 36
+CompanyValue -3
+PromoteEmployee 237 67
+RemoveEmployee 82
+AverageBumpGradeBetweenSalaryByGroup  3 74 102
+PromoteEmployee 478 11
+PromoteEmployee 175 60
+RemoveEmployee 191
+CompanyValue 2
+AverageBumpGradeBetweenSalaryByGroup  10 -7 695
+AverageBumpGradeBetweenSalaryByGroup  6 74 961
+RemoveEmployee 57
+PromoteEmployee 215 43
+AverageBumpGradeBetweenSalaryByGroup  -2 46 600
+CompanyValue 5
+RemoveEmployee 76
+RemoveEmployee 398
+RemoveEmployee 235
+RemoveEmployee 25
+AcquireCompany 7 8 1.31
+AverageBumpGradeBetweenSalaryByGroup  5 -8 85
+CompanyValue 7
+CompanyValue -5
+AcquireCompany 9 -1 1.237
+RemoveEmployee 140
+AcquireCompany 3 0 2.926
+AverageBumpGradeBetweenSalaryByGroup  -4 13 683
+SumOfBumpGradeBetweenTopWorkersByGroup  7 74
+SumOfBumpGradeBetweenTopWorkersByGroup  4 26
+PromoteEmployee -1 23
+RemoveEmployee 325
+RemoveEmployee 122
+AverageBumpGradeBetweenSalaryByGroup  9 70 776
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 98
+AcquireCompany 0 13 0.873
+AcquireCompany 6 -1 2.853
+AcquireCompany 0 3 3.016
+SumOfBumpGradeBetweenTopWorkersByGroup  14 42
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 96
+AddEmployee 382 8 54
+EmployeeSalaryIncrease 416 26
+PromoteEmployee 383 -10
+PromoteEmployee 351 70
+AverageBumpGradeBetweenSalaryByGroup  1 61 504
+RemoveEmployee 215
+CompanyValue 8
+RemoveEmployee 250
+AddEmployee 166 -1 29
+AverageBumpGradeBetweenSalaryByGroup  9 21 414
+RemoveEmployee 383
+AverageBumpGradeBetweenSalaryByGroup  -1 96 28
+AverageBumpGradeBetweenSalaryByGroup  -2 74 485
+CompanyValue 15
+EmployeeSalaryIncrease 238 14
+RemoveEmployee 372
+AcquireCompany 11 6 4.194
+SumOfBumpGradeBetweenTopWorkersByGroup  6 -9
+EmployeeSalaryIncrease 136 22
+PromoteEmployee 203 47
+CompanyValue 9
+AddEmployee 412 -2 -1
+AverageBumpGradeBetweenSalaryByGroup  10 1 641
+EmployeeSalaryIncrease 202 57
+RemoveEmployee 8
+AverageBumpGradeBetweenSalaryByGroup  14 48 -4
+PromoteEmployee 72 41
+PromoteEmployee 92 36
+CompanyValue 13
+AcquireCompany 14 -3 0.269
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 99
+AcquireCompany 6 4 4.4
+AverageBumpGradeBetweenSalaryByGroup  6 70 29
+RemoveEmployee 461
+AcquireCompany 6 4 -0.24
+AcquireCompany 15 -2 2.404
+AverageBumpGradeBetweenSalaryByGroup  -4 12 140
+AcquireCompany 14 1 4.494
+EmployeeSalaryIncrease 439 37
+SumOfBumpGradeBetweenTopWorkersByGroup  0 7
+AddEmployee 152 9 8
+AddEmployee 463 9 34
+CompanyValue 11
+AverageBumpGradeBetweenSalaryByGroup  -2 81 815
+RemoveEmployee 500
+AverageBumpGradeBetweenSalaryByGroup  8 53 141
+AddEmployee 50 -2 -4
+SumOfBumpGradeBetweenTopWorkersByGroup  10 90
+CompanyValue 2
+SumOfBumpGradeBetweenTopWorkersByGroup  3 46
+AcquireCompany 7 10 0.087
+AcquireCompany -2 11 2.9
+AverageBumpGradeBetweenSalaryByGroup  -3 4 983
+SumOfBumpGradeBetweenTopWorkersByGroup  3 5
+AddEmployee 327 -5 19
+AcquireCompany 1 7 0.481
+AcquireCompany 5 2 1.949
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 39
+AddEmployee 74 -3 -1
+EmployeeSalaryIncrease 144 23
+SumOfBumpGradeBetweenTopWorkersByGroup  15 45
+AcquireCompany -1 13 4.627
+RemoveEmployee 34
+PromoteEmployee 423 9
+SumOfBumpGradeBetweenTopWorkersByGroup  13 42
+EmployeeSalaryIncrease 126 44
+SumOfBumpGradeBetweenTopWorkersByGroup  11 20
+AcquireCompany 15 -5 1.975
+PromoteEmployee 332 7
+AcquireCompany 0 -1 2.948
+RemoveEmployee 199
+SumOfBumpGradeBetweenTopWorkersByGroup  8 68
+AddEmployee 200 9 18
+SumOfBumpGradeBetweenTopWorkersByGroup  0 23
+EmployeeSalaryIncrease 296 36
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 83
+RemoveEmployee 191
+AverageBumpGradeBetweenSalaryByGroup  8 66 521
+AcquireCompany 8 -4 3.86
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 2
+AcquireCompany 11 10 0.353
+CompanyValue 12
+AcquireCompany 3 14 4.842
+AddEmployee 412 5 66
+AverageBumpGradeBetweenSalaryByGroup  0 26 556
+CompanyValue 1
+AverageBumpGradeBetweenSalaryByGroup  11 77 138
+PromoteEmployee 104 43
+RemoveEmployee 403
+AddEmployee 196 9 71
+AddEmployee 181 12 36
+AcquireCompany 2 11 1.396
+SumOfBumpGradeBetweenTopWorkersByGroup  12 98
+CompanyValue 10
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 -8
+AddEmployee -6 7 3
+PromoteEmployee 220 37
+EmployeeSalaryIncrease 363 75
+SumOfBumpGradeBetweenTopWorkersByGroup  2 51
+AverageBumpGradeBetweenSalaryByGroup  4 34 158
+RemoveEmployee 45
+SumOfBumpGradeBetweenTopWorkersByGroup  7 63
+EmployeeSalaryIncrease 34 3
+RemoveEmployee 274
+CompanyValue 4
+RemoveEmployee 179
+AverageBumpGradeBetweenSalaryByGroup  2 44 130
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 31
+PromoteEmployee 237 51
+CompanyValue -5
+EmployeeSalaryIncrease 256 57
+PromoteEmployee 465 98
+RemoveEmployee 8
+RemoveEmployee 274
+AverageBumpGradeBetweenSalaryByGroup  0 18 893
+AcquireCompany -2 1 4.558
+AddEmployee 314 2 11
+PromoteEmployee -10 85
+AcquireCompany 3 5 2.023
+PromoteEmployee 154 19
+CompanyValue -1
+AcquireCompany -1 8 2.644
+RemoveEmployee 129
+EmployeeSalaryIncrease 423 2
+AddEmployee 71 0 67
+AverageBumpGradeBetweenSalaryByGroup  7 -10 308
+RemoveEmployee 132
+RemoveEmployee 437
+SumOfBumpGradeBetweenTopWorkersByGroup  14 40
+EmployeeSalaryIncrease 186 69
+AcquireCompany -2 11 0.179
+CompanyValue 9
+AverageBumpGradeBetweenSalaryByGroup  2 89 917
+SumOfBumpGradeBetweenTopWorkersByGroup  10 67
+PromoteEmployee -4 99
+PromoteEmployee 333 53
+RemoveEmployee 341
+CompanyValue -2
+EmployeeSalaryIncrease 315 67
+AverageBumpGradeBetweenSalaryByGroup  -5 47 765
+AverageBumpGradeBetweenSalaryByGroup  4 -5 672
+CompanyValue 7
+AcquireCompany -4 -4 1.451
+SumOfBumpGradeBetweenTopWorkersByGroup  9 61
+AddEmployee 384 6 51
+RemoveEmployee 344
+AcquireCompany 7 4 0.585
+AddEmployee 161 7 -5
+AcquireCompany 12 4 2.784
+AcquireCompany 2 0 2.427
+RemoveEmployee 46
+AverageBumpGradeBetweenSalaryByGroup  -5 13 297
+RemoveEmployee -2
+AverageBumpGradeBetweenSalaryByGroup  4 51 277
+CompanyValue 7
+CompanyValue -1
+EmployeeSalaryIncrease 421 13
+EmployeeSalaryIncrease 270 22
+CompanyValue 11
+AverageBumpGradeBetweenSalaryByGroup  -3 50 513
+SumOfBumpGradeBetweenTopWorkersByGroup  8 1
+CompanyValue 14
+AverageBumpGradeBetweenSalaryByGroup  -1 -10 182
+AddEmployee 459 -5 7
+AddEmployee 12 3 -6
+PromoteEmployee 428 12
+AcquireCompany 6 12 -0.268
+AcquireCompany 1 2 1.723
+SumOfBumpGradeBetweenTopWorkersByGroup  7 98
+PromoteEmployee 337 32
+CompanyValue 6
+CompanyValue 6
+PromoteEmployee 401 66
+RemoveEmployee 277
+AcquireCompany 3 14 4.709
+RemoveEmployee 369
+RemoveEmployee 259
+AddEmployee 457 5 96
+PromoteEmployee 269 37
+EmployeeSalaryIncrease 321 70
+AcquireCompany 11 12 4.5
+AverageBumpGradeBetweenSalaryByGroup  11 21 530
+RemoveEmployee 410
+RemoveEmployee 71
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 21
+SumOfBumpGradeBetweenTopWorkersByGroup  7 81
+EmployeeSalaryIncrease 484 21
+AverageBumpGradeBetweenSalaryByGroup  7 -6 470
+AcquireCompany 3 7 0.312
+EmployeeSalaryIncrease 256 84
+PromoteEmployee 338 70
+EmployeeSalaryIncrease 78 33
+AcquireCompany 2 0 4.284
+AcquireCompany 0 0 3.762
+RemoveEmployee 239
+EmployeeSalaryIncrease 69 89
+PromoteEmployee 226 62
+PromoteEmployee 62 55
+PromoteEmployee 424 49
+AddEmployee 268 -5 71
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 58
+AverageBumpGradeBetweenSalaryByGroup  2 14 776
+PromoteEmployee 214 48
+AverageBumpGradeBetweenSalaryByGroup  12 -2 981
+SumOfBumpGradeBetweenTopWorkersByGroup  15 5
+AddEmployee 453 6 68
+SumOfBumpGradeBetweenTopWorkersByGroup  3 43
+SumOfBumpGradeBetweenTopWorkersByGroup  5 52
+CompanyValue 12
+RemoveEmployee 45
+AcquireCompany 13 13 0.437
+AverageBumpGradeBetweenSalaryByGroup  10 -7 313
+RemoveEmployee 208
+AcquireCompany 10 13 1.192
+CompanyValue 4
+SumOfBumpGradeBetweenTopWorkersByGroup  3 3
+SumOfBumpGradeBetweenTopWorkersByGroup  4 58
+PromoteEmployee 93 22
+AverageBumpGradeBetweenSalaryByGroup  -4 22 457
+RemoveEmployee 68
+AverageBumpGradeBetweenSalaryByGroup  12 99 361
+AcquireCompany 7 -5 -0.119
+PromoteEmployee 156 9
+SumOfBumpGradeBetweenTopWorkersByGroup  4 21
+AcquireCompany -3 14 1.928
+AddEmployee 181 12 63
+AcquireCompany 7 1 3.87
+AverageBumpGradeBetweenSalaryByGroup  10 39 308
+EmployeeSalaryIncrease 380 -2
+EmployeeSalaryIncrease 440 84
+EmployeeSalaryIncrease 380 0
+RemoveEmployee 304
+RemoveEmployee 14
+PromoteEmployee 230 -7
+SumOfBumpGradeBetweenTopWorkersByGroup  1 3
+EmployeeSalaryIncrease 407 91
+CompanyValue 1
+CompanyValue -2
+CompanyValue 1
+AddEmployee 152 12 19
+AverageBumpGradeBetweenSalaryByGroup  0 94 605
+AddEmployee 253 7 45
+CompanyValue 5
+RemoveEmployee 307
+CompanyValue -4
+EmployeeSalaryIncrease 210 36
+SumOfBumpGradeBetweenTopWorkersByGroup  7 38
+PromoteEmployee 26 93
+EmployeeSalaryIncrease 460 95
+AverageBumpGradeBetweenSalaryByGroup  11 19 264
+CompanyValue -5
+SumOfBumpGradeBetweenTopWorkersByGroup  14 94
+SumOfBumpGradeBetweenTopWorkersByGroup  1 9
+AddEmployee 246 -2 41
+EmployeeSalaryIncrease 437 27
+AcquireCompany 14 1 0.086
+AcquireCompany 10 7 3.712
+SumOfBumpGradeBetweenTopWorkersByGroup  10 34
+AverageBumpGradeBetweenSalaryByGroup  3 22 434
+PromoteEmployee 188 79
+AcquireCompany -3 1 3.651
+PromoteEmployee 214 -2
+CompanyValue 7
+AddEmployee 472 13 82
+EmployeeSalaryIncrease 315 80
+EmployeeSalaryIncrease 467 72
+AcquireCompany -1 8 3.262
+RemoveEmployee 30
+AverageBumpGradeBetweenSalaryByGroup  2 2 286
+AddEmployee 340 2 69
+EmployeeSalaryIncrease 170 -5
+AddEmployee 243 5 55
+AcquireCompany 12 8 3.839
+AcquireCompany -1 4 4.683
+EmployeeSalaryIncrease 170 55
+AddEmployee 428 5 44
+RemoveEmployee 113
+AverageBumpGradeBetweenSalaryByGroup  14 55 378
+AddEmployee 487 5 17
+AcquireCompany 8 11 -0.436
+SumOfBumpGradeBetweenTopWorkersByGroup  13 89
+CompanyValue 0
+SumOfBumpGradeBetweenTopWorkersByGroup  15 -8
+AverageBumpGradeBetweenSalaryByGroup  12 40 701
+RemoveEmployee 478
+CompanyValue 9
+CompanyValue 1
+AcquireCompany 15 2 3.922
+AverageBumpGradeBetweenSalaryByGroup  4 41 223
+AcquireCompany 14 13 0.921
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 93
+EmployeeSalaryIncrease 2 -7
+RemoveEmployee 366
+EmployeeSalaryIncrease 283 54
+PromoteEmployee 483 -10
+AddEmployee 381 12 50
+AverageBumpGradeBetweenSalaryByGroup  -2 -6 768
+EmployeeSalaryIncrease 339 -3
+AverageBumpGradeBetweenSalaryByGroup  7 16 309
+AverageBumpGradeBetweenSalaryByGroup  -4 21 235
+AcquireCompany 14 14 3.308
+CompanyValue -2
+AverageBumpGradeBetweenSalaryByGroup  11 75 75
+AddEmployee 228 12 86
+EmployeeSalaryIncrease 396 -5
+PromoteEmployee 366 77
+AddEmployee 324 -2 64
+EmployeeSalaryIncrease 148 41
+RemoveEmployee 19
+AcquireCompany 11 3 -0.541
+EmployeeSalaryIncrease 452 71
+AcquireCompany -5 9 3.535
+CompanyValue 2
+RemoveEmployee 292
+EmployeeSalaryIncrease 145 33
+AddEmployee 223 3 71
+AverageBumpGradeBetweenSalaryByGroup  12 84 15
+AverageBumpGradeBetweenSalaryByGroup  5 86 804
+CompanyValue 12
+CompanyValue 5
+CompanyValue 14
+AcquireCompany 10 9 2.154
+PromoteEmployee 115 23
+CompanyValue 1
+EmployeeSalaryIncrease 364 72
+PromoteEmployee 336 69
+SumOfBumpGradeBetweenTopWorkersByGroup  0 58
+AverageBumpGradeBetweenSalaryByGroup  -3 35 555
+SumOfBumpGradeBetweenTopWorkersByGroup  6 -9
+PromoteEmployee 338 6
+SumOfBumpGradeBetweenTopWorkersByGroup  1 29
+AddEmployee 354 14 81
+EmployeeSalaryIncrease 361 11
+CompanyValue 9
+RemoveEmployee 456
+PromoteEmployee 80 55
+CompanyValue 4
+AcquireCompany -4 7 3.293
+AcquireCompany -3 9 4.76
+EmployeeSalaryIncrease 444 23
+EmployeeSalaryIncrease 285 96
+AddEmployee 430 -2 -2
+AcquireCompany -4 -3 0.313
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 -10
+PromoteEmployee 300 6
+AverageBumpGradeBetweenSalaryByGroup  15 48 536
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 23
+AddEmployee 111 2 46
+EmployeeSalaryIncrease 204 57
+PromoteEmployee 328 15
+AddEmployee 155 3 -5
+RemoveEmployee 311
+PromoteEmployee 64 26
+AddEmployee 372 12 -9
+AverageBumpGradeBetweenSalaryByGroup  -3 70 472
+RemoveEmployee 47
+AcquireCompany -3 12 4.102
+EmployeeSalaryIncrease 97 22
+EmployeeSalaryIncrease 462 5
+RemoveEmployee 294
+AcquireCompany 8 3 -0.089
+AddEmployee 116 7 99
+AverageBumpGradeBetweenSalaryByGroup  14 35 698
+CompanyValue 11
+AverageBumpGradeBetweenSalaryByGroup  3 69 454
+EmployeeSalaryIncrease 202 -10
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 86
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 36
+AverageBumpGradeBetweenSalaryByGroup  -2 82 968
+AcquireCompany 6 7 2.328
+AcquireCompany 15 -5 4.332
+PromoteEmployee 153 77
+SumOfBumpGradeBetweenTopWorkersByGroup  15 93
+AverageBumpGradeBetweenSalaryByGroup  1 18 633
+AverageBumpGradeBetweenSalaryByGroup  4 57 230
+AverageBumpGradeBetweenSalaryByGroup  1 49 592
+AverageBumpGradeBetweenSalaryByGroup  -3 67 460
+PromoteEmployee 167 24
+EmployeeSalaryIncrease 0 0
+CompanyValue -3
+RemoveEmployee 409
+AverageBumpGradeBetweenSalaryByGroup  13 55 705
+CompanyValue 2
+SumOfBumpGradeBetweenTopWorkersByGroup  12 70
+PromoteEmployee 287 97
+PromoteEmployee 298 37
+EmployeeSalaryIncrease 266 -1
+SumOfBumpGradeBetweenTopWorkersByGroup  12 -3
+AverageBumpGradeBetweenSalaryByGroup  -1 21 983
+PromoteEmployee 421 -1
+AcquireCompany 4 7 1.641
+RemoveEmployee 454
+PromoteEmployee 400 17
+AcquireCompany 9 15 -0.966
+RemoveEmployee 486
+SumOfBumpGradeBetweenTopWorkersByGroup  1 87
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 75
+RemoveEmployee 321
+PromoteEmployee 26 87
+SumOfBumpGradeBetweenTopWorkersByGroup  6 -3
+CompanyValue -4
+AcquireCompany 11 -4 2.649
+AverageBumpGradeBetweenSalaryByGroup  13 7 853
+AcquireCompany 13 14 -0.351
+SumOfBumpGradeBetweenTopWorkersByGroup  7 18
+EmployeeSalaryIncrease 363 22
+CompanyValue 5
+CompanyValue -2
+SumOfBumpGradeBetweenTopWorkersByGroup  7 87
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 84
+RemoveEmployee 65
+CompanyValue 10
+PromoteEmployee 373 69
+AddEmployee 16 -4 56
+AverageBumpGradeBetweenSalaryByGroup  14 71 955
+AverageBumpGradeBetweenSalaryByGroup  -5 -3 986
+CompanyValue 8
+RemoveEmployee 279
+CompanyValue 11
+RemoveEmployee 445
+EmployeeSalaryIncrease 495 55
+RemoveEmployee 40
+AcquireCompany -4 5 3.648
+RemoveEmployee 224
+CompanyValue 7
+AddEmployee 168 2 76
+AverageBumpGradeBetweenSalaryByGroup  4 17 745
+AddEmployee 204 12 21
+PromoteEmployee 62 52
+PromoteEmployee 292 27
+RemoveEmployee 271
+EmployeeSalaryIncrease 49 44
+CompanyValue 7
+PromoteEmployee 238 29
+CompanyValue 10
+RemoveEmployee 316
+PromoteEmployee 416 95
+RemoveEmployee 86
+AddEmployee 355 15 61
+AverageBumpGradeBetweenSalaryByGroup  4 64 994
+CompanyValue 5
+AcquireCompany 7 4 2.657
+CompanyValue -3
+AverageBumpGradeBetweenSalaryByGroup  2 33 518
+RemoveEmployee 241
+AverageBumpGradeBetweenSalaryByGroup  2 90 300
+EmployeeSalaryIncrease 222 38
+EmployeeSalaryIncrease 476 -10
+RemoveEmployee 161
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 58
+CompanyValue 1
+EmployeeSalaryIncrease 446 31
+AddEmployee 408 15 17
+AverageBumpGradeBetweenSalaryByGroup  0 14 30
+CompanyValue -2
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 100
+SumOfBumpGradeBetweenTopWorkersByGroup  14 68
+AcquireCompany 12 8 4.674
+PromoteEmployee 198 54
+AverageBumpGradeBetweenSalaryByGroup  4 0 870
+AcquireCompany 15 -3 1.233
+AddEmployee 339 -1 74
+CompanyValue 1
+SumOfBumpGradeBetweenTopWorkersByGroup  9 20
+EmployeeSalaryIncrease 381 62
+SumOfBumpGradeBetweenTopWorkersByGroup  8 29
+AcquireCompany -5 9 1.386
+AcquireCompany 2 2 4.533
+AddEmployee 40 1 77
+CompanyValue 15
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 43
+CompanyValue -2
+EmployeeSalaryIncrease 323 21
+AverageBumpGradeBetweenSalaryByGroup  3 43 350
+PromoteEmployee 133 63
+SumOfBumpGradeBetweenTopWorkersByGroup  -3 1
+AverageBumpGradeBetweenSalaryByGroup  4 71 22
+RemoveEmployee 98
+PromoteEmployee 229 40
+CompanyValue 8
+EmployeeSalaryIncrease 284 -9
+PromoteEmployee 389 13
+PromoteEmployee 217 35
+CompanyValue 5
+SumOfBumpGradeBetweenTopWorkersByGroup  7 31
+PromoteEmployee 126 48
+CompanyValue -2
+PromoteEmployee -6 37
+SumOfBumpGradeBetweenTopWorkersByGroup  6 91
+EmployeeSalaryIncrease 419 -3
+SumOfBumpGradeBetweenTopWorkersByGroup  8 100
+AddEmployee 7 -2 36
+CompanyValue -2
+PromoteEmployee 311 85
+AcquireCompany 0 -2 3.571
+PromoteEmployee 263 91
+SumOfBumpGradeBetweenTopWorkersByGroup  10 64
+EmployeeSalaryIncrease 446 79
+AddEmployee 256 14 -5
+RemoveEmployee 3
+EmployeeSalaryIncrease 48 4
+AddEmployee 140 10 42
+RemoveEmployee 32
+AcquireCompany 3 -1 2.781
+EmployeeSalaryIncrease 127 48
+AddEmployee 424 -5 89
+AcquireCompany 2 4 2.285
+EmployeeSalaryIncrease 266 19
+AverageBumpGradeBetweenSalaryByGroup  9 3 901
+CompanyValue 4
+CompanyValue 7
+AverageBumpGradeBetweenSalaryByGroup  9 50 254
+AddEmployee 278 -3 30
+RemoveEmployee 7
+EmployeeSalaryIncrease 103 32
+PromoteEmployee 347 85
+AverageBumpGradeBetweenSalaryByGroup  7 -1 387
+RemoveEmployee 360
+EmployeeSalaryIncrease 491 5
+SumOfBumpGradeBetweenTopWorkersByGroup  8 -10
+RemoveEmployee 294
+EmployeeSalaryIncrease 163 7
+PromoteEmployee 236 21
+AverageBumpGradeBetweenSalaryByGroup  -4 79 16
+PromoteEmployee 168 56
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 22
+EmployeeSalaryIncrease 345 27
+CompanyValue 11
+RemoveEmployee 383
+RemoveEmployee 183
+CompanyValue 1
+AddEmployee 383 8 52
+EmployeeSalaryIncrease 456 49
+EmployeeSalaryIncrease 399 62
+AverageBumpGradeBetweenSalaryByGroup  5 9 987
+RemoveEmployee 160
+CompanyValue 3
+SumOfBumpGradeBetweenTopWorkersByGroup  2 53
+AddEmployee 213 -4 65
+PromoteEmployee 305 67
+AverageBumpGradeBetweenSalaryByGroup  1 64 820
+RemoveEmployee 122
+CompanyValue 12
+AcquireCompany -1 -4 2.486
+AverageBumpGradeBetweenSalaryByGroup  2 60 353
+AverageBumpGradeBetweenSalaryByGroup  9 -4 619
+RemoveEmployee 465
+RemoveEmployee 330
+PromoteEmployee 110 42
+PromoteEmployee 332 53
+CompanyValue 13
+RemoveEmployee 293
+CompanyValue 8
+EmployeeSalaryIncrease 91 11
+EmployeeSalaryIncrease 229 56
+EmployeeSalaryIncrease 216 92
+CompanyValue 9
+PromoteEmployee -6 38
+CompanyValue -5
+AcquireCompany 13 -5 -0.4
+CompanyValue 2
+EmployeeSalaryIncrease 281 2
+AcquireCompany 13 -2 -0.527
+AcquireCompany 9 2 4.049
+SumOfBumpGradeBetweenTopWorkersByGroup  9 70
+AverageBumpGradeBetweenSalaryByGroup  8 59 834
+AverageBumpGradeBetweenSalaryByGroup  -1 39 925
+AddEmployee 58 5 61
+RemoveEmployee 476
+RemoveEmployee 474
+AverageBumpGradeBetweenSalaryByGroup  11 90 463
+SumOfBumpGradeBetweenTopWorkersByGroup  9 -6
+PromoteEmployee 438 60
+EmployeeSalaryIncrease 398 78
+EmployeeSalaryIncrease 32 40
+SumOfBumpGradeBetweenTopWorkersByGroup  7 18
+CompanyValue 10
+CompanyValue 0
+AddEmployee 451 14 37
+SumOfBumpGradeBetweenTopWorkersByGroup  11 36
+AcquireCompany 7 -4 0.624
+AcquireCompany 13 11 1.652
+PromoteEmployee 79 9
+PromoteEmployee 119 60
+RemoveEmployee 96
+RemoveEmployee 291
+CompanyValue 4
+PromoteEmployee 258 37
+AddEmployee 317 0 47
+CompanyValue 8
+PromoteEmployee 244 77
+AverageBumpGradeBetweenSalaryByGroup  -1 5 563
+AddEmployee 148 10 41
+RemoveEmployee 229
+AddEmployee 334 2 92
+CompanyValue -4
+AcquireCompany -3 5 3.569
+AcquireCompany 10 7 0.462
+RemoveEmployee 384
+AddEmployee 119 2 0
+AverageBumpGradeBetweenSalaryByGroup  -3 42 978
+PromoteEmployee 317 7
+RemoveEmployee 472
+PromoteEmployee 30 74
+SumOfBumpGradeBetweenTopWorkersByGroup  10 89
+PromoteEmployee 310 3
+EmployeeSalaryIncrease 422 42
+SumOfBumpGradeBetweenTopWorkersByGroup  10 51
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 99
+AverageBumpGradeBetweenSalaryByGroup  9 57 755
+AcquireCompany 13 0 1.273
+PromoteEmployee 259 25
+EmployeeSalaryIncrease 190 69
+AcquireCompany 2 1 3.962
+CompanyValue 15
+CompanyValue 11
+AddEmployee 212 8 38
+AcquireCompany 4 14 3.964
+AverageBumpGradeBetweenSalaryByGroup  3 75 -6
+RemoveEmployee 30
+CompanyValue 1
+SumOfBumpGradeBetweenTopWorkersByGroup  -4 27
+PromoteEmployee 355 70
+CompanyValue 4
+AverageBumpGradeBetweenSalaryByGroup  0 -5 599
+AcquireCompany 14 8 2.283
+AddEmployee 92 15 50
+EmployeeSalaryIncrease 316 88
+PromoteEmployee 91 21
+CompanyValue -2
+SumOfBumpGradeBetweenTopWorkersByGroup  8 54
+PromoteEmployee 127 51
+PromoteEmployee 199 64
+AddEmployee 34 0 31
+RemoveEmployee 89
+PromoteEmployee 447 10
+PromoteEmployee 22 21
+RemoveEmployee 147
+CompanyValue 14
+CompanyValue 10
+RemoveEmployee 33
+EmployeeSalaryIncrease 239 84
+AverageBumpGradeBetweenSalaryByGroup  -4 99 794
+RemoveEmployee 338
+CompanyValue 9
+RemoveEmployee 484
+AverageBumpGradeBetweenSalaryByGroup  4 63 171
+RemoveEmployee 409
+PromoteEmployee 70 9
+RemoveEmployee 281
+AcquireCompany 11 3 2.15
+AcquireCompany -5 -1 3.952
+AcquireCompany 15 6 -0.435
+AcquireCompany 2 4 3.702
+AcquireCompany 15 3 -0.516
+AverageBumpGradeBetweenSalaryByGroup  6 83 444
+AverageBumpGradeBetweenSalaryByGroup  15 83 -4
+AverageBumpGradeBetweenSalaryByGroup  12 98 235
+EmployeeSalaryIncrease 296 61
+SumOfBumpGradeBetweenTopWorkersByGroup  0 84
+EmployeeSalaryIncrease 226 27
+EmployeeSalaryIncrease -3 76
+AverageBumpGradeBetweenSalaryByGroup  -2 13 155
+EmployeeSalaryIncrease 277 -8
+AcquireCompany -5 4 4.811
+AddEmployee 484 -3 -10
+AverageBumpGradeBetweenSalaryByGroup  1 60 947
+AddEmployee 490 -3 85
+EmployeeSalaryIncrease 330 77
+EmployeeSalaryIncrease 363 -4
+CompanyValue 11
+CompanyValue 6
+EmployeeSalaryIncrease 252 76
+PromoteEmployee 298 43
+PromoteEmployee 325 62
+CompanyValue 14
+AcquireCompany -5 7 0.819
+CompanyValue 1
+AcquireCompany -1 2 1.771
+PromoteEmployee 222 59
+AverageBumpGradeBetweenSalaryByGroup  7 28 662
+RemoveEmployee 132
+AverageBumpGradeBetweenSalaryByGroup  -1 62 727
+RemoveEmployee 295
+AddEmployee 266 -3 2
+SumOfBumpGradeBetweenTopWorkersByGroup  15 77
+SumOfBumpGradeBetweenTopWorkersByGroup  5 42
+AverageBumpGradeBetweenSalaryByGroup  -2 -10 311
+AverageBumpGradeBetweenSalaryByGroup  7 29 479
+EmployeeSalaryIncrease 41 10
+AcquireCompany 12 9 2.403
+AverageBumpGradeBetweenSalaryByGroup  12 70 252
+EmployeeSalaryIncrease 51 18
+AcquireCompany 2 3 0.073
+PromoteEmployee 295 48
+AverageBumpGradeBetweenSalaryByGroup  -5 98 360
+AverageBumpGradeBetweenSalaryByGroup  0 30 851
+RemoveEmployee -8
+RemoveEmployee 120
+EmployeeSalaryIncrease 74 56
+RemoveEmployee 257
+AverageBumpGradeBetweenSalaryByGroup  13 49 639
+AcquireCompany -4 2 3.144
+CompanyValue 5
+SumOfBumpGradeBetweenTopWorkersByGroup  9 87
+CompanyValue 11
+AcquireCompany 2 5 3.633
+PromoteEmployee 46 19
+EmployeeSalaryIncrease 440 83
+PromoteEmployee 400 68
+SumOfBumpGradeBetweenTopWorkersByGroup  7 29
+EmployeeSalaryIncrease 467 96
+AcquireCompany 2 11 2.02
+RemoveEmployee 399
+AverageBumpGradeBetweenSalaryByGroup  0 97 55
+AverageBumpGradeBetweenSalaryByGroup  10 54 263
+AverageBumpGradeBetweenSalaryByGroup  7 94 631
+AcquireCompany 2 -3 0.002
+AcquireCompany -4 -1 2.191
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 91
+SumOfBumpGradeBetweenTopWorkersByGroup  10 87
+AcquireCompany -2 10 0.525
+AcquireCompany 1 7 0.183
+AverageBumpGradeBetweenSalaryByGroup  15 56 358
+AverageBumpGradeBetweenSalaryByGroup  13 71 494
+SumOfBumpGradeBetweenTopWorkersByGroup  3 94
+CompanyValue 4
+EmployeeSalaryIncrease 77 42
+AddEmployee 480 -2 35
+AverageBumpGradeBetweenSalaryByGroup  1 78 574
+EmployeeSalaryIncrease 226 67
+AddEmployee 468 7 58
+AcquireCompany -1 1 4.821
+PromoteEmployee 121 19
+PromoteEmployee 76 90
+AverageBumpGradeBetweenSalaryByGroup  6 11 434
+SumOfBumpGradeBetweenTopWorkersByGroup  6 32
+AverageBumpGradeBetweenSalaryByGroup  3 74 202
+PromoteEmployee 460 34
+PromoteEmployee 97 77
+PromoteEmployee 266 86
+AverageBumpGradeBetweenSalaryByGroup  -3 56 21
+CompanyValue 15
+CompanyValue -4
+AcquireCompany 1 2 4.886
+SumOfBumpGradeBetweenTopWorkersByGroup  5 13
+AcquireCompany 9 10 -0.541
+EmployeeSalaryIncrease 494 89
+EmployeeSalaryIncrease 442 13
+AcquireCompany 1 9 2.637
+AverageBumpGradeBetweenSalaryByGroup  -3 28 798
+PromoteEmployee 498 28
+AcquireCompany -4 8 1.929
+RemoveEmployee 483
+SumOfBumpGradeBetweenTopWorkersByGroup  0 93
+AverageBumpGradeBetweenSalaryByGroup  4 57 194
+CompanyValue -3
+EmployeeSalaryIncrease 183 29
+EmployeeSalaryIncrease 109 28
+AcquireCompany -3 -2 3.851
+SumOfBumpGradeBetweenTopWorkersByGroup  14 100
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 14
+AddEmployee 37 -1 61
+AverageBumpGradeBetweenSalaryByGroup  6 -4 574
+AcquireCompany 10 4 4.092
+EmployeeSalaryIncrease 233 21
+AcquireCompany 6 7 2.995
+RemoveEmployee 397
+AcquireCompany -5 11 -0.563
+AcquireCompany -1 -3 4.058
+AverageBumpGradeBetweenSalaryByGroup  12 9 114
+AverageBumpGradeBetweenSalaryByGroup  -3 -3 570
+PromoteEmployee 188 31
+CompanyValue 9
+AverageBumpGradeBetweenSalaryByGroup  -1 99 474
+SumOfBumpGradeBetweenTopWorkersByGroup  6 47
+AcquireCompany -2 12 3.769
+PromoteEmployee 197 81
+AcquireCompany -4 9 -0.483
+AverageBumpGradeBetweenSalaryByGroup  -1 61 39
+AcquireCompany 13 -3 0.732
+CompanyValue -1
+AddEmployee -10 0 68
+CompanyValue -4
+AcquireCompany -1 3 0.853
+AddEmployee 213 13 40
+CompanyValue 7
+PromoteEmployee 444 88
+AcquireCompany -4 1 1.384
+AverageBumpGradeBetweenSalaryByGroup  5 23 219
+RemoveEmployee 447
+AverageBumpGradeBetweenSalaryByGroup  13 98 73
+AcquireCompany 11 9 0.6
+SumOfBumpGradeBetweenTopWorkersByGroup  15 23
+EmployeeSalaryIncrease 153 56
+AverageBumpGradeBetweenSalaryByGroup  13 4 200
+SumOfBumpGradeBetweenTopWorkersByGroup  4 70
+AverageBumpGradeBetweenSalaryByGroup  12 83 305
+PromoteEmployee 130 9
+EmployeeSalaryIncrease 494 89
+RemoveEmployee 470
+AverageBumpGradeBetweenSalaryByGroup  -3 6 44
+AddEmployee 311 -1 36
+AcquireCompany 0 11 0.534
+PromoteEmployee 165 18
+AddEmployee 279 -5 7
+EmployeeSalaryIncrease 13 4
+AddEmployee 37 9 96
+CompanyValue 2
+RemoveEmployee 286
+SumOfBumpGradeBetweenTopWorkersByGroup  0 22
+AverageBumpGradeBetweenSalaryByGroup  6 39 939
+PromoteEmployee 217 12
+RemoveEmployee 342
+AverageBumpGradeBetweenSalaryByGroup  14 68 131
+AverageBumpGradeBetweenSalaryByGroup  -2 47 70
+AcquireCompany 10 9 1.394
+SumOfBumpGradeBetweenTopWorkersByGroup  12 70
+CompanyValue 0
+AcquireCompany -2 3 0.126
+AverageBumpGradeBetweenSalaryByGroup  4 19 59
+EmployeeSalaryIncrease 27 24
+SumOfBumpGradeBetweenTopWorkersByGroup  -5 47
+EmployeeSalaryIncrease 252 28
+PromoteEmployee 257 12
+AverageBumpGradeBetweenSalaryByGroup  14 80 679
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 27
+AcquireCompany 8 13 2.994
+CompanyValue -5
+PromoteEmployee 98 51
+CompanyValue -1
+PromoteEmployee 312 10
+RemoveEmployee 453
+EmployeeSalaryIncrease 439 69
+AddEmployee 384 8 86
+CompanyValue -5
+EmployeeSalaryIncrease 178 29
+AverageBumpGradeBetweenSalaryByGroup  15 58 320
+AverageBumpGradeBetweenSalaryByGroup  -1 38 387
+CompanyValue 0
+AddEmployee 4 1 54
+PromoteEmployee 282 4
+AcquireCompany 15 8 1.974
+RemoveEmployee 84
+CompanyValue -5
+CompanyValue 7
+RemoveEmployee 207
+AcquireCompany 7 5 4.587
+PromoteEmployee 244 79
+EmployeeSalaryIncrease 33 51
+AcquireCompany 6 0 1.644
+AcquireCompany 3 5 4.289
+AcquireCompany -2 -1 -0.54
+RemoveEmployee 203
+AverageBumpGradeBetweenSalaryByGroup  6 6 877
+AcquireCompany -1 -1 3.282
+AverageBumpGradeBetweenSalaryByGroup  6 50 674
+SumOfBumpGradeBetweenTopWorkersByGroup  -2 38
+RemoveEmployee 179
+RemoveEmployee 290
+PromoteEmployee 123 -5
+AcquireCompany 7 3 4.876
+CompanyValue -3
+AverageBumpGradeBetweenSalaryByGroup  -2 74 797
+AddEmployee 30 0 35
+AverageBumpGradeBetweenSalaryByGroup  15 3 963
+SumOfBumpGradeBetweenTopWorkersByGroup  2 8
+PromoteEmployee 239 28
+AcquireCompany 6 -4 3.596
+AcquireCompany 12 3 1.947
+AddEmployee 239 12 93
+RemoveEmployee 112
+AddEmployee 36 8 68
+AddEmployee 107 12 20
+EmployeeSalaryIncrease 337 67
+AcquireCompany 1 -2 2.112
+RemoveEmployee 382
+RemoveEmployee 54
+AcquireCompany -1 9 -0.321
+RemoveEmployee 62
+AverageBumpGradeBetweenSalaryByGroup  13 -7 592
+RemoveEmployee 73
+RemoveEmployee 169
+PromoteEmployee 66 36
+SumOfBumpGradeBetweenTopWorkersByGroup  5 -2
+AcquireCompany 8 6 4.528
+PromoteEmployee 455 52
+AverageBumpGradeBetweenSalaryByGroup  5 1 725
+AverageBumpGradeBetweenSalaryByGroup  2 12 100
+AverageBumpGradeBetweenSalaryByGroup  -3 98 942
+RemoveEmployee 376
+SumOfBumpGradeBetweenTopWorkersByGroup  -1 47
+PromoteEmployee 344 -8
+PromoteEmployee 321 36
+AddEmployee 382 12 93
+AcquireCompany 10 8 3.606
+RemoveEmployee 363
+CompanyValue -4
+AverageBumpGradeBetweenSalaryByGroup  15 13 443
+AddEmployee 321 -5 84
+PromoteEmployee 67 20
+EmployeeSalaryIncrease 336 5
+AverageBumpGradeBetweenSalaryByGroup  13 85 211
+AcquireCompany -3 -1 1.146
+AddEmployee 40 4 76
+SumOfBumpGradeBetweenTopWorkersByGroup  4 29
+PromoteEmployee 134 86
+AddEmployee 406 5 37
+SumOfBumpGradeBetweenTopWorkersByGroup  15 23
+AcquireCompany 9 -1 4.555
+AcquireCompany 2 12 0.373
+AverageBumpGradeBetweenSalaryByGroup  6 90 643
+AcquireCompany 12 8 4.7
+RemoveEmployee 401
+AcquireCompany -3 3 2.367
+RemoveEmployee 291
+PromoteEmployee 491 -2
+EmployeeSalaryIncrease 273 79
+AddEmployee 150 4 28
+EmployeeSalaryIncrease 424 33
+AcquireCompany 14 1 1.979
+EmployeeSalaryIncrease 276 6
+AcquireCompany 10 9 0.024
+EmployeeSalaryIncrease 52 69
+RemoveEmployee 112
+EmployeeSalaryIncrease 319 52
+EmployeeSalaryIncrease 329 22
+SumOfBumpGradeBetweenTopWorkersByGroup  12 35
+PromoteEmployee 33 99
+SumOfBumpGradeBetweenTopWorkersByGroup  8 83
+PromoteEmployee 49 26
+AverageBumpGradeBetweenSalaryByGroup  4 33 684
+RemoveEmployee 60
+EmployeeSalaryIncrease 7 56
+Quit

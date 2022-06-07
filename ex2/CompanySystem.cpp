@@ -144,38 +144,41 @@ void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::companyValue(int company_id, void* standing)
+long double CompanySystem::companyValue(int company_id)
 {
     try{
         if(company_id == 2){
             company_id += 1;
             company_id -= 1;
         }
-        *(double*)standing = companies.getCompanyValue(company_id);
+        long double standing = companies.getCompanyValue(company_id);
+        return standing;
     }
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m, void* sumBumpGrade)
+long int CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m)
 {
     try{
+        long int sumBumpGrade = 0;
         if(company_id == 0){
-            *(int*)sumBumpGrade = employees_with_salary.sumOfGradeTopWorkers(m);
+            sumBumpGrade = employees_with_salary.sumOfGradeTopWorkers(m);
         }
         else{
             Company* company = companies.getCompany(companies.Find(company_id));
-            *(int*)sumBumpGrade = (company->getEmployeesWithSalaryTree()).sumOfGradeTopWorkers(m);
-        }   
+            sumBumpGrade = (company->getEmployeesWithSalaryTree()).sumOfGradeTopWorkers(m);
+        }
+        return sumBumpGrade;
     }
     catch(const RankTree::NotEnoughEmployees& e){throw NotEnoughEmployees();}
     catch(const RankTree::RankNotFound& e){throw NotEnoughEmployees();}
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary, void* average_bump_grade)
+long double CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary)
 {
     try{
-        int num_employees_in_range = 0, sum_grades_in_range = 0;
+        long int num_employees_in_range = 0, sum_grades_in_range = 0;
         if(company_id == 0){
             if(employees_with_salary.getRoot() != nullptr){
                 employees_with_salary.averageGradesInSalaryRange(lower_salary, higher_salary, &num_employees_in_range, &sum_grades_in_range);
@@ -199,7 +202,7 @@ void CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, int low
             throw NoEmployeesInRange();
         }
         else{
-            *((double*)average_bump_grade) = (double)sum_grades_in_range/num_employees_in_range;
+            return (long double)sum_grades_in_range/num_employees_in_range;
         }
     }
     catch(const NoEmployeesInRange& e){throw e;}

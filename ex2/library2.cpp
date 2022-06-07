@@ -1,5 +1,6 @@
 #include "library2.h"
 #include "CompanySystem.h"
+#include <stdio.h>
 
 void* Init(int k)
 {
@@ -75,40 +76,43 @@ StatusType PromoteEmployee(void *DS, int employeeID, int bumpGrade)
     catch(const std::bad_alloc& e){return ALLOCATION_ERROR;}
 }
 
-StatusType SumOfBumpGradeBetweenTopWorkersByGroup(void *DS, int companyID, int m, void ** sumBumpGrade)
+StatusType SumOfBumpGradeBetweenTopWorkersByGroup(void *DS, int companyID, int m)
 {
-    if(DS == nullptr || *sumBumpGrade == nullptr || companyID < 0 || companyID > (((CompanySystem*)DS)->getNumCompanies()) || m <= 0){
+    if(DS == nullptr || companyID < 0 || companyID > (((CompanySystem*)DS)->getNumCompanies()) || m <= 0){
         return INVALID_INPUT;
     }
     try{
-        ((CompanySystem*)DS)->sumOfBumpGradeBetweenTopWorkersByGroup(companyID, m, *sumBumpGrade);
+        long int sum = ((CompanySystem*)DS)->sumOfBumpGradeBetweenTopWorkersByGroup(companyID, m);
+        printf("SumOfBumpGradeBetweenTopWorkersByGroup: %ld\n", sum);
         return SUCCESS;
     }
     catch(const CompanySystem::NotEnoughEmployees& e){return FAILURE;}
     catch(const std::bad_alloc& e){return ALLOCATION_ERROR;}
 }
 
-StatusType AverageBumpGradeBetweenSalaryByGroup(void *DS, int companyID, int lowerSalary, int higherSalary, void ** averageBumpGrade)
+StatusType AverageBumpGradeBetweenSalaryByGroup(void *DS, int companyID, int lowerSalary, int higherSalary)
 {
-    if(DS == nullptr || *averageBumpGrade == nullptr || companyID < 0 || companyID > (((CompanySystem*)DS)->getNumCompanies()) ||
+    if(DS == nullptr || companyID < 0 || companyID > (((CompanySystem*)DS)->getNumCompanies()) ||
         lowerSalary < 0 || higherSalary < 0 || lowerSalary > higherSalary){
         return INVALID_INPUT;
     }
     try{
-        ((CompanySystem*)DS)->averageBumpGradeBetweenSalaryByGroup(companyID, lowerSalary, higherSalary, *averageBumpGrade);
+        long double average = ((CompanySystem*)DS)->averageBumpGradeBetweenSalaryByGroup(companyID, lowerSalary, higherSalary);
+        printf("AverageBumpGradeBetweenSalaryByGroup: %.1Lf\n", average);
         return SUCCESS;
     }
     catch(const CompanySystem::NoEmployeesInRange& e){return FAILURE;}
     catch(const std::bad_alloc& e){return ALLOCATION_ERROR;}
 }
 
-StatusType CompanyValue(void *DS, int companyID, void ** standing)
+StatusType CompanyValue(void *DS, int companyID)
 {
-    if(DS == nullptr || *standing == nullptr || companyID <= 0 || companyID > (((CompanySystem*)DS)->getNumCompanies())){
+    if(DS == nullptr || companyID <= 0 || companyID > (((CompanySystem*)DS)->getNumCompanies())){
         return INVALID_INPUT;
     }
     try{
-        ((CompanySystem*)DS)->companyValue(companyID, *standing);
+        long double value = ((CompanySystem*)DS)->companyValue(companyID);
+        printf("CompanyValue: %.1Lf\n", value);
         return SUCCESS;
     }
     catch(const std::bad_alloc& e){return ALLOCATION_ERROR;}

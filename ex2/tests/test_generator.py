@@ -101,6 +101,7 @@ def generate_test(test_num):
 
 
 def main():
-    generate_test(0)
+    for i in range(0,100):
+        generate_test(i)
 
 main()

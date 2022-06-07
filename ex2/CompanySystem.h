@@ -35,10 +35,10 @@ class CompanySystem{
         void promoteEmployee(int employee_id, int bump_grade);
         //company functions
         void acquireCompany(int acquirer_id, int target_id, double factor);
-        void companyValue(int company_id, void* standing);
+        long double companyValue(int company_id);
         //DS functions
-        void sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m, void* sumBumpGrade);
-        void averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary, void* average_bump_grade);
+        long int sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m);
+        long double averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary);
 };
 
 #endif /* UF_COMPANIES */

@@ -65,7 +65,6 @@ class HashTable
         Employee* find(const int& employee_id);
         void insert(Employee* employee);
         void remove(const int& employee_id);
-        void merge(HashTable& table);
 };
 
 #endif /* HASH_TABLE */
