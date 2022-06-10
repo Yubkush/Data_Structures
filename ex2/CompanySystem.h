@@ -5,7 +5,7 @@
 #include "LinkedList.h"
 #include "HashTable.h"
 #include "UnionFind.h"
-
+#include <new>
 
 class CompanySystem{
 
