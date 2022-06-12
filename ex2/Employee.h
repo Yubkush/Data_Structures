@@ -6,20 +6,20 @@ class Company;
 class Employee
 {
     private:
-        int id;
+        long int id;
         Company* company;
-        int salary;
-        int grade;
+        long int salary;
+        long int grade;
     
     public:
-        Employee(const int employee_id, Company* company, const int salary, const int grade);
-        int GetEmployeeId() const;
+        Employee(const long int employee_id, Company* company, const long int salary, const long int grade);
+        long int GetEmployeeId() const;
         Company* GetCompany() const;
-        int GetSalary() const;
-        int GetGrade() const;
+        long int GetSalary() const;
+        long int GetGrade() const;
         void SetCompany(Company* company);
-        void SetSalary(const int salary); 
-        void SetGrade(const int grade);
+        void SetSalary(const long int salary); 
+        void SetGrade(const long int grade);
 };
 
 #endif /* EMPLOYEE_H_ */

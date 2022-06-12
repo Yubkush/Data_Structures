@@ -53,7 +53,7 @@ class LinkedList
             this->head = tmp;
         }
 
-        void remove(const int id){
+        void remove(const long int id){
             Node* temp = head;
             if(head == nullptr){
                 throw ElementNotInList();
@@ -79,7 +79,7 @@ class LinkedList
             }
         }
 
-        Employee* find(const int id){
+        Employee* find(const long int id){
             Node* temp = head;
             while(temp != nullptr && temp->getData()->GetEmployeeId() != id)
             {

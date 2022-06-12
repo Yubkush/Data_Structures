@@ -86,9 +86,9 @@ RankNode* RankTree::findMaxNode(RankNode* start)
     return current;
 }
 
-Employee* RankTree::getElementByReverseRank(int reverse_rank)
+Employee* RankTree::getElementByReverseRank(long int reverse_rank)
 {
-    int sum_right = 0;
+    long int sum_right = 0;
     RankNode* temp = root;
     while(temp != nullptr && reverse_rank != sum_right + getNumEmployees(temp->getRight()) + 1){
         //going right
@@ -110,9 +110,9 @@ Employee* RankTree::getElementByReverseRank(int reverse_rank)
     return temp->getData();
 }
 
-long int RankTree::sumOfGradeTopWorkers(int m)
+long int RankTree::sumOfGradeTopWorkers(long int m)
 {
-    long int sum = 0;
+    long long int sum = 0;
     RankNode *temp = root;
     if(temp == nullptr || temp->getNumEmployees() < m){
         throw NotEnoughEmployees();
@@ -134,7 +134,7 @@ long int RankTree::sumOfGradeTopWorkers(int m)
     throw RankNotFound();
 }
 
-void RankTree::averageGradesInSalaryRange(int lower, int higher, long int* num_employees_in_range, long int *sum_grades_in_range)
+void RankTree::averageGradesInSalaryRange(long int lower, long int higher, long int* num_employees_in_range, long int *sum_grades_in_range)
 {
     *num_employees_in_range = root->getNumEmployees();
     *sum_grades_in_range = root->getSumGrades();
@@ -174,8 +174,8 @@ void RankTree::averageGradesInSalaryRange(int lower, int higher, long int* num_e
 
 void RankTree::absorbTree(RankTree& tree)
 {
-    int len1 = countElements(this->root);
-    int len2 = countElements(tree.getRoot());
+    long int len1 = countElements(this->root);
+    long int len2 = countElements(tree.getRoot());
     Employee** arr1 = new Employee*[len1];
     Employee** arr2 = new Employee*[len2];
     Employee** merged = new Employee*[len1 + len2];

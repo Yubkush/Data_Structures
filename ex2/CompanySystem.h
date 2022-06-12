@@ -11,8 +11,8 @@ class CompanySystem{
 
     private:
         int num_companies;
-        int num_interns;
-        int sum_interns_grades;
+        long int num_interns;
+        long int sum_interns_grades;
         UnionFind companies;
         HashTable all_employees;
         RankTree employees_with_salary;
@@ -29,16 +29,16 @@ class CompanySystem{
         int getNumCompanies(){return num_companies;}
     
         //employee functions
-        void addEmployee(int employee_id, int company_id, int grade);
-        void removeEmployee(int employee_id);
-        void employeeSalaryIncrease(int employee_id, int salary_increase);
-        void promoteEmployee(int employee_id, int bump_grade);
+        void addEmployee(long int employee_id, int company_id, long int grade);
+        void removeEmployee(long int employee_id);
+        void employeeSalaryIncrease(long int employee_id, long int salary_increase);
+        void promoteEmployee(long int employee_id, long int bump_grade);
         //company functions
-        void acquireCompany(int acquirer_id, int target_id, double factor);
+        void acquireCompany(int acquirer_id, int target_id, long double factor);
         long double companyValue(int company_id);
         //DS functions
-        long int sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m);
-        long double averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary);
+        long int sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, long int m);
+        long double averageBumpGradeBetweenSalaryByGroup(int company_id, long int lower_salary, long int higher_salary);
 };
 
 #endif /* UF_COMPANIES */

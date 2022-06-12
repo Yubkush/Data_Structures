@@ -1,12 +1,12 @@
 #include "Employee.h"
 
-Employee::Employee(const int employee_id, Company* company, const int salary, const int grade):
+Employee::Employee(const long int employee_id, Company* company, const long int salary, const long int grade):
 id(employee_id), company(company), salary(salary), grade(grade)
 {
     
 }
 
-int Employee::GetEmployeeId() const{
+long int Employee::GetEmployeeId() const{
     return this->id;
 }
 
@@ -15,12 +15,12 @@ Company* Employee::GetCompany() const
     return company;
 }
 
-int Employee::GetSalary() const
+long int Employee::GetSalary() const
 {
     return salary;
 }
 
-int Employee::GetGrade() const
+long int Employee::GetGrade() const
 {
     return grade;
 }
@@ -30,12 +30,12 @@ void Employee::SetCompany(Company* company)
     this->company = company;
 }
 
-void Employee::SetSalary(const int salary)
+void Employee::SetSalary(const long int salary)
 {
     this->salary = salary;
 }
 
-void Employee::SetGrade(const int grade)
+void Employee::SetGrade(const long int grade)
 {
     this->grade = grade;
 }

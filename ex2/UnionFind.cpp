@@ -27,7 +27,7 @@ UnionFind::~UnionFind()
 
 //Assume that we get 2 groups
 //b acquire a
-void UnionFind::Union(int group_a, int group_b, double factor)
+void UnionFind::Union(int group_a, int group_b, long double factor)
 {
     UFNode* group_a_root = groups[group_a].root;
     UFNode* group_b_root = groups[group_b].root;
@@ -60,7 +60,7 @@ int UnionFind::Find(int company_id)
     //Node of interest
     UFNode* temp = company_nodes[company_id];
     //For fixing fixers during second phase of find
-    double sum_fixers = 0, prev_fixer = 0;
+    long double sum_fixers = 0, prev_fixer = 0;
     while(temp->getParent() != nullptr)
     {
         sum_fixers += temp->getFixer();
@@ -70,7 +70,7 @@ int UnionFind::Find(int company_id)
     int group_to_return = root->getGroup()->group_num;
     //temp returns to Node of interest
     temp = company_nodes[company_id];
-    int to_subtract = 0;
+    long double to_subtract = 0;
     while (temp->getParent() != root && temp->getParent() != nullptr)
     {
         //changing fixers on our way up, and connecting all the nodes in the way to the root
@@ -84,10 +84,10 @@ int UnionFind::Find(int company_id)
     return group_to_return;
 }
 
-double UnionFind::getCompanyValue(int company_id)
+long double UnionFind::getCompanyValue(int company_id)
 {
     UFNode* start = company_nodes[company_id];
-    double sum_fixers = start->getCompany()->getValue();
+    long double sum_fixers = (long double)(start->getCompany()->getValue());
     while(start != nullptr)
     {
         sum_fixers += start->getFixer();

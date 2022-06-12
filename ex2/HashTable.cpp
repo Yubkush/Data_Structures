@@ -12,7 +12,7 @@ HashTable::~HashTable()
 
 void HashTable::destroyHashData()
 {
-    for (int i = 0; i < table_size; i++)
+    for (long int i = 0; i < table_size; i++)
     {
         Node* head = values[i].getHead();
         while(head != nullptr)
@@ -26,7 +26,7 @@ void HashTable::destroyHashData()
 void HashTable::clearHash()
 {
     //empty values
-    for (int i = 0; i < table_size; i++)
+    for (long int i = 0; i < table_size; i++)
     {
         while(values[i].getHead() != nullptr)
         {
@@ -41,21 +41,21 @@ void HashTable::clearHash()
     delete[] temp;
 }
 
-int HashTable::getOccupancy(){
+long int HashTable::getOccupancy(){
     return occupancy;
 }
-int HashTable::getTableSize(){
+long int HashTable::getTableSize(){
     return table_size;
 }
 LinkedList* HashTable::getValues(){
     return values;
 }
 
-void HashTable::setOccupancy(const int& occupancy){
+void HashTable::setOccupancy(const long int& occupancy){
     this->occupancy = occupancy;
 }
 
-Employee* HashTable::find(const int& employee_id)
+Employee* HashTable::find(const long int& employee_id)
 {
     Employee* temp;
     try{
@@ -76,7 +76,7 @@ void HashTable::insert(Employee* employee)
     occupancy++;
 }
 
-void HashTable::remove(const int& employee_id)
+void HashTable::remove(const long int& employee_id)
 {
     if(occupancy <= (table_size / (SHRINK_EXPANSE_RATE * SHRINK_EXPANSE_RATE)) && (table_size > 5)){
         resizeTable(false);

@@ -12,19 +12,19 @@ class RankNode
         Employee* data;
         RankNode* left;
         RankNode* right;
-        int height;
-        int num_employees_sub_tree;
-        int sum_grades_sub_tree;
+        long int height;
+        long int num_employees_sub_tree;
+        long int sum_grades_sub_tree;
         RankNode(): data(nullptr), left(nullptr), right(nullptr), height(0),
                                 num_employees_sub_tree(0), sum_grades_sub_tree(0){};
         RankNode(Employee* data): data(data), left(nullptr), right(nullptr), height(0),
                                 num_employees_sub_tree(1), sum_grades_sub_tree(data->GetGrade()){};
         ~RankNode() = default;
 
-        int getNumEmployees(){
+        long int getNumEmployees(){
             return num_employees_sub_tree;
         }
-        int getSumGrades(){
+        long int getSumGrades(){
             return sum_grades_sub_tree;
         }
         RankNode* getLeft(){
@@ -44,28 +44,28 @@ class RankTree
     private:
         RankNode* root;
         
-        int getHeight(RankNode* node)
+        long int getHeight(RankNode* node)
         {
             if(node == nullptr)
                 return -1;
             return node->height;
         }
 
-        int getNumEmployees(RankNode* node)
+        long int getNumEmployees(RankNode* node)
         {
             if(node == nullptr)
                 return 0;
             return node->num_employees_sub_tree;
         }
 
-        int getSumGrades(RankNode* node)
+        long int getSumGrades(RankNode* node)
         {
             if(node == nullptr)
                 return 0;
             return node->sum_grades_sub_tree;
         }
 
-        int getBalanceFactor(const RankNode* node)
+        long int getBalanceFactor(const RankNode* node)
         {
             if(node == nullptr){
                 return 0;
@@ -76,7 +76,7 @@ class RankTree
         void fixHeight(RankNode* root)
         {
             if(root != nullptr){
-                int height_of_AVLNode = 0;
+                long int height_of_AVLNode = 0;
 
                 if(root->left != nullptr){
                     height_of_AVLNode = root->left->height + 1;
@@ -253,7 +253,7 @@ class RankTree
             return to_delete;
         }
 
-        int treeToSortedArray(RankNode* root ,Employee* arr[], int index = 0)
+        long int treeToSortedArray(RankNode* root ,Employee* arr[], long int index = 0)
         {
             if(root != nullptr){
                 index = treeToSortedArray(root->left, arr, index);
@@ -264,9 +264,9 @@ class RankTree
             return index;
         }
 
-        void mergeArrays(Employee* merged[], Employee* arr1[], Employee* arr2[], int len1, int len2)
+        void mergeArrays(Employee* merged[], Employee* arr1[], Employee* arr2[], long int len1, long int len2)
         {
-            int i = 0, j = 0, p = 0;
+            long int i = 0, j = 0, p = 0;
             while(i<len1 && j<len2){
                 if(SalaryCondition(arr1[i], arr2[j])){
                     merged[p] = arr1[i];
@@ -282,13 +282,13 @@ class RankTree
             for(;j<len2;j++, p++){merged[p] = arr2[j];}
         }
 
-        RankNode* sortedArrayToRankTree(Employee* merged[], int start, int end)
+        RankNode* sortedArrayToRankTree(Employee* merged[], long int start, long int end)
         {
             if(start > end){
                 return nullptr;
             }
             
-            int mid = (start+end)/2;
+            long int mid = (start+end)/2;
             RankNode* root = new RankNode(merged[mid]);
             root->left = sortedArrayToRankTree(merged, start, mid - 1);
             root->right = sortedArrayToRankTree(merged, mid + 1, end);
@@ -306,7 +306,7 @@ class RankTree
             }
         }
 
-        int countElements(RankNode* root)
+        long int countElements(RankNode* root)
         {
             if(root == nullptr)
                 return 0;
@@ -330,9 +330,9 @@ class RankTree
         void remove(Employee* data);
         RankNode* findMinNode(RankNode* start);
         RankNode* findMaxNode(RankNode* start);
-        long int sumOfGradeTopWorkers(int m);
-        void averageGradesInSalaryRange(int lower, int higher, long int* num_employees_in_range, long int* sum_grades_in_range);
-        Employee* getElementByReverseRank(int reverse_rank);
+        long int sumOfGradeTopWorkers(long int m);
+        void averageGradesInSalaryRange(long int lower, long int higher, long int* num_employees_in_range, long int* sum_grades_in_range);
+        Employee* getElementByReverseRank(long int reverse_rank);
         void absorbTree(RankTree& tree);
         void destroyRecursiveData(RankNode* node);
 };

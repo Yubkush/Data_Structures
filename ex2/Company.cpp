@@ -16,12 +16,12 @@ int Company::getValue() const
     return value;
 }
 
-int Company::getNumOfInterns() const
+long int Company::getNumOfInterns() const
 {
     return num_of_interns;
 }
 
-int Company::getSumOfInternsGrades() const
+long int Company::getSumOfInternsGrades() const
 {
     return sum_of_interns_grades;
 }
@@ -41,7 +41,7 @@ void Company::setValue(int value)
     this->value = value;
 }
 
-void Company::increaseNumOfInterns(int num_of_interns)
+void Company::increaseNumOfInterns(long int num_of_interns)
 {
     if(this->num_of_interns + num_of_interns < 0){
         throw EmployeesUnderZero();
@@ -49,7 +49,7 @@ void Company::increaseNumOfInterns(int num_of_interns)
     this->num_of_interns += num_of_interns;
 }
 
-void Company::increaseSumOfInternsGrades(int sum_of_interns_grades)
+void Company::increaseSumOfInternsGrades(long int sum_of_interns_grades)
 {
     if(this->sum_of_interns_grades + sum_of_interns_grades < 0){
         throw EmployeesUnderZero();

@@ -12,7 +12,7 @@ CompanySystem::~CompanySystem()
     all_employees.destroyHashData();
 }
 
-void CompanySystem::addEmployee(int employee_id, int company_id, int grade)
+void CompanySystem::addEmployee(long int employee_id, int company_id, long int grade)
 {
     try{
         all_employees.find(employee_id);
@@ -32,7 +32,7 @@ void CompanySystem::addEmployee(int employee_id, int company_id, int grade)
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::removeEmployee(int employee_id)
+void CompanySystem::removeEmployee(long int employee_id)
 {
     try{
         Employee* employee_to_remove = all_employees.find(employee_id);
@@ -55,7 +55,7 @@ void CompanySystem::removeEmployee(int employee_id)
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::employeeSalaryIncrease(int employee_id, int salary_increase)
+void CompanySystem::employeeSalaryIncrease(long int employee_id, long int salary_increase)
 {
     try{
         Employee* employee = all_employees.find(employee_id);
@@ -81,7 +81,7 @@ void CompanySystem::employeeSalaryIncrease(int employee_id, int salary_increase)
     catch(const std::bad_alloc& e){throw e;}
 }
 
-void CompanySystem::promoteEmployee(int employee_id, int bump_grade)
+void CompanySystem::promoteEmployee(long int employee_id, long int bump_grade)
 {
     try{
         Employee* employee = all_employees.find(employee_id);
@@ -121,7 +121,7 @@ static void mergeHashTables(Company* acquirer_company, HashTable& acquirer, Hash
     target.clearHash();
 }
 
-void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor)
+void CompanySystem::acquireCompany(int acquirer_id, int target_id, long double factor)
 {
     try{
         if(companies.Find(acquirer_id) == companies.Find(target_id)){
@@ -147,17 +147,13 @@ void CompanySystem::acquireCompany(int acquirer_id, int target_id, double factor
 long double CompanySystem::companyValue(int company_id)
 {
     try{
-        if(company_id == 2){
-            company_id += 1;
-            company_id -= 1;
-        }
         long double standing = companies.getCompanyValue(company_id);
         return standing;
     }
     catch(const std::bad_alloc& e){throw e;}
 }
 
-long int CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, int m)
+long int CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, long int m)
 {
     try{
         long int sumBumpGrade = 0;
@@ -175,7 +171,7 @@ long int CompanySystem::sumOfBumpGradeBetweenTopWorkersByGroup(int company_id, i
     catch(const std::bad_alloc& e){throw e;}
 }
 
-long double CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, int lower_salary, int higher_salary)
+long double CompanySystem::averageBumpGradeBetweenSalaryByGroup(int company_id, long int lower_salary, long int higher_salary)
 {
     try{
         long int num_employees_in_range = 0, sum_grades_in_range = 0;

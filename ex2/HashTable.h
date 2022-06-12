@@ -12,17 +12,17 @@ class HashTable
 {
     private:
         LinkedList* values;
-        int occupancy;
-        int table_size;
+        long int occupancy;
+        long int table_size;
 
-        void copyHash(int new_size, int prev_size, LinkedList* new_table, LinkedList* prev_table)
+        void copyHash(long int new_size, long int prev_size, LinkedList* new_table, LinkedList* prev_table)
         {
-            for (int i = 0; i < prev_size; i++)
+            for (long int i = 0; i < prev_size; i++)
             {
                 Node* head = prev_table[i].getHead();
                 while (head != nullptr)
                 {
-                    int new_index = (head->getData()->GetEmployeeId()) % new_size;
+                    long int new_index = (head->getData()->GetEmployeeId()) % new_size;
                     new_table[new_index].insert(head->getData());
                     head = head->getNext();
                 }
@@ -35,7 +35,7 @@ class HashTable
          * @param expand if expand=True expanse table otherwise shrink table
          */
         void resizeTable(bool expand){
-            int new_size = 0;
+            long int new_size = 0;
             if(expand){
                 new_size = table_size * SHRINK_EXPANSE_RATE;
             }
@@ -58,13 +58,13 @@ class HashTable
 
         class ElementNotInTable: public std::exception{};
 
-        int getOccupancy();
-        void setOccupancy(const int&);
-        int getTableSize();
+        long int getOccupancy();
+        void setOccupancy(const long int&);
+        long int getTableSize();
         LinkedList* getValues();
-        Employee* find(const int& employee_id);
+        Employee* find(const long int& employee_id);
         void insert(Employee* employee);
-        void remove(const int& employee_id);
+        void remove(const long int& employee_id);
 };
 
 #endif /* HASH_TABLE */

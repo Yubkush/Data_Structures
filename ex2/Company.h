@@ -13,8 +13,8 @@ class Company
     private:
         int id;
         int value;
-        int num_of_interns;
-        int sum_of_interns_grades;
+        long int num_of_interns;
+        long int sum_of_interns_grades;
         HashTable all_employees;
         RankTree employees_with_salary;
 
@@ -28,14 +28,14 @@ class Company
         //Getters
         int getId() const;
         int getValue() const;
-        int getNumOfInterns() const;
-        int getSumOfInternsGrades() const;
+        long int getNumOfInterns() const;
+        long int getSumOfInternsGrades() const;
         RankTree& getEmployeesWithSalaryTree();
         HashTable& getEmployeesHash();
         //setters
         void setValue(int value);
-        void increaseNumOfInterns(int num_of_interns);
-        void increaseSumOfInternsGrades(int sum_of_interns_grades);
+        void increaseNumOfInterns(long int num_of_interns);
+        void increaseSumOfInternsGrades(long int sum_of_interns_grades);
 
         //O(1) without insert to employees tree
         void AddEmployee(Employee* employee);
